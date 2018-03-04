@@ -6,6 +6,9 @@ class App extends Component {
     return (
       <div className="App">
         <div>React JS main component</div>
+        <div>React JS main component</div>
+        <div>React JS main component</div>
+        <div>React JS main component</div>
       </div>
     );
   }
