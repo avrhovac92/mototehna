@@ -1,0 +1,110 @@
+.cointainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eeeeee;
+}
+.title {
+  display: flex;
+  margin-top: 57px;
+  margin-bottom: 8px;
+  color: #010207;
+  font-family: 'Work Sans', 'Regular';
+  font-size: 38px;
+}
+.line {
+  display: flex;
+  margin-bottom: 56px;
+  height: 1.5px;
+  width: 100px;
+  background-color: #fbc106;
+}
+.products {
+  display: flex;
+  flex-direction: row;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin:25px 25px 60px 25px;
+  padding: 4px 30px;
+  background-color: #fbc106;
+  color: #010207;
+  text-align: center;
+  font-family: 'Nunito Sans';
+  font-weight: bold;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 18px;
+
+  background-color: white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  display: flex;
+}
+.pictureProduct {
+  position: relative;
+  height: 250px;
+  width: 350px;
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+}
+.nameProduct {
+  position: relative;
+  padding: 15px 0px 5px 10px;
+  color: #010207;
+  text-align: left;
+  font-family: 'Nunito Sans';
+  font-size: 20px;
+  display: flex;
+}
+.categoryProduct {
+  position: relative;
+  text-align: left;
+  padding-left: 10px;
+  color: #95989a;
+  font-family: 'Nunito-Sans';
+  font-size: 14px;
+  display: flex;
+}
+.priseProducts {
+  text-align: left;
+  position: relative;
+  padding: 15px 0px 20px 10px;
+  color: #32a560;
+  font-family: 'Nunito Sans';
+  font-size: 14px;
+  font-weight: bolder;
+  display: flex;
+}
+
+.iconCard {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-top: 220px;
+  margin-left: 260px;
+  display: flex;
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+}
+.arrow {
+  margin: 5px;
+  display: flex;
+}
+.arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 15px;
+
+}
+.leftarrow {
+  margin-right: 25px;
+}

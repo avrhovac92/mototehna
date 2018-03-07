@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import 'css/App.css';
+import TopProducts from 'components/TopProducts';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>React JS main component</div>
-        <div>React JS main component</div>
-        <div>React JS main component</div>
-        <div>React JS main component</div>
+        <TopProducts />
       </div>
     );
   }
