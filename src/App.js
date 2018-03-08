@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'css/App.css';
-import OstaleUsluge from './OstaleUsluge.js'
+import OstaleUsluge from './OstaleUsluge.js';
 
 class App extends Component {
   render() {

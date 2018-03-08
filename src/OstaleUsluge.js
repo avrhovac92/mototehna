@@ -7,12 +7,12 @@ export default class OstaleUsluge extends Component {
   constructor(props) {
     super(props);
   }
-  render () {
-    const { state: paragraph} = this;
+  render() {
+    const { state: paragraph } = this;
     return (
       <div class="ostale-usluge-sveSkupa">
         <Title />
-        <Paragraph paragraph = {paragraph} />
+        <Paragraph paragraph={paragraph} />
       </div>
     );
   }
