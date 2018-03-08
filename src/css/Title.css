@@ -1,0 +1,17 @@
+.ostale-usluge-naslov {
+  padding-top: 50px;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: normal;
+  font-size: 38px;
+  color: #010207;
+}
+
+.underline {
+  height: 3px;
+  background: #fbc106;
+  width: 100px;
+  margin: auto;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
