@@ -22,39 +22,57 @@
 .products {
   display: flex;
   flex-direction: row;
-}
-.button {
-  display: flex;
-  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  margin: 25px 25px 60px 25px;
-  padding: 4px 30px;
-  background-color: #fbc106;
-  color: #010207;
-  text-align: center;
-  font-family: 'Nunito Sans';
-  font-weight: bold;
+  margin: 0px 5%;
 }
 
 .product {
   display: flex;
   flex-direction: column;
-  margin: 15px 18px;
-
+  margin: 15px 0;
+  width: 75%;
   background-color: white;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   display: flex;
 }
+.button-container {
+  display: flex;
+  margin: 25px 5% 60px 5%;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
+  margin: 3px 5px;
+  background-color: #fbc106;
+  color: #010207;
+  font-family: 'Nunito Sans';
+  font-weight: bold;
+  width: 75%;
+}
 .pictureProduct {
   position: relative;
-  height: 250px;
-  width: 350px;
+  width: 100%;
   border-bottom: 1px solid #cccccc;
   display: flex;
 }
-.nameProduct {
+.productTextContainer {
   position: relative;
-  padding: 15px 0px 5px 10px;
+}
+.iconCard {
+  position: absolute;
+  z-index: 10;
+  top: -40px;
+  right: 10px;
+}
+.nameProduct {
+  padding: 20px 0px 5px 10px;
   color: #010207;
   text-align: left;
   font-family: 'Nunito Sans';
@@ -62,7 +80,6 @@
   display: flex;
 }
 .categoryProduct {
-  position: relative;
   text-align: left;
   padding-left: 10px;
   color: #95989a;
@@ -70,28 +87,13 @@
   font-size: 14px;
   display: flex;
 }
-.priseProducts {
+.priceProducts {
   text-align: left;
-  position: relative;
   padding: 15px 0px 20px 10px;
   color: #32a560;
   font-family: 'Nunito Sans';
+  font-weight: 800;
   font-size: 14px;
-  font-weight: bolder;
-  display: flex;
-}
-
-.iconCard {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  margin-top: 220px;
-  margin-left: 260px;
-  display: flex;
-
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
   display: flex;
 }
 .arrow {
@@ -110,24 +112,33 @@
 .rightarrow {
 }
 
-.hide {
+.hide-mobile {
   display: none;
 }
 .show {
   display: flex;
 }
-@media only screen and (min-width: 500px) {
+
+@media only screen and (min-width: 960px) {
   .leftarrow {
     display: none;
+  }
+  .product {
+    width: 30%;
   }
   .rightarrow {
     display: flex;
     display: none;
   }
-  .hide {
+  .hide-mobile {
     display: flex;
   }
   .show {
     display: flex;
+  }
+  .button {
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
