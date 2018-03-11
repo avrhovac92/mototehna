@@ -1,0 +1,33 @@
+.paragraphContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  display: flex;
+}
+
+.proizvodnja {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #555;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+h4,
+p {
+  text-align: center;
+}
+
+.lorem-ipsum {
+  padding-bottom: 30px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  color: #666;
+}
+
+@media only screen and (max-width: 960px){
+  .paragraphContainer {
+    width: 75%
+  }
+}
