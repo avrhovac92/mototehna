@@ -1,9 +1,17 @@
+.paragraphContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  display: flex;
+}
+
 .proizvodnja {
-  padding-top: 30px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 600;
   font-size: 20px;
   color: #555;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 h4,
@@ -18,5 +26,8 @@ p {
   color: #666;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans');
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+@media only screen and (max-width: 960px){
+  .paragraphContainer {
+    width: 75%
+  }
+}

@@ -1,17 +1,21 @@
-.ostale-usluge-naslov {
-  padding-top: 50px;
-  text-align: center;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: normal;
-  font-size: 38px;
+.titleContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  .title {
+  display: flex;
+  margin-top: 57px;
+  margin-bottom: 8px;
   color: #010207;
+  font-family: 'Work Sans', 'Regular';
+  font-size: 38px;
 }
-
-.underline {
-  height: 3px;
-  background: #fbc106;
+.line {
+  display: flex;
+  margin-bottom: 56px;
+  height: 1.5px;
   width: 100px;
-  margin: auto;
+  background-color: #fbc106;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Work+Sans');
