@@ -34,5 +34,8 @@ const Services = [
   }
 ];
 
+const MototehnaGoogleMapRoutes = { lat: 45.2784481, lng: 19.7784862 };
+
 export { ListProducts };
 export { Services };
+export { MototehnaGoogleMapRoutes };
