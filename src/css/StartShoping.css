@@ -1,0 +1,65 @@
+.startShopingContainer {
+  background-image: url("../assets/images/bg-image-overlay.png");
+  display: flex;
+  text-align: center;
+}
+
+.startShopingButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
+  margin: 3px 5px;
+  background-color: #fbc106;
+  color: #010207;
+  font-family: 'Nunito Sans';
+  font-weight: bold;
+  width: 75%;
+}
+/* .startShopingButton {
+  background-color: #fbc106;
+  font-color: #010207;
+  font: Nunito-Sans;
+  bold: 16px;
+  padding: 10px 10px 10px 10px;
+} */
+/*@font-face {
+  font-family: 'Work Sans';
+  src:url('WorkSans-Black.otf') format('otf');
+}*/
+
+.startShopingContainer .title {
+  color: #fff;
+}
+/* .title {
+  display: flex;
+  margin-top: 57px;
+  margin-bottom: 8px;
+  color: #fff;
+  font-family: 'Work Sans', 'SemiBold';
+  font-size: 42px;
+  line-height: 0, 5;
+  letter-spacing: -1, 05;
+} */
+.startShopingContainer .line {
+  display: flex;
+  margin-bottom: 56px;
+  height: 1.5px;
+  width: 100px;
+  background-color: #fbc106;
+}
+
+.startShopingContainer p {
+  display: flex;
+  margin-top: 57px;
+  margin-bottom: 8px;
+  color: #fff;
+  font-family: 'Nunito Sans', 'Light';
+  font-size: 20px;
+}
+
+.cart {
+  margin: 5px;
+  display: flex;
+}
