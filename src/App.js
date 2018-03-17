@@ -3,6 +3,7 @@ import 'css/App.css';
 
 import OtherServices from 'components/OtherServices';
 import TopProducts from 'components/TopProducts';
+import Footer from 'components/Footer';
 import AboutUs from 'components/AboutUs';
 import StartShoping from 'components/StartShoping';
 
@@ -17,6 +18,8 @@ class App extends Component {
         <OtherServices />
         <br />
         <AboutUs />
+        <br />
+        <Footer />
       </div>
     );
   }
