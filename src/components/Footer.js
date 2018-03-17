@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import 'css/Footer.css';
 
-import UsefulLinks from './UsefulLinks';
-import Address from './Address';
-import ContactPhoneNumbers from './ContactPhoneNumbers';
+import FooterItem from './FooterItem';
 import SocialNetworkLinks from './SocialNetworkLinks';
+import { FooterList } from 'config/constants';
+import Copyright from 'components/Copyright';
 
 export default class Footer extends Component {
   render() {
     return (
-      <div className="footer-container">
-        <UsefulLinks />
-        <Address />
-        <ContactPhoneNumbers />
-        <SocialNetworkLinks />
+      <div>
+        <div className="footer-container">
+          {FooterList.map((item, key) => <FooterItem key={key} {...item} />)}
+          <SocialNetworkLinks />
+        </div>
+        <Copyright />
       </div>
     );
   }
