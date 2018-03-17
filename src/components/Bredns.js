@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import Bredns from 'css/Brends.css';
+import  'css/Brends.css';
 import { Icons,ListBrends } from 'assets';
 import Title from 'components/Title';
 
 
-let List=Object.values(ListBrends);
+
 
 export default class Brends extends Component {
   constructor(props) {
@@ -19,16 +19,16 @@ export default class Brends extends Component {
     return (<div>
       <Title title="Brendovi" />
       <div className="row">
-      <img src={Icons.arrowLeft}    onClick={leftClick} className="arrow"/>
+      <img src={Icons.arrowLeft}    onClick={leftClick} className="arrow" alt="arrow-left"/>
       <div className="container">
-      <img className="brendPicture show" src={ListBrends['brend'+begin%16]}/>
-      <img className="brendPicture hideMobile" src={ListBrends['brend'+((begin+1)%16)]}/>
-      <img className="brendPicture hideMobile" src={ListBrends['brend'+((begin+2)%16)]}/>
-      <img className="brendPicture hideMobile" src={ListBrends['brend'+((begin+3)%16)]}/>
-      <img className="brendPicture hideMobile" src={ListBrends['brend'+((begin+4)%16)]} id="po"/>
+      <img className="brendPicture show" src={ListBrends['brend'+begin%16]}  alt="logo 1"/>
+      <img className="brendPicture hideMobile" src={ListBrends['brend'+((begin+1)%16)]} alt="logo 2"/>
+      <img className="brendPicture hideMobile" src={ListBrends['brend'+((begin+2)%16)]} alt="logo 3"/>
+      <img className="brendPicture hideMobile" src={ListBrends['brend'+((begin+3)%16)]} alt="logo 4"/>
+      <img className="brendPicture hideMobile" src={ListBrends['brend'+((begin+4)%16)]} alt="logo 5"/>
 
                   </div>
-                  <img src={Icons.arrowRight} onClick={rightClick} className="arrow" id="rr"/></div>
+                  <img src={Icons.arrowRight} onClick={rightClick} className="arrow" id="rr" alt="arrow right "/></div>
               </div>)
   }
   rightClick = () => {
@@ -37,7 +37,7 @@ export default class Brends extends Component {
   };
   leftClick = () => {
     const { begin } = this.state;
-    if(begin!=0)
+    if(begin!==0)
     this.setState({ begin: (begin -1)});
     else
     this.setState({ begin:(6)});

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { ListProducts } from 'config/constants';
 import Product from 'components/Product';
+import Title from 'components/Title';
 
 import 'css/TopProducts.css';
 import { Images, Icons } from 'assets';
@@ -17,8 +18,7 @@ export default class TopProducts extends Component {
     const { leftClick, rightClick, state: { displayedProduct } } = this;
     return (
       <div className="cointainer">
-        <p className="title">Istaknuti Proizvodi</p>
-        <div className="line" />
+        <Title title="Istaknuti Proizvodi" />
         <div className="arrows">
           <img
             onClick={leftClick}

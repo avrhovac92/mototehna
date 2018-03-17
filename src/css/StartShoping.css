@@ -1,0 +1,54 @@
+.startShopingContainer {
+  background-image: url('../assets/images/bg-image-overlay.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 22%;
+}
+.startShopingTitle {
+  color: #fff;
+  font-family: 'Work Sans';
+  line-height: 55px;
+  font-size: 42px;
+  letter-spacing: -1.05px;
+  text-align: center;
+  font-weight: 600;
+}
+.startShopingDescription {
+  color: #fff;
+  font-family: 'Work Sans';
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 300;
+  text-align: center;
+}
+.line {
+  display: flex;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  height: 1.5px;
+  width: 100px;
+  background-color: #fbc106;
+}
+.startShopingButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 30px;
+  margin-top: 40px;
+  background-color: #fbc106;
+  color: #010207;
+  font-family: 'Nunito Sans';
+  font-weight: 700;
+}.cart {
+  margin: 5px;
+  display: flex;
+}
+
+@media only screen and (max-width: 960px) {
+  .startShopingContainer {
+    padding: 70px 10%;
+  }
+}
