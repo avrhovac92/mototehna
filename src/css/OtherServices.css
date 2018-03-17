@@ -12,10 +12,6 @@
   margin: 0px 5%;
 }
 
-.ostale-usluge-sveSkupa {
-  background: #eee;
-}
-
 @media only screen and (max-width: 960px){
   .services {
     flex-direction: column;
