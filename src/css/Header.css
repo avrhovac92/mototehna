@@ -1,13 +1,16 @@
-.container {
+.header-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: #eee;
   width: 100%;
 }
-
+.mototehna-navbar {
+  display: flex;
+}
 .logo {
   margin: 2% 6% 2% 6%;
+  height: 1%;
 }
 .logo1 {
   padding: 3%;
@@ -18,17 +21,30 @@
   width: 50%;
 }
 
-@media only screen and (min-width: 960px) {
+ul li a:hover {
+  color: #4a4a4a;
+  border-bottom: 1px solid #fbc106;
+}
+ul li a:active {
+  color: #4a4a4a;
+  border-bottom: 1px solid #fbc106;
+}
+ul li a:link {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+.navigation-item {
+  font-size: 50px;
+}
+
+@media only screen and (min-width: 768px) {
   #basic-nav-dropdown {
     display: none;
   }
-}
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #eee;
-  width: 100%;
+  .hide-screen {
+    display: none;
+  }
 }
 .link {
   text-decoration: none;
@@ -62,30 +78,4 @@
   font-weight: 'Regular';
   text-decoration: none;
   border-bottom: 1px solid #fbc106;
-}
-
-a:hover {
-  color: #4a4a4a;
-  text-decoration-color: #fbc106;
-  text-decoration: underline;
-}
-a:active {
-  color: #4a4a4a;
-  border-bottom: 1px solid #fbc106;
-}
-a:link {
-  color: #4a4a4a;
-  text-decoration: none;
-}
-
-.logo {
-  margin: 2% 6% 2% 6%;
-}
-.logo1 {
-  padding: 3%;
-  margin: 4%;
-  margin-left: 0%;
-  margin-right: 8%;
-  height: 30%;
-  width: 70%;
 }

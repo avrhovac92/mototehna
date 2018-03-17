@@ -1,0 +1,19 @@
+.otherServicesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eeeeee;
+}
+.services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px 5%;
+}
+
+@media only screen and (max-width: 960px){
+  .services {
+    flex-direction: column;
+  }
+}

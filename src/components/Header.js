@@ -7,38 +7,49 @@ import hamburger from 'assets/slike/hamurger-menu.png';
 class Header extends Component {
   render() {
     return (
-      <div className="container">
-        <img alt="logo" src={logo} className="logo" />
-        <Navbar collapseOnSelect className="naslov">
-          <Navbar.Header>
-            <Navbar.Toggle />
-          </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav>
-              <NavItem className="text" eventKey={1}>
-                Naslovna
-              </NavItem>
-              <NavItem divider />
-              <NavItem className="text" eventKey={2}>
-                Prodavnica
-              </NavItem>
-              <NavItem divider />
-              <NavItem className="text" eventKey={3}>
-                Usluge
-              </NavItem>
-              <NavItem divider />
-              <NavItem className="text" eventKey={4}>
-                O Nama
-              </NavItem>
-              <NavItem divider />
-              <NavItem className="text" eventKey={5}>
-                Kontakt
-              </NavItem>
-              <NavItem divider />
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
+      <nav className="navbar navbar-default">
+        <div className="container-fluid">
+          <div className="navbar-header mototehna-navbar">
+            <img src={logo} className="navbar-brand logo" />
+            <button
+              type="button"
+              data-toggle="collapse"
+              className="hide-screen"
+              data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false"
+            >
+              <img src={hamburger} alt="hamburger" className="hamburger" />
+            </button>
+          </div>
+          <div
+            className="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul className="nav navbar-nav">
+              <li>
+                <a href="#" className="navigation-item">Link</a>
+              </li>
+              <li role="presentation" className="divider" />
+              <li>
+                <a href="#" className="navigation-item">Link</a>
+              </li>
+              <li role="presentation" className="divider" />
+              <li>
+                <a href="#" className="navigation-item">Link</a>
+              </li>
+              <li role="presentation" className="divider" />
+              <li>
+                <a href="#" className="navigation-item">Link</a>
+              </li>
+              <li role="presentation" className="divider" />
+              <li>
+                <a href="#" className="navigation-item">Link</a>
+              </li>
+              <li role="presentation" className="divider" />
+            </ul>
+          </div>
+        </div>
+      </nav>
     );
   }
 }
