@@ -1,16 +1,32 @@
 import React, { Component } from 'react';
-import 'css/SocialNetworkLinks.css';
+import 'css/ContactPhoneNumbers.css';
 
 import { Icons } from 'assets';
 
 export default class SocialNetworkLinks extends Component {
   render() {
     return (
-      <div className="social">
-        <img src={Icons.facebookIcon} />
-        <span>/mototehna.rs</span> <br />
-        <img src={Icons.whatsappLogo} /> <br />
-        <img src={Icons.viberLogo} />
+      <div className="phone-numbers social-networks-container">
+
+        <h4 className="footer-title no-border-bottom" />
+        <div className="facebook-container">
+          <img
+            className="footer-facebook-icon"
+            src={Icons.facebookIcon}
+            alt="facebook icon"
+          />
+          <span className="footer-text">/mototehna.rs</span>
+        </div>
+        <img
+          className="footer-social-icon"
+          src={Icons.whatsappLogo}
+          alt="whatsapp logo"
+        />
+        <img
+          className="footer-social-icon"
+          src={Icons.viberLogo}
+          alt="viber logo"
+        />
       </div>
     );
   }
