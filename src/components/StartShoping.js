@@ -6,7 +6,7 @@ import { Icons } from 'assets';
 export default class StartShoping extends Component {
   render() {
     return (
-      <div className="container startShopingContainer">
+      <div className="startShopingContainer">
         <div className="startShopingTitle">
           MALOPRODAJNI DISTRIBUTER REZERVNIH DELOVA
         </div>
