@@ -1,0 +1,93 @@
+.footer-title {
+  font-family: 'Nunito Sans';
+  font-size: 20px;
+  font-weight: normal;
+  text-align: left;
+  border-bottom: 1px solid #fbc106;
+  width: 80%;
+  font-size: 20px;
+  color: #fff;
+  line-height: 35px;
+}
+
+.footer-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-item-text {
+  font-family: 'Nunito Sans';
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.footer-image {
+  align-self: flex-start;
+  margin-right: 10px;
+}
+
+.phone-numbers {
+  font-family: 'Nunito Sans';
+  font-weight: normal;
+  text-align: left;
+  width: 20%;
+}
+
+.social-networks-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.facebook-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.footer-social-icon {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-facebook-icon {
+  margin-right: 20px;
+}
+
+.no-border-bottom {
+  border: none;
+}
+
+
+@media (min-width: 931px) and (max-width:1080px){
+  .phone-numbers {
+    width: 25%
+  }
+}
+
+@media (max-width: 931px){
+  .phone-numbers {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-title {
+    width: auto;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .footer-item {
+    justify-content: center;
+  }
+  .no-border-bottom {
+    margin: 0;
+  }
+  .footer-remove-icon {
+    display: none;
+  }
+}

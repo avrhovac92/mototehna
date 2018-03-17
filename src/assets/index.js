@@ -10,7 +10,12 @@ const Icons = {
   arrowLeft: require('./icons/arrow-left.png'),
   next: require('./icons/next.png'),
   yellowCart: require('./icons/yellow-cart.png'),
-  addToCartIcon: require('./icons/add-to-cart-circle-icon.png'),  
+  phoneHeader: require('./icons/phone-header.png'),
+  viberLogo: require('./icons/viber-logo.png'),
+  facebookIcon: require('./icons/facebook-icon.png'),
+  whatsappLogo: require('./icons/WhatsApp_Logo_5.png'),
+  footerWorkingHours: require('./icons/footer-working-hours.png'),
+  addToCartIcon: require('./icons/add-to-cart-circle-icon.png'),
 };
 
 const ListBrends={
