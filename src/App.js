@@ -1,24 +1,17 @@
 import React, { Component } from 'react';
 import 'css/App.css';
-import Header from 'components/Header';
 
-import OtherServices from 'components/OtherServices';
-import TopProducts from 'components/TopProducts';
-import Footer from 'components/Footer';
-import AboutUs from 'components/AboutUs';
-import StartShoping from 'components/StartShoping';
+import { Switch, Route } from 'react-router-dom';
+import Home from 'screens/Home';
+import Register from 'screens/Register';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <StartShoping />
-        <TopProducts />
-        <OtherServices />
-        <AboutUs />
-        <Footer />
-      </div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/register" component={Register} />
+      </Switch>
     );
   }
 }
