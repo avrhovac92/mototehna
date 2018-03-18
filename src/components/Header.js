@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem, NavDropdown } from 'react-bootstrap';
 import 'css/Header.css';
-import logo from 'assets/slike/logo.png';
-import hamburger from 'assets/slike/hamurger-menu.png';
+import { Icons, Images } from 'assets';
 
 class Header extends Component {
   render() {
@@ -10,7 +8,8 @@ class Header extends Component {
       <nav className="navbar navbar-default">
         <div className="container-fluid">
           <div className="navbar-header mototehna-navbar">
-            <img src={logo} className="navbar-brand logo" />
+          <div className="header-logo-image">
+            <img src={Images.logo} className="navbar-brand logo" />
             <button
               type="button"
               data-toggle="collapse"
@@ -18,8 +17,13 @@ class Header extends Component {
               data-target="#bs-example-navbar-collapse-1"
               aria-expanded="false"
             >
-              <img src={hamburger} alt="hamburger" className="hamburger" />
+              <img
+                src={Icons.hamburgerMenu}
+                alt="hamburger"
+                className="hamburger"
+              />
             </button>
+            </div>
           </div>
           <div
             className="collapse navbar-collapse"
@@ -31,31 +35,26 @@ class Header extends Component {
                   Naslovna
                 </a>
               </li>
-              <li role="presentation" className="divider" />
               <li>
                 <a href="#" className="navigation-item">
                   Prodavnica
                 </a>
               </li>
-              <li role="presentation" className="divider" />
               <li>
                 <a href="#" className="navigation-item">
                   Usluge
                 </a>
               </li>
-              <li role="presentation" className="divider" />
               <li>
                 <a href="#" className="navigation-item">
                   O Nama
                 </a>
               </li>
-              <li role="presentation" className="divider" />
               <li>
                 <a href="#" className="navigation-item">
                   Kontakt
                 </a>
               </li>
-              <li role="presentation" className="divider" />
             </ul>
           </div>
         </div>

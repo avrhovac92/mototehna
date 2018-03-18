@@ -13,15 +13,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <br />
         <StartShoping />
-        <br />
         <TopProducts />
-        <br />
         <OtherServices />
-        <br />
         <AboutUs />
-        <br />
         <Footer />
       </div>
     );
