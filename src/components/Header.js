@@ -27,23 +27,33 @@ class Header extends Component {
           >
             <ul className="nav navbar-nav">
               <li>
-                <a href="#" className="navigation-item">Link</a>
+                <a href="#" className="navigation-item">
+                  Naslovna
+                </a>
               </li>
               <li role="presentation" className="divider" />
               <li>
-                <a href="#" className="navigation-item">Link</a>
+                <a href="#" className="navigation-item">
+                  Prodavnica
+                </a>
               </li>
               <li role="presentation" className="divider" />
               <li>
-                <a href="#" className="navigation-item">Link</a>
+                <a href="#" className="navigation-item">
+                  Usluge
+                </a>
               </li>
               <li role="presentation" className="divider" />
               <li>
-                <a href="#" className="navigation-item">Link</a>
+                <a href="#" className="navigation-item">
+                  O Nama
+                </a>
               </li>
               <li role="presentation" className="divider" />
               <li>
-                <a href="#" className="navigation-item">Link</a>
+                <a href="#" className="navigation-item">
+                  Kontakt
+                </a>
               </li>
               <li role="presentation" className="divider" />
             </ul>
