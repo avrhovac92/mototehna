@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'css/App.css';
+import Header from 'components/Header';
 
 import OtherServices from 'components/OtherServices';
 import TopProducts from 'components/TopProducts';
@@ -11,14 +12,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <StartShoping />
-        <br />
         <TopProducts />
-        <br />
         <OtherServices />
-        <br />
         <AboutUs />
-        <br />
         <Footer />
       </div>
     );

@@ -8,7 +8,7 @@
     "react-google-maps": "9.4.5",
     "react-scripts": "1.1.1",
     "recompose": "0.26.0",
-    "webfontloader": "1.6.28"
+    "react-bootstrap": "0.32.1"
   },
   "scripts": {
     "start": "react-scripts start",
