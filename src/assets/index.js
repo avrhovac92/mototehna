@@ -23,8 +23,9 @@ const Icons = {
 };
 
 const Video = {
-  video: require('./video/mototehna snimak.mp4')
+  video: require('./video/mototehna-snimak.mp4')
 };
+
 export { Images };
 export { Icons };
 export { Video };
