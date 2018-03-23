@@ -37,11 +37,13 @@
   align-items: center;
   justify-content: center;
   padding: 4px 30px;
+  margin-top: 40px;
   background-color: #fbc106;
   color: #010207;
   font-family: 'Nunito Sans';
   font-weight: 700;
-}.cart {
+}
+.cart {
   margin: 5px;
   display: flex;
 }

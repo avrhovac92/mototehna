@@ -1,21 +1,22 @@
-import React, { Component } from "react";
-import "css/CustomerInformations.css";
+import React, { Component } from 'react';
+import 'css/CustomerInformations.css';
 
-import { Icons } from "assets";
+import { Icons } from 'assets';
 
 class CustomerInformations extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
-      address: "",
-      phoneNumber: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      validPassword: false,
-      validMail: false
+      firstName: '',
+      lastName: '',
+      address: '',
+      phoneNumber: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      validPassword: true,
+      validEmail: true,
+      validConfirmPassword: true
     };
 
     this.validatePassword = this.validatePassword.bind(this);
@@ -26,21 +27,54 @@ class CustomerInformations extends Component {
       [event.target.name]: event.target.value
     });
   };
+
+  validateConfirmPassword = event => {
+    if (event.target.value !== this.state.password) {
+      this.setState({ validConfirmPassword: false });
+    } else {
+      this.setState({ validConfirmPassword: true });
+    }
+  };
+
   validatePassword = event => {
-    const passwordRules = /^(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/;
+    const passwordRules = /^(?=.{8,}).*$/;
     const validPassword = passwordRules.test(event.target.value);
 
     this.setState({ validPassword });
   };
 
   validateEmail = event => {
+    console.log('validateEmail', event);
     const emailRules = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
     const validEmail = emailRules.test(event.target.value);
 
     this.setState({ validEmail });
   };
 
+  register = () => {
+    console.log('register');
+  };
+
   render() {
+    const {
+      state: {
+        firstName,
+        lastName,
+        email,
+        password,
+        confirmPassword,
+        validEmail,
+        validPassword,
+        address,
+        phoneNumber,
+        validConfirmPassword
+      },
+      change,
+      validateEmail,
+      validatePassword,
+      register,
+      validateConfirmPassword
+    } = this;
     return (
       <div>
         <div className="title-container">
@@ -52,71 +86,74 @@ class CustomerInformations extends Component {
           <input
             name="firstName"
             placeholder="Vaše ime"
-            value={this.state.firstName}
-            onChange={event => this.change(event)}
-          />{" "}
+            value={firstName}
+            onChange={change}
+          />
           <br />
           <label>Prezime</label> <br />
           <input
             name="lastName"
             placeholder="Vaše prezime"
-            value={this.state.lastName}
-            onChange={event => this.change(event)}
+            value={lastName}
+            onChange={change}
           />
           <br />
           <label>Adresa</label> <br />
           <input
             name="address"
             placeholder="Ulica i broj"
-            value={this.state.address}
-            onChange={event => this.change(event)}
-          />{" "}
+            value={address}
+            onChange={change}
+          />
           <br />
           <label>Broj telefona</label> <br />
           <input
             name="phoneNumber"
             placeholder="061 1234 567"
-            value={this.state.phoneNumber}
-            onChange={event => this.change(event)}
-          />{" "}
+            value={phoneNumber}
+            onChange={change}
+          />
           <br />
           <label>Email</label> <br />
           <input
-            // name="email"
+            name="email"
             placeholder="vas@email.com"
-            // value={this.state.email}
-            onChange={event => this.validateEmail(event)}
-            className={this.state.validEmail ? "validEmail" : "invalidEmail"}
-          />{" "}
+            value={email}
+            onChange={change}
+            onBlur={validateEmail}
+            className={validEmail ? '' : 'invalidEmail'}
+          />
           <br />
           <label>Lozinka</label> <br />
           <input
             name="password"
-            type="text"
+            type="password"
             placeholder="Lozinka"
-            // value={this.state.password}
-            onChange={event => this.validatePassword(event)}
-            className={
-              this.state.validPassword ? "validPassword" : "invalidPassword"
-            }
-          />{" "}
+            value={password}
+            onChange={change}
+            onBlur={validatePassword}
+            className={validPassword ? '' : 'invalidPassword'}
+          />
           <br />
           <label>Ponovite lozinku</label> <br />
           <input
             name="confirmPassword"
             type="password"
             placeholder="Ponovite lozinku"
-            // value={this.state.confirmPassword}
+            onChange={change}
+            onBlur={validateConfirmPassword}
+            value={confirmPassword}
+            className={validConfirmPassword ? '' : 'invalidPassword'}
           />
         </div>
-        <div className="createAccountButton">
+        <button className="createAccountButton" onClick={register}>
           <img
             className="accountIcon"
             src={Icons.createAccountIcon}
             alt="Account icon"
           />
           <span>NAPRAVITE NALOG</span>
-        </div>
+        </button>
       </div>
     );
   }
