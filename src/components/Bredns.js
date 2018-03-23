@@ -4,18 +4,22 @@ import  'css/Brends.css';
 import { Icons,ListBrends } from 'assets';
 import Title from 'components/Title';
 
-
+let sliderStyle={
+  transform:'translateX(${this.state.activeIndex * -100}%)',
+  transition:'0.2s'
+}
 
 
 export default class Brends extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      activeIndex:0,
       begin:0
     };
   }
   render() {
-    const{state:{begin},leftClick,rightClick}=this;
+    const{state:{begin},leftClick,rightClick,onNextClick}=this;
     return (<div>
       <Title title="Brendovi" />
       <div className="row">
@@ -28,7 +32,13 @@ export default class Brends extends Component {
       <img className="brendPicture hideMobile" src={ListBrends['brend'+((begin+4)%16)]} alt="logo 5"/>
 
                   </div>
-                  <img src={Icons.arrowRight} onClick={rightClick} className="arrow" id="rr" alt="arrow right "/></div>
+                  <img src={Icons.arrowRight} onClick={ onNextClick} className="arrow" id="rr" alt="arrow right "/></div>
+                {/*  <ol className="slide-container">
+                    {[1,2,3,4,5].map((item,index)=>{
+                      let computedClass =index =={this.state.activeIndex} ? 'slide active': 'slide';
+                      return <li className={computedClass} key ={index}>{item} </li>
+                    })}
+                  </ol>*/}
               </div>)
   }
   rightClick = () => {
@@ -40,8 +50,18 @@ export default class Brends extends Component {
     if(begin!==0)
     this.setState({ begin: (begin -1)});
     else
-    this.setState({ begin:(6)});
+    this.setState({ begin:(16)});
 
   };
+  onNextClick=()=>{
+    const{rightClick}=this;
+    rightClick();
+    if(this.state.activeIndex<4){
+      this.setState({activeIndex:this.state.activeIndex+1})
+    }
+    else{
+      this.setState({activeIndex:0});
+    }
+  }
 
   }
