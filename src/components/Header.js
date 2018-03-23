@@ -34,9 +34,9 @@ class Header extends Component {
           >
             <ul className="nav navbar-nav">
               <li>
-                <a href="#" className="navigation-item">
+                <Link to="/" className="navigation-item">
                   Naslovna
-                </a>
+                </Link>
               </li>
               <li>
                 <Link to="/register" className="navigation-item">
@@ -44,9 +44,9 @@ class Header extends Component {
                 </Link>
               </li>
               <li>
-                <a href="#" className="navigation-item">
+                <Link to="/registration" className="navigation-item">
                   Usluge
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="navigation-item">

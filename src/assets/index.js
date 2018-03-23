@@ -17,7 +17,8 @@ const Icons = {
   whatsappLogo: require('./icons/WhatsApp_Logo_5.png'),
   footerWorkingHours: require('./icons/footer-working-hours.png'),
   addToCartIcon: require('./icons/add-to-cart-circle-icon.png'),
-  hamburgerMenu: require('./icons/hamburger-menu.png')
+  hamburgerMenu: require('./icons/hamburger-menu.png'),
+  createAccountIcon: require('./icons/create-account-icon-for-btn.png')
 };
 
 export { Images };
