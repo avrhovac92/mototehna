@@ -5,24 +5,15 @@ import Header from 'components/Header';
 import OtherServices from 'components/OtherServices';
 import TopProducts from 'components/TopProducts';
 import Footer from 'components/Footer';
-import AboutUs from 'components/AboutUs';
+import Page1 from 'components/Page1';
 import StartShoping from 'components/StartShoping';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <br />
-        <StartShoping />
-        <br />
-        <TopProducts />
-        <br />
-        <OtherServices />
-        <br />
-        <AboutUs />
-        <br />
-        <Footer />
+        <Page1;
+ />
       </div>
     );
   }
