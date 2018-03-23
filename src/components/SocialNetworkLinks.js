@@ -7,8 +7,7 @@ export default class SocialNetworkLinks extends Component {
   render() {
     return (
       <div className="phone-numbers social-networks-container">
-
-        <h4 className="footer-title no-border-bottom" />
+        <div className="footer-title no-border-bottom margin-top-35" />
         <div className="facebook-container">
           <img
             className="footer-facebook-icon"

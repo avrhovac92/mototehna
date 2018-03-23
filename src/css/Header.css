@@ -1,0 +1,138 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #eee;
+  width: 100%;
+}
+
+.mototehna-navbar {
+  display: flex;
+}
+
+.header-logo-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hide-screen {
+  margin-right: 10%;
+}
+
+.logo {
+  padding-left: 18%;
+  height: 130px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  border-bottom: 3px solid #fbc106;
+}
+
+.navbar-nav {
+  float: left;
+  margin-left: 60px;
+  margin-top: 15px;
+}
+
+.navigation-item {
+  font-size: 24px;
+  font-family: 'Work Sans';
+  color: #4a4a4a !important;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+}
+
+ul li a:hover {
+  color: #4a4a4a;
+  border-bottom: 1px solid #fbc106;
+}
+
+ul li a:active {
+  color: #4a4a4a;
+  border-bottom: 1px solid #fbc106;
+}
+
+ul li a:link {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 1150px) {
+  #basic-nav-dropdown {
+    display: none;
+  }
+  .hide-screen {
+    display: none;
+  }
+  .navbar-nav {
+    float: right;
+    margin-left: 0px;
+    margin-top: 40px;
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 1150px) and (min-width: 985px) {
+  .navigation-item {
+    font-size: 18px;
+  }
+  #basic-nav-dropdown {
+    display: none;
+  }
+  .hide-screen {
+    display: none;
+  }
+  .navbar-nav {
+    float: right;
+    margin-left: 0px;
+    margin-top: 40px;
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 985px) and (min-width: 768px) {
+  .navigation-item {
+    font-size: 15px;
+  }
+  #basic-nav-dropdown {
+    display: none;
+  }
+  .hide-screen {
+    display: none;
+  }
+  .navbar-nav {
+    float: right;
+    margin-left: 0px;
+    margin-top: 18px;
+    margin-right: 2%;
+  }
+  .logo {
+    padding-left: 5%;
+    height: 85px;
+  }
+}
+
+@media (max-width: 522px) and (min-width: 449px) {
+  .logo {
+    padding: 3%;
+  }
+  .hide-screen {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 449px) {
+  .logo {
+    padding: 3%;
+    height: 73px;
+  }
+}
