@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import 'css/CustomerInformations.css';
+import React, { Component } from "react";
+import "css/CustomerInformations.css";
 
-import { Icons } from 'assets';
+import { Icons } from "assets";
 
 class CustomerInformations extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      address: '',
-      phoneNumber: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
+      firstName: "",
+      lastName: "",
+      address: "",
+      phoneNumber: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
       validPassword: true,
       validEmail: true,
       validConfirmPassword: true
@@ -44,16 +44,14 @@ class CustomerInformations extends Component {
   };
 
   validateEmail = event => {
-    console.log('validateEmail', event);
+    console.log("validateEmail", event);
     const emailRules = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
     const validEmail = emailRules.test(event.target.value);
 
     this.setState({ validEmail });
   };
 
-  register = () => {
-    console.log('register');
-  };
+  register = () => {};
 
   render() {
     const {
@@ -76,7 +74,7 @@ class CustomerInformations extends Component {
       validateConfirmPassword
     } = this;
     return (
-      <div>
+      <div className="registrationContainer">
         <div className="title-container">
           <p className="registration-title">Registracija</p>
           <div className="underline" />
@@ -121,7 +119,7 @@ class CustomerInformations extends Component {
             value={email}
             onChange={change}
             onBlur={validateEmail}
-            className={validEmail ? '' : 'invalidEmail'}
+            className={validEmail ? "" : "invalidEmail"}
           />
           <br />
           <label>Lozinka</label> <br />
@@ -132,7 +130,7 @@ class CustomerInformations extends Component {
             value={password}
             onChange={change}
             onBlur={validatePassword}
-            className={validPassword ? '' : 'invalidPassword'}
+            className={validPassword ? "" : "invalidPassword"}
           />
           <br />
           <label>Ponovite lozinku</label> <br />
@@ -143,7 +141,7 @@ class CustomerInformations extends Component {
             onChange={change}
             onBlur={validateConfirmPassword}
             value={confirmPassword}
-            className={validConfirmPassword ? '' : 'invalidPassword'}
+            className={validConfirmPassword ? "" : "invalidPassword"}
           />
         </div>
         <button className="createAccountButton" onClick={register}>
