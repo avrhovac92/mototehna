@@ -2,7 +2,8 @@ const Images = {
   picture1: require('./images/picture1.jpg'),
   picture2: require('./images/picture2.jpg'),
   picture3: require('./images/picture3.jpg'),
-  bgImageOverlay: require('./images/bg-image-overlay.png')
+  bgImageOverlay: require('./images/bg-image-overlay.png'),
+  logo: require('./images/logo.png')
 };
 
 const Icons = {
@@ -18,6 +19,7 @@ const Icons = {
   footerWorkingHours: require('./icons/footer-working-hours.png'),
   workingHours: require('./icons/hours-grey-sidebar.png'),
   addToCartIcon: require('./icons/add-to-cart-circle-icon.png'),
+  hamburgerMenu: require('./icons/hamburger-menu.png')
 };
 
 const Video = {
