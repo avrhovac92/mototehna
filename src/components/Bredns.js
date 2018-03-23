@@ -25,7 +25,7 @@ const settings = {
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 1,
-        className: 'slider-container',
+        className: 'slider-containe',
         prevArrow: (
           <img src={Icons.arrowLeft} className="arrow" alt="arrow-left" />
         ),
@@ -46,11 +46,13 @@ export default class Brends extends Component {
   }
   render() {
     return (
+      <div className="container">
       <Slider {...settings}>
         {ListBrends.map((item, key) => (
           <img key={key} className="brendPicture" src={item} alt="logo 1" />
         ))}
       </Slider>
+      </div>
     );
   }
   // render() {
