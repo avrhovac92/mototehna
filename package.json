@@ -7,6 +7,7 @@
     "react-dom": "16.2.0",
     "react-google-maps": "9.4.5",
     "react-scripts": "1.1.1",
+    "react-slick": "0.22.2",
     "recompose": "0.26.0",
     "webfontloader": "1.6.28"
   },
