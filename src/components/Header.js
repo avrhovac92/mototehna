@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'css/Header.css';
 import { Icons, Images } from 'assets';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
@@ -8,21 +9,27 @@ class Header extends Component {
       <nav className="navbar navbar-default">
         <div className="container-fluid">
           <div className="navbar-header mototehna-navbar">
-          <div className="header-logo-image">
-            <img src={Images.logo} className="navbar-brand logo" />
-            <button
-              type="button"
-              data-toggle="collapse"
-              className="hide-screen"
-              data-target="#bs-example-navbar-collapse-1"
-              aria-expanded="false"
-            >
-              <img
-                src={Icons.hamburgerMenu}
-                alt="hamburger"
-                className="hamburger"
-              />
-            </button>
+            <div className="header-logo-image">
+              <Link to="/">
+                <img
+                  src={Images.logo}
+                  className="navbar-brand logo"
+                  alt="logo"
+                />
+              </Link>
+              <button
+                type="button"
+                data-toggle="collapse"
+                className="hide-screen"
+                data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false"
+              >
+                <img
+                  src={Icons.hamburgerMenu}
+                  alt="hamburger"
+                  className="hamburger"
+                />
+              </button>
             </div>
           </div>
           <div
@@ -31,29 +38,23 @@ class Header extends Component {
           >
             <ul className="nav navbar-nav">
               <li>
-                <a href="#" className="navigation-item">
-                  Naslovna
-                </a>
+                <a className="navigation-item">Naslovna</a>
               </li>
               <li>
-                <a href="#" className="navigation-item">
+                <Link to="/register" className="navigation-item">
                   Prodavnica
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="navigation-item">
-                  Usluge
-                </a>
+                <a className="navigation-item">Usluge</a>
               </li>
               <li>
-                <a href="#" className="navigation-item">
+                <Link to="/aboutus" className="navigation-item">
                   O Nama
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="navigation-item">
-                  Kontakt
-                </a>
+                <a className="navigation-item">Kontakt</a>
               </li>
             </ul>
           </div>

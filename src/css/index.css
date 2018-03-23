@@ -1,5 +1,39 @@
+html {
+  min-height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  min-height: 100%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+.container-component-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-sidebar-wrapper {
+  display: flex;
+}
+
+.container-sidebar-left-part {
+  width: 70%;
+  border: 1px solid red;
+}
+.container-sidebar-right-part {
+  width: 30%;
+  padding: 40px 6%;
+  border: 1px solid blue;
+}
+
+@media (max-width: 768px) {
+  .container-sidebar-left-part {
+    width: 100%;
+  }
+  .container-sidebar-right-part {
+    display: none;
+  }
 }

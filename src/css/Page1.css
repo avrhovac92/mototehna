@@ -1,12 +1,11 @@
 .glavni {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 .Prvi {
   display: flex;
   flex-direction: column;
-  width: 55.2%;
   align-items: flex-start;
   margin-left: 6%;
 }
@@ -52,11 +51,10 @@
 }
 
 .aboutUsMap1 {
-  width: 80% !important;
-  margin: 20px;
-  display: flex;
+  width: 100%;
+  height: 230px;
 }
 .videoTag {
-  height: 250px;
-  width: 350px;
+  width: 360px;
+  float: left;
 }
