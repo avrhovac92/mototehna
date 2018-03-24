@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 
 import 'css/Brends.css';
 import { Icons, ListBrends } from 'assets';
@@ -12,6 +12,7 @@ const settings = {
   slidesToShow: 5,
   slidesToScroll: 1,
   className: 'slider-container',
+
   prevArrow: <img src={Icons.arrowLeft} className="arrow" alt="arrow-left" />,
   nextArrow: (
     <img src={Icons.arrowRight} className="arrow" alt="arrow right " />
@@ -118,3 +119,4 @@ export default class Brends extends Component {
     }
   };
 }
+*/
