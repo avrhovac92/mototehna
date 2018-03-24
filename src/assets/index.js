@@ -10,7 +10,8 @@ const Icons = {
   arrowLeft: require('./icons/arrow-left.png'),
   next: require('./icons/next.png'),
   yellowCart: require('./icons/yellow-cart.png'),
-  addToCartIcon: require('./icons/add-to-cart-circle-icon.png'),  
+  addToCartIcon: require('./icons/add-to-cart-circle-icon.png'),
+  sendIcon: require('./icons/posalji-btn-icon.png'),
 };
 
 export { Images };
