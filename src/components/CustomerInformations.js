@@ -51,7 +51,7 @@ class CustomerInformations extends Component {
     this.setState({ validEmail });
   };
 
-  register = () => {};
+  register = event => {};
 
   render() {
     const {
@@ -119,7 +119,7 @@ class CustomerInformations extends Component {
             value={email}
             onChange={change}
             onBlur={validateEmail}
-            className={validEmail ? "" : "invalidEmail"}
+            className={validEmail ? "" : "invalid"}
           />
           <br />
           <label>Lozinka</label> <br />
@@ -130,7 +130,7 @@ class CustomerInformations extends Component {
             value={password}
             onChange={change}
             onBlur={validatePassword}
-            className={validPassword ? "" : "invalidPassword"}
+            className={validPassword ? "" : "invalid"}
           />
           <br />
           <label>Ponovite lozinku</label> <br />
@@ -141,7 +141,7 @@ class CustomerInformations extends Component {
             onChange={change}
             onBlur={validateConfirmPassword}
             value={confirmPassword}
-            className={validConfirmPassword ? "" : "invalidPassword"}
+            className={validConfirmPassword ? "" : "invalid"}
           />
         </div>
         <button className="createAccountButton" onClick={register}>

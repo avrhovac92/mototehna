@@ -53,7 +53,7 @@ input {
   align-items: center;
   justify-content: center;
   padding: 5px 30px;
-  margin: 30px 0 90px 0px;
+  margin: 30px 0 20px 0px;
   background-color: #fbc106;
   color: #010207;
   font-family: 'Nunito Sans';
@@ -65,17 +65,7 @@ input {
   display: flex;
 }
 
-.validPassword {
-  border: 1px solid green;
-  outline: none;
-}
-
-.invalidPassword {
-  border: 1px solid red;
-  outline: none;
-}
-
-.invalidEmail {
+.invalid {
   border: 1px solid red;
   outline: none;
 }
