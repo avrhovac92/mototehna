@@ -12,7 +12,7 @@ class Home extends Component {
       <div className="home-screen-container">
         <StartShopping />
         <TopProducts />
-      {  /*<Bredns/>*/}
+        <Bredns/>
         <OtherServices />
         <AboutUs />
       </div>

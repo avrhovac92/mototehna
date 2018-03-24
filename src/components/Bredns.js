@@ -1,4 +1,4 @@
-/*import React, { Component } from 'react';
+import React, { Component } from 'react';
 
 import 'css/Brends.css';
 import { Icons, ListBrends } from 'assets';
@@ -24,14 +24,14 @@ const settings = {
         arrows: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         className: 'slider-containe',
         prevArrow: (
-          <img src={Icons.arrowLeft} className="arrow" alt="arrow-left" />
+          <img src={Icons.arrowLeft} className="arrowP" alt="arrow-left" />
         ),
         nextArrow: (
-          <img src={Icons.arrowRight} className="arrow" alt="arrow right " />
+          <img src={Icons.arrowRight} className="arrowP" alt="arrow right " />
         )
       }
     }
@@ -119,4 +119,3 @@ export default class Brends extends Component {
     }
   };
 }
-*/
