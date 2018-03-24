@@ -16,7 +16,11 @@ const Icons = {
   facebookIcon: require('./icons/facebook-icon.png'),
   whatsappLogo: require('./icons/WhatsApp_Logo_5.png'),
   footerWorkingHours: require('./icons/footer-working-hours.png'),
-  addToCartIcon: require('./icons/add-to-cart-circle-icon.png')
+  addToCartIcon: require('./icons/add-to-cart-circle-icon.png'),
+  cartHeader: require('./icons/cart-header.png'),
+  loginHeader: require('./icons/login-header.png'),
+  registerHeader: require('./icons/register-header.png'),
+  hamburgerMenu: require('./icons/hamburger-menu.png')
 };
 
 const ListBrends = [
