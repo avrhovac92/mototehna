@@ -8,7 +8,9 @@ const Icons = {
   arrowRight: require('./icons/arrow-right.png'),
   arrowLeft: require('./icons/arrow-left.png'),
   next: require('./icons/next.png'),
-  yellowCart: require('./icons/yellow-cart.png')
+  yellowCart: require('./icons/yellow-cart.png'),
+  logo: require('./icons/mototehna-logo-login.png'),
+  loginButtonIcon: require('./icons/login-large-btn-icon.png')
 };
 
 export { Images };

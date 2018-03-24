@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'css/App.css';
+import SignIn from 'components/SignIn';
 
 import OtherServices from 'components/OtherServices';
 import TopProducts from 'components/TopProducts';
@@ -14,7 +15,10 @@ class App extends Component {
         <OtherServices />
         <br />
         <AboutUs />
+        <br/>
+        <SignIn />
       </div>
+
     );
   }
 }

@@ -1,0 +1,50 @@
+.signInContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eeeeee;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: right;
+}
+
+.titleSignInContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  .title {
+  display: flex;
+  color: #444;
+  font-family: 'Nunito-Sans';
+  font-size: 18px;
+
+}
+.line {
+  display: flex;
+  margin-bottom: 56px;
+  border-radius: 5px;
+  height: 1.5px;
+  width: 100px;
+  background-color: #fbc106;
+}
+
+.topTitle {
+  font-family: Nunito-Sans;
+  font-size: 18px;
+  color: #666;
+  align-items: flex-start;
+}
+
+.signInButton {
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 0;
+  margin: 3px 5px;
+  background-color: #fbc106;
+}
