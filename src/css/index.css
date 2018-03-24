@@ -14,3 +14,26 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.container-sidebar-wrapper {
+  display: flex;
+}
+
+.container-sidebar-left-part {
+  width: 70%;
+
+}
+.container-sidebar-right-part {
+  width: 30%;
+  padding: 40px 6%;
+
+}
+
+@media (max-width: 768px) {
+  .container-sidebar-left-part {
+    width: 100%;
+  }
+  .container-sidebar-right-part {
+    display: none;
+  }
+}

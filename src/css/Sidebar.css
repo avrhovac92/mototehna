@@ -1,0 +1,44 @@
+.slidebar-title {
+  font-family: 'Nunito Sans';
+  font-size: 20px;
+  font-weight: normal;
+  text-align: left;
+  border-bottom: 1px solid #fbc106;
+  width: 80%;
+  font-size: 20px;
+  color: #010207;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+.footer-item1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-item-text1 {
+  font-family: 'Nunito Sans';
+  font-weight: 300;
+  color: #666;
+  font-size: 15px;
+}
+
+.footer-image1 {
+  align-self: flex-start;
+  margin-right: 10px;
+}
+
+.phone-numbers1 {
+  font-family: 'Nunito Sans';
+  font-weight: normal;
+  text-align: left;
+}
+
+.no-border-bottom {
+  border: none;
+}
+.margin-top-40 {
+  margin-top: 40px;
+}

@@ -49,7 +49,9 @@ class Header extends Component {
                 <a className="navigation-item">Usluge</a>
               </li>
               <li>
-                <a className="navigation-item">O Nama</a>
+                <Link to="/aboutus" className="navigation-item">
+                  O Nama
+                </Link>
               </li>
               <li>
                 <a className="navigation-item">Kontakt</a>
