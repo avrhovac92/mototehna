@@ -11,7 +11,11 @@ class Header extends Component {
           <div className="navbar-header mototehna-navbar">
             <div className="header-logo-image">
               <Link to="/">
-                <img src={Images.logo} className="navbar-brand logo" />
+                <img
+                  src={Images.logo}
+                  className="navbar-brand logo"
+                  alt="logo"
+                />
               </Link>
               <button
                 type="button"
@@ -49,14 +53,12 @@ class Header extends Component {
                 </Link>
               </li>
               <li>
-                <a href="#" className="navigation-item">
+                <Link to="/aboutus" className="navigation-item">
                   O Nama
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="navigation-item">
-                  Kontakt
-                </a>
+                <a className="navigation-item">Kontakt</a>
               </li>
             </ul>
           </div>

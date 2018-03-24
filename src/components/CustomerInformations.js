@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import "css/CustomerInformations.css";
+import React, { Component } from 'react';
+import 'css/CustomerInformations.css';
 
-import { Icons } from "assets";
+import { Icons } from 'assets';
 
 class CustomerInformations extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
-      address: "",
-      phoneNumber: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
+      firstName: '',
+      lastName: '',
+      address: '',
+      phoneNumber: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
       validPassword: true,
       validEmail: true,
       validConfirmPassword: true
@@ -31,9 +31,10 @@ class CustomerInformations extends Component {
   validateConfirmPassword = event => {
     if (event.target.value !== this.state.password) {
       this.setState({ validConfirmPassword: false });
-    } else {
-      this.setState({ validConfirmPassword: true });
+      return false;
     }
+    this.setState({ validConfirmPassword: true });
+    return true;
   };
 
   validatePassword = event => {
@@ -41,17 +42,35 @@ class CustomerInformations extends Component {
     const validPassword = passwordRules.test(event.target.value);
 
     this.setState({ validPassword });
+    return validPassword;
   };
 
   validateEmail = event => {
-    console.log("validateEmail", event);
     const emailRules = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
     const validEmail = emailRules.test(event.target.value);
 
     this.setState({ validEmail });
+    return validEmail;
   };
 
-  register = event => {};
+  register = event => {
+    const {
+      state: { password, email, confirmPassword },
+      validatePassword,
+      validateEmail,
+      validateConfirmPassword
+    } = this;
+    if (
+      !validatePassword({ target: { value: password } }) ||
+      !validateEmail({ target: { value: email } }) ||
+      !validateConfirmPassword({
+        target: { value: confirmPassword }
+      })
+    ) {
+      return;
+    }
+    //registration logic
+  };
 
   render() {
     const {
@@ -119,7 +138,7 @@ class CustomerInformations extends Component {
             value={email}
             onChange={change}
             onBlur={validateEmail}
-            className={validEmail ? "" : "invalid"}
+            className={validEmail ? '' : 'invalid'}
           />
           <br />
           <label>Lozinka</label> <br />
@@ -130,7 +149,7 @@ class CustomerInformations extends Component {
             value={password}
             onChange={change}
             onBlur={validatePassword}
-            className={validPassword ? "" : "invalid"}
+            className={validPassword ? '' : 'invalid'}
           />
           <br />
           <label>Ponovite lozinku</label> <br />
@@ -141,7 +160,7 @@ class CustomerInformations extends Component {
             onChange={change}
             onBlur={validateConfirmPassword}
             value={confirmPassword}
-            className={validConfirmPassword ? "" : "invalid"}
+            className={validConfirmPassword ? '' : 'invalid'}
           />
         </div>
         <button className="createAccountButton" onClick={register}>

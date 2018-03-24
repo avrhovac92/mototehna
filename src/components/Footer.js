@@ -9,7 +9,7 @@ import Copyright from 'components/Copyright';
 export default class Footer extends Component {
   render() {
     return (
-      <div>
+      <div className="footer-footer-wrapper">
         <div className="footer-container">
           {FooterList.map((item, key) => <FooterItem key={key} {...item} />)}
           <SocialNetworkLinks />

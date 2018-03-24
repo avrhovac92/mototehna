@@ -14,6 +14,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+.hide-screen {
+  margin-right: 10%;
 }
 
 .logo {
@@ -23,6 +28,7 @@
 
 .navbar {
   margin-bottom: 0px;
+  border-bottom: 3px solid #fbc106;
 }
 
 .navbar-nav {
@@ -113,7 +119,6 @@ ul li a:link {
     padding-left: 5%;
     height: 85px;
   }
-
 }
 
 @media (max-width: 522px) and (min-width: 449px) {

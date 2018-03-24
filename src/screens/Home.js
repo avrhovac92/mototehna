@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
-import 'css/App.css';
-import Header from 'components/Header';
+
+import ContainerComponent from 'components/ContainerComponent';
 
 import OtherServices from 'components/OtherServices';
 import TopProducts from 'components/TopProducts';
-import Footer from 'components/Footer';
 import AboutUs from 'components/AboutUs';
-import StartShoping from 'components/StartShoping';
+import StartShopping from 'components/StartShopping';
 
 class Home extends Component {
   render() {
     return (
-      <div>
-        <Header />
-        <StartShoping />
-        <TopProducts />
-        <OtherServices />
-        <AboutUs />
-        <Footer />
-      </div>
+      <ContainerComponent>
+        <div className="home-screen-container">
+          <StartShopping />
+          <TopProducts />
+          <OtherServices />
+          <AboutUs />
+        </div>
+      </ContainerComponent>
     );
   }
 }

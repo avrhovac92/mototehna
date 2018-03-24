@@ -1,18 +1,26 @@
-import React, { Component } from "react";
-import "css/App.css";
-import Header from "components/Header";
+import React, { Component } from 'react';
 
-import Footer from "components/Footer";
-import CustomerInformations from "components/CustomerInformations";
+import 'css/Page1.css';
+import CustomerInformations from 'components/CustomerInformations';
+import ContainerComponent from 'components/ContainerComponent';
+import MototehnaMap from 'components/MototehnaMap';
+import SideBar from 'components/Sidebar';
+import { SidebarPhones } from 'config/constants';
 
 class Registration extends Component {
   render() {
     return (
-      <div>
-        <Header />
+      <ContainerComponent
+        hasSidebar={true}
+        sidebarItems={[
+          <SideBar {...SidebarPhones} />,
+          <div className="aboutUsMap1">
+            <MototehnaMap />
+          </div>
+        ]}
+      >
         <CustomerInformations />
-        <Footer />
-      </div>
+      </ContainerComponent>
     );
   }
 }
