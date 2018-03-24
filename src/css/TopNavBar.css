@@ -1,0 +1,86 @@
+.TopNavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #010207;
+  color: #fff;
+  font-family: 'Nunito sans';
+  font-weight: lighter;
+  font-size: 15px;
+  padding: 2px 6%;
+}
+.bundleNavBar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.phone {
+  display: flex;
+  align-items: center;
+}
+.login {
+  display: flex;
+  align-content: center;
+  margin: 5px;
+  padding: 0px 5% 0px 0px;
+}
+.register {
+  display: flex;
+  align-content: center;
+  margin: 5px;
+  padding: 0px 5% 0px 0px;
+}
+.cart {
+  display: flex;
+  align-content: center;
+  margin: 5px;
+}
+.phoneIcon {
+  margin-right: 10px;
+  height: 20px;
+}
+.loginIcon {
+  margin-right: 10px;
+  height: 20px;
+}
+.registerIcon {
+  margin-right: 10px;
+  height: 20px;
+}
+.cartIcon {
+  margin-right: 10px;
+  height: 20px;
+}
+
+@media (max-width: 985px) and (min-width: 768px) {
+  .TopNavBar {
+    padding-left: 2%;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 522px) {
+  .top-navbar-hide-mobile {
+    display: none;
+  }
+  .TopNavBar {
+    padding-left: 8%;
+  }
+}
+
+@media (max-width: 522px) and (min-width: 449px) {
+  .top-navbar-hide-mobile {
+    display: none;
+  }
+  .TopNavBar {
+    padding-left: 3%;
+  }
+}
+
+@media (max-width: 449px) {
+  .TopNavBar {
+    padding-left: 3%;
+  }
+  .top-navbar-hide-mobile {
+    display: none;
+  }
+}

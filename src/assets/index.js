@@ -19,6 +19,9 @@ const Icons = {
   footerWorkingHours: require('./icons/footer-working-hours.png'),
   workingHours: require('./icons/hours-grey-sidebar.png'),
   addToCartIcon: require('./icons/add-to-cart-circle-icon.png'),
+  cartHeader: require('./icons/cart-header.png'),
+  loginHeader: require('./icons/login-header.png'),
+  registerHeader: require('./icons/register-header.png'),
   hamburgerMenu: require('./icons/hamburger-menu.png')
 };
 
