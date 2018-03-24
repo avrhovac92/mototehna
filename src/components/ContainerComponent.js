@@ -17,7 +17,9 @@ export default class ContainerComponent extends Component {
             <div className="container-sidebar-wrapper">
               <div className="container-sidebar-left-part">{children}</div>
               <div className="container-sidebar-right-part">
-                {sidebarItems.map(item => item)}
+                {sidebarItems.map((item, key) =>
+                  React.cloneElement(item, { key })
+                )}
               </div>
             </div>
           ) : (

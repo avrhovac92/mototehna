@@ -8,24 +8,24 @@
   font-size: 20px;
   color: #010207;
   line-height: 35px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
-.footer-item {
+.footer-item1 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.footer-item-text {
+.footer-item-text1 {
   font-family: 'Nunito Sans';
   font-weight: 300;
   color: #666;
   font-size: 15px;
 }
 
-.footer-image {
+.footer-image1 {
   align-self: flex-start;
   margin-right: 10px;
 }
@@ -38,4 +38,7 @@
 
 .no-border-bottom {
   border: none;
+}
+.margin-top-40 {
+  margin-top: 40px;
 }

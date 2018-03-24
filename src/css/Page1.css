@@ -36,5 +36,18 @@
 .videoTag {
   width: 360px;
   float: left;
-  margin-right:20px;
+  margin-right: 20px;
+}
+.page1-about-us-text {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .glavni {
+    align-items: center;
+  }
+  .videoTag {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
