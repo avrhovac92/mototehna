@@ -21,12 +21,12 @@ body {
 
 .container-sidebar-left-part {
   width: 70%;
-  border: 1px solid red;
+
 }
 .container-sidebar-right-part {
   width: 30%;
   padding: 40px 6%;
-  border: 1px solid blue;
+
 }
 
 @media (max-width: 768px) {

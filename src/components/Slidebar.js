@@ -21,6 +21,7 @@ export default class SlidebarItem extends Component {
             <span className="footer-item-text">{item.text}</span>
           </div>
         ))}
+        <h4 className="slidebar-title">Naša lokacija</h4>
       </div>
     );
   }

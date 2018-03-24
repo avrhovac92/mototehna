@@ -1,0 +1,23 @@
+.titleContainer1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+}
+.title1 {
+  display: flex;
+  margin-top: 57px;
+  margin-left:80px;
+  margin-bottom: 8px;
+  color: #010207;
+  font-family: 'Work Sans', 'Regular';
+  font-size: 38px;
+}
+.line1 {
+  display: flex;
+  margin-left:85px;
+  margin-bottom: 26px;
+  height: 3.4px;
+  width: 55px;
+  background-color: #fbc106;
+}

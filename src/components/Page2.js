@@ -9,6 +9,7 @@ class Page2 extends Component {
     return (
       <div className="konmap">
         <div className="footer-container1" />
+    
         <MototehnaMap className="aboutUsMap1" />
       </div>
     );

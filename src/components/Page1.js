@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import 'css/Page1.css';
 import { Video } from 'assets';
 import 'css/Footer.css';
-import Title from 'components/Title';
-import Page2 from 'components/Page2';
+import Title1 from 'components/Title1';
+
 
 class AboutUs extends Component {
   render() {
     return (
       <div className="glavni">
-        <Title className="title2" title="O Nama" />
+        <Title1 className="title2" title="O Nama" />
         <div className="glavnitext">
           <video
             src={Video.video}
