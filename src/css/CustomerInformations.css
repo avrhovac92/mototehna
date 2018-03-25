@@ -1,0 +1,94 @@
+.registrationContainer {
+  padding: 8%;
+  padding-top: 3%;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.registration-title {
+  display: flex;
+  margin-bottom: 8px;
+  color: #010207;
+  font-family: 'Work Sans', 'Regular';
+  font-size: 38px;
+}
+.underline {
+  display: flex;
+  margin-bottom: 40px;
+  height: 3px;
+  width: 50px;
+  background-color: #fbc106;
+}
+
+label {
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+  font-size: 18px;
+  color: #444;
+  padding-top: 17px;
+  padding-bottom: 4px;
+}
+
+input {
+  font-family: 'Nunito Sans';
+  font-weight: 300;
+  font-style: italic;
+  font-size: 16px;
+  padding: 13px;
+  background-color: #f4f4f4;
+  border: 1px solid #acacac;
+  width: 80%;
+}
+
+::placeholder {
+  color: #95989a;
+}
+
+.createAccountButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 30px;
+  margin: 30px 0 20px 0px;
+  background-color: #fbc106;
+  color: #010207;
+  font-family: 'Nunito Sans';
+  font-weight: 700;
+}
+
+.accountIcon {
+  margin: 5px;
+  display: flex;
+}
+
+.invalid {
+  border: 1px solid red;
+  outline: none;
+}
+
+@media (max-width: 721px) {
+  .registrationContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  createAccountButton {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+  }
+}

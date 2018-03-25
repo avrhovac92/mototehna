@@ -10,6 +10,6 @@
 
 @media only screen and (max-width: 960px){
   .copyright {
-    padding: 20px;
+    text-align: center;
   }
 }
