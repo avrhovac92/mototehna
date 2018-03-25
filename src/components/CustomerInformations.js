@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+
+import { userActions } from 'redux/actions';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import 'css/CustomerInformations.css';
 
 import { Icons } from 'assets';
@@ -10,7 +14,7 @@ class CustomerInformations extends Component {
       firstName: '',
       lastName: '',
       address: '',
-      phoneNumber: '',
+      phone: '',
       email: '',
       password: '',
       confirmPassword: '',
@@ -18,7 +22,6 @@ class CustomerInformations extends Component {
       validEmail: true,
       validConfirmPassword: true
     };
-
     this.validatePassword = this.validatePassword.bind(this);
   }
 
@@ -46,16 +49,25 @@ class CustomerInformations extends Component {
   };
 
   validateEmail = event => {
-    const emailRules = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+    const emailRules = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const validEmail = emailRules.test(event.target.value);
 
     this.setState({ validEmail });
     return validEmail;
   };
 
-  register = event => {
+  register = async event => {
     const {
-      state: { password, email, confirmPassword },
+      state: {
+        password,
+        email,
+        confirmPassword,
+        firstName,
+        lastName,
+        address,
+        phone
+      },
+      props: { registerUser, history: { replace } },
       validatePassword,
       validateEmail,
       validateConfirmPassword
@@ -69,7 +81,18 @@ class CustomerInformations extends Component {
     ) {
       return;
     }
-    //registration logic
+    const response = await registerUser({
+      email,
+      password,
+      firstName,
+      lastName,
+      address,
+      phone
+    });
+    if (response.status) {
+      replace('/');
+      window.scrollTo(0, 0);
+    }
   };
 
   render() {
@@ -83,7 +106,7 @@ class CustomerInformations extends Component {
         validEmail,
         validPassword,
         address,
-        phoneNumber,
+        phone,
         validConfirmPassword
       },
       change,
@@ -125,9 +148,9 @@ class CustomerInformations extends Component {
           <br />
           <label>Broj telefona</label> <br />
           <input
-            name="phoneNumber"
+            name="phone"
             placeholder="061 1234 567"
-            value={phoneNumber}
+            value={phone}
             onChange={change}
           />
           <br />
@@ -176,4 +199,6 @@ class CustomerInformations extends Component {
   }
 }
 
-export default CustomerInformations;
+export default connect(state => ({}), {
+  registerUser: userActions.registerUser
+})(withRouter(CustomerInformations));

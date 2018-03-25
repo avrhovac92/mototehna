@@ -12,6 +12,7 @@ const Icons = {
   next: require('./icons/next.png'),
   yellowCart: require('./icons/yellow-cart.png'),
   phoneHeader: require('./icons/phone-header.png'),
+  profileIcon: require('./icons/profile-icon.png'),
   phoneSidebar: require('./icons/phone-grey-sidebar.png'),
   viberLogo: require('./icons/viber-logo.png'),
   facebookIcon: require('./icons/facebook-icon.png'),

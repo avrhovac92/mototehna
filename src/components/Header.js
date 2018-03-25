@@ -43,12 +43,12 @@ class Header extends Component {
                 </Link>
               </li>
               <li>
-                <Link to="/register" className="navigation-item">
+                <Link to="/" className="navigation-item">
                   Prodavnica
                 </Link>
               </li>
               <li>
-                <Link to="/registration" className="navigation-item">
+                <Link to="/" className="navigation-item">
                   Usluge
                 </Link>
               </li>
@@ -58,7 +58,9 @@ class Header extends Component {
                 </Link>
               </li>
               <li>
-                <a className="navigation-item">Kontakt</a>
+                <Link to="/" className="navigation-item">
+                  Kontakt
+                </Link>
               </li>
             </ul>
           </div>
