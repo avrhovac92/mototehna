@@ -106,4 +106,8 @@ input {
     flex-direction: row;
     align-self: center;
   }
+
+  .error-message {
+    width: 100%;
+  }
 }
