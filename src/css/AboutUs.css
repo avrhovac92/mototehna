@@ -1,0 +1,38 @@
+.aboutUsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+.itemsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 0px 5%;
+  padding-bottom: 50px;
+}
+.aboutUsText {
+  width: 48%;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  color: #666;
+  padding-bottom: 30px;
+}
+.aboutUsMap {
+  width: 48%;
+}
+
+@media only screen and (max-width: 960px) {
+  .itemsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutUsText,
+  .aboutUsMap {
+    width: 75%;
+  }
+  .aboutUsMap {
+    height: 300px;
+  }
+}

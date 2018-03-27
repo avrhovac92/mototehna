@@ -1,0 +1,15 @@
+.copyright {
+  font-family: 'Nunito Sans';
+  font-weight: normal;
+  text-align: center;
+  background: #010207;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 960px){
+  .copyright {
+    text-align: center;
+  }
+}
