@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { userActions } from 'redux/actions';
-import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-import 'css/CustomerInformations.css';
+import { userActions } from "redux/actions";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import "css/CustomerInformations.css";
 
-import { Icons } from 'assets';
+import { Icons } from "assets";
 
 class CustomerInformations extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      address: '',
-      phone: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
+      firstName: "",
+      lastName: "",
+      address: "",
+      phone: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
       validPassword: true,
       validEmail: true,
       validConfirmPassword: true
@@ -90,7 +90,7 @@ class CustomerInformations extends Component {
       phone
     });
     if (response.status) {
-      replace('/');
+      replace("/");
       window.scrollTo(0, 0);
     }
   };
@@ -161,7 +161,7 @@ class CustomerInformations extends Component {
             value={email}
             onChange={change}
             onBlur={validateEmail}
-            className={validEmail ? '' : 'invalid'}
+            className={validEmail ? "" : "invalid"}
           />
           <br />
           <label>Lozinka</label> <br />
@@ -172,7 +172,7 @@ class CustomerInformations extends Component {
             value={password}
             onChange={change}
             onBlur={validatePassword}
-            className={validPassword ? '' : 'invalid'}
+            className={validPassword ? "" : "invalid"}
           />
           <br />
           <label>Ponovite lozinku</label> <br />
@@ -183,7 +183,7 @@ class CustomerInformations extends Component {
             onChange={change}
             onBlur={validateConfirmPassword}
             value={confirmPassword}
-            className={validConfirmPassword ? '' : 'invalid'}
+            className={validConfirmPassword ? "" : "invalid"}
           />
         </div>
         <button className="createAccountButton" onClick={register}>
@@ -194,6 +194,33 @@ class CustomerInformations extends Component {
           />
           <span>NAPRAVITE NALOG</span>
         </button>
+        <div className={validEmail ? "hidden-div" : ""}>
+          <span className="error-message">
+            <img
+              className="accountIcon"
+              src={Icons.loginErrorIcon}
+              alt="Error icon"
+            />Niste uneli ispravnu Email adresu!
+          </span>
+        </div>
+        <div className={validPassword ? "hidden-div" : ""}>
+          <span className="error-message">
+            <img
+              className="accountIcon"
+              src={Icons.loginErrorIcon}
+              alt="Error icon"
+            />Niste uneli ispravnu lozinku!
+          </span>
+        </div>
+        <div className={validConfirmPassword ? "hidden-div" : ""}>
+          <span className="error-message">
+            <img
+              className="accountIcon"
+              src={Icons.loginErrorIcon}
+              alt="Error icon"
+            />Lozinke se ne podudaraju!
+          </span>
+        </div>
       </div>
     );
   }
