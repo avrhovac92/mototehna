@@ -1,23 +1,23 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { userActions } from "redux/actions";
-import { withRouter } from "react-router-dom";
-import { connect } from "react-redux";
-import "css/CustomerInformations.css";
+import { userActions } from 'redux/actions';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import 'css/CustomerInformations.css';
 
-import { Icons } from "assets";
+import { Icons } from 'assets';
 
 class CustomerInformations extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
-      address: "",
-      phone: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
+      firstName: '',
+      lastName: '',
+      address: '',
+      phone: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
       validPassword: true,
       validEmail: true,
       validConfirmPassword: true
@@ -50,8 +50,11 @@ class CustomerInformations extends Component {
 
   validateEmail = event => {
     const emailRules = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const validEmail = emailRules.test(event.target.value);
+    let validEmail = false;
 
+    if (event.target.value) {
+      validEmail = emailRules.test(event.target.value);
+    }
     this.setState({ validEmail });
     return validEmail;
   };
@@ -73,8 +76,8 @@ class CustomerInformations extends Component {
       validateConfirmPassword
     } = this;
     if (
-      !validatePassword({ target: { value: password } }) ||
       !validateEmail({ target: { value: email } }) ||
+      !validatePassword({ target: { value: password } }) ||
       !validateConfirmPassword({
         target: { value: confirmPassword }
       })
@@ -90,7 +93,7 @@ class CustomerInformations extends Component {
       phone
     });
     if (response.status) {
-      replace("/");
+      replace('/');
       window.scrollTo(0, 0);
     }
   };
@@ -110,10 +113,7 @@ class CustomerInformations extends Component {
         validConfirmPassword
       },
       change,
-      validateEmail,
-      validatePassword,
-      register,
-      validateConfirmPassword
+      register
     } = this;
     return (
       <div className="registrationContainer">
@@ -160,8 +160,7 @@ class CustomerInformations extends Component {
             placeholder="vas@email.com"
             value={email}
             onChange={change}
-            onBlur={validateEmail}
-            className={validEmail ? "" : "invalid"}
+            className={validEmail ? '' : 'invalid'}
           />
           <br />
           <label>Lozinka</label> <br />
@@ -171,8 +170,7 @@ class CustomerInformations extends Component {
             placeholder="Lozinka"
             value={password}
             onChange={change}
-            onBlur={validatePassword}
-            className={validPassword ? "" : "invalid"}
+            className={validPassword ? '' : 'invalid'}
           />
           <br />
           <label>Ponovite lozinku</label> <br />
@@ -181,9 +179,8 @@ class CustomerInformations extends Component {
             type="password"
             placeholder="Ponovite lozinku"
             onChange={change}
-            onBlur={validateConfirmPassword}
             value={confirmPassword}
-            className={validConfirmPassword ? "" : "invalid"}
+            className={validConfirmPassword ? '' : 'invalid'}
           />
         </div>
         <button className="createAccountButton" onClick={register}>
@@ -194,7 +191,7 @@ class CustomerInformations extends Component {
           />
           <span>NAPRAVITE NALOG</span>
         </button>
-        <div className={validEmail ? "hidden-div" : ""}>
+        <div className={validEmail ? 'hidden-div' : ''}>
           <span className="error-message">
             <img
               className="accountIcon"
@@ -203,7 +200,7 @@ class CustomerInformations extends Component {
             />Niste uneli ispravnu Email adresu!
           </span>
         </div>
-        <div className={validPassword ? "hidden-div" : ""}>
+        <div className={validPassword ? 'hidden-div' : ''}>
           <span className="error-message">
             <img
               className="accountIcon"
@@ -212,7 +209,7 @@ class CustomerInformations extends Component {
             />Niste uneli ispravnu lozinku!
           </span>
         </div>
-        <div className={validConfirmPassword ? "hidden-div" : ""}>
+        <div className={validConfirmPassword ? 'hidden-div' : ''}>
           <span className="error-message">
             <img
               className="accountIcon"
