@@ -50,8 +50,11 @@ class CustomerInformations extends Component {
 
   validateEmail = event => {
     const emailRules = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const validEmail = emailRules.test(event.target.value);
+    let validEmail = false;
 
+    if (event.target.value) {
+      validEmail = emailRules.test(event.target.value);
+    }
     this.setState({ validEmail });
     return validEmail;
   };
@@ -73,8 +76,8 @@ class CustomerInformations extends Component {
       validateConfirmPassword
     } = this;
     if (
-      !validatePassword({ target: { value: password } }) ||
       !validateEmail({ target: { value: email } }) ||
+      !validatePassword({ target: { value: password } }) ||
       !validateConfirmPassword({
         target: { value: confirmPassword }
       })
@@ -110,10 +113,7 @@ class CustomerInformations extends Component {
         validConfirmPassword
       },
       change,
-      validateEmail,
-      validatePassword,
-      register,
-      validateConfirmPassword
+      register
     } = this;
     return (
       <div className="registrationContainer">
@@ -160,7 +160,6 @@ class CustomerInformations extends Component {
             placeholder="vas@email.com"
             value={email}
             onChange={change}
-            onBlur={validateEmail}
             className={validEmail ? '' : 'invalid'}
           />
           <br />
@@ -171,7 +170,6 @@ class CustomerInformations extends Component {
             placeholder="Lozinka"
             value={password}
             onChange={change}
-            onBlur={validatePassword}
             className={validPassword ? '' : 'invalid'}
           />
           <br />
@@ -181,7 +179,6 @@ class CustomerInformations extends Component {
             type="password"
             placeholder="Ponovite lozinku"
             onChange={change}
-            onBlur={validateConfirmPassword}
             value={confirmPassword}
             className={validConfirmPassword ? '' : 'invalid'}
           />
@@ -194,6 +191,33 @@ class CustomerInformations extends Component {
           />
           <span>NAPRAVITE NALOG</span>
         </button>
+        <div className={validEmail ? 'hidden-div' : ''}>
+          <span className="error-message">
+            <img
+              className="accountIcon"
+              src={Icons.loginErrorIcon}
+              alt="Error icon"
+            />Niste uneli ispravnu Email adresu!
+          </span>
+        </div>
+        <div className={validPassword ? 'hidden-div' : ''}>
+          <span className="error-message">
+            <img
+              className="accountIcon"
+              src={Icons.loginErrorIcon}
+              alt="Error icon"
+            />Niste uneli ispravnu lozinku!
+          </span>
+        </div>
+        <div className={validConfirmPassword ? 'hidden-div' : ''}>
+          <span className="error-message">
+            <img
+              className="accountIcon"
+              src={Icons.loginErrorIcon}
+              alt="Error icon"
+            />Lozinke se ne podudaraju!
+          </span>
+        </div>
       </div>
     );
   }

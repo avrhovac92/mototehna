@@ -26,7 +26,8 @@ const Icons = {
   registerHeader: require('./icons/register-header.png'),
   hamburgerMenu: require('./icons/hamburger-menu.png'),
   sendIcon: require('./icons/posalji-btn-icon.png'),
-  send: require('./icons/posalji-btn-icon.png')
+  send: require('./icons/posalji-btn-icon.png'),
+  loginErrorIcon: require('./icons/login-error-icon.png')
 };
 
 const Video = {

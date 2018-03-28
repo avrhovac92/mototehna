@@ -105,15 +105,17 @@ class ContactForm extends Component {
             />
             <br />
             <label>Poruka</label> <br />
-            <input
+            <textarea
               name="message"
               placeholder="Vaša poruka"
               value={message}
               onChange={change}
               onBlur={validateMessage}
-              className={validMessage ? '' : 'invalid'}
-              rows="4"
-              cols="5"
+              className={
+                validMessage ? 'text-area-field' : 'text-area-field invalid'
+              }
+              rows="5"
+              maxLength="512"
             />
             <br />
           </div>

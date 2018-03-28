@@ -22,9 +22,18 @@
   width: 50px;
   background-color: #fbc106;
 }
-
+.text-area-field {
+  font-family: 'Nunito Sans';
+  font-weight: 300;
+  font-style: italic;
+  font-size: 16px;
+  padding: 13px;
+  background-color: #f4f4f4;
+  border: 1px solid #acacac;
+  width: 60%;
+}
 label {
-  font-family: 'Nunito Sans'+SemiBold;
+  font-family: 'Nunito Sans' + SemiBold;
   font-weight: 600;
   font-size: 18px;
   color: #444;
@@ -68,7 +77,7 @@ input :focus {
   background-color: white;
 }
 
-.largerInput{
+.largerInput {
   width: 300px;
   height: 100px;
 }
