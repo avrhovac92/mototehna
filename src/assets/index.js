@@ -25,6 +25,7 @@ const Icons = {
   loginHeader: require('./icons/login-header.png'),
   registerHeader: require('./icons/register-header.png'),
   hamburgerMenu: require('./icons/hamburger-menu.png'),
+  sendIcon: require('./icons/posalji-btn-icon.png'),
   send: require('./icons/posalji-btn-icon.png')
 };
 
