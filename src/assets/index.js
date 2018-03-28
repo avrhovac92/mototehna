@@ -24,7 +24,8 @@ const Icons = {
   cartHeader: require('./icons/cart-header.png'),
   loginHeader: require('./icons/login-header.png'),
   registerHeader: require('./icons/register-header.png'),
-  hamburgerMenu: require('./icons/hamburger-menu.png')
+  hamburgerMenu: require('./icons/hamburger-menu.png'),
+  send: require('./icons/posalji-btn-icon.png')
 };
 
 const Video = {

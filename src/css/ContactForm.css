@@ -1,0 +1,74 @@
+.contactContainer {
+  padding: 8%;
+  padding-top: 3%;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-title {
+  display: flex;
+  margin-bottom: 8px;
+  color: #010207;
+  font-family: 'Work Sans', 'Regular';
+  font-size: 38px;
+}
+.underline {
+  display: flex;
+  margin-bottom: 40px;
+  height: 3px;
+  width: 50px;
+  background-color: #fbc106;
+}
+
+label {
+  font-family: 'Nunito Sans'+SemiBold;
+  font-weight: 600;
+  font-size: 18px;
+  color: #444;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+input {
+  font-family: 'Nunito Sans';
+  font-weight: 300;
+  font-style: italic;
+  font-size: 16px;
+  padding: 13px;
+  background-color: #f4f4f4;
+  border: 1px solid #acacac;
+  width: 60%;
+}
+
+::placeholder {
+  color: #95989a;
+}
+.contactFormButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px 5px 10px;
+  margin: 30px 5px 10px 5px;
+  background-color: #fbc106;
+  color: #010207;
+  font-family: 'Nunito Sans';
+  font-weight: 700;
+  width: 140px;
+  height: 40px;
+}
+.imageSend {
+  margin: 5px;
+  display: flex;
+}
+input :focus {
+  background-color: white;
+}
+
+.largerInput{
+  width: 300px;
+  height: 100px;
+}

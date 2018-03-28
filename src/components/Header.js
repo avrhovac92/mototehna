@@ -58,7 +58,7 @@ class Header extends Component {
                 </Link>
               </li>
               <li>
-                <Link to="/" className="navigation-item">
+                <Link to="/contactform" className="navigation-item">
                   Kontakt
                 </Link>
               </li>
