@@ -1,21 +1,21 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { userActions } from "redux/actions";
-import { withRouter } from "react-router-dom";
-import { connect } from "react-redux";
-import "css/OrderLoggedIn.css";
+import { userActions } from 'redux/actions';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import 'css/OrderLoggedIn.css';
 
-import { Icons } from "assets";
+import { Icons } from 'assets';
 
 class OrderLoggedIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
-      address: "",
-      phone: "",
-      email: "",
+      firstName: props.firstName || '',
+      lastName: props.lastName || '',
+      address: props.address || '',
+      phone: props.phone || '',
+      email: props.email || '',
       validEmail: true,
       validPhoneNumber: true
     };
@@ -28,7 +28,7 @@ class OrderLoggedIn extends Component {
   };
 
   validatePhoneNumber = event => {
-    if (event.target.value === "") {
+    if (event.target.value === '') {
       this.setState({ validPhoneNumber: false });
       return false;
     }
@@ -67,7 +67,7 @@ class OrderLoggedIn extends Component {
       phone
     });
     if (response.status) {
-      replace("/");
+      replace('/');
       window.scrollTo(0, 0);
     }
   };
@@ -134,7 +134,7 @@ class OrderLoggedIn extends Component {
             value={phone}
             onChange={change}
             onBlur={validatePhoneNumber}
-            className={validPhoneNumber ? "" : "invalid"}
+            className={validPhoneNumber ? '' : 'invalid'}
           />
           <br />
           <label>Email</label> <br />
@@ -144,7 +144,7 @@ class OrderLoggedIn extends Component {
             value={email}
             onChange={change}
             onBlur={validateEmail}
-            className={validEmail ? "" : "invalid"}
+            className={validEmail ? '' : 'invalid'}
           />
         </div>
         <button className="createAccountButton" onClick={register}>
@@ -160,6 +160,10 @@ class OrderLoggedIn extends Component {
   }
 }
 
-export default connect(state => ({}), {
-  registerUser: userActions.registerUser
-})(withRouter(OrderLoggedIn));
+export default connect(state => ({
+  email: state.user.email,
+  phone: state.user.phone,
+  firstName: state.user.firstName,
+  lastName: state.user.lastName,
+  address: state.user.address
+}))(withRouter(OrderLoggedIn));

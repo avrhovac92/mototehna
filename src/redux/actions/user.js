@@ -35,3 +35,20 @@ export const registerUser = user => {
     }
   };
 };
+export const signInUser = user => {
+  return async (dispatch, getState) => {
+    try {
+      const logUser = await Fetch({
+        endpoint: 'http://localhost:3001/api/users/signIn',
+        method: 'POST',
+        body: user
+      });
+      const result = await logUser.json();
+      dispatch(updateUser(result));
+      return { status: true };
+    } catch (error) {
+      console.log(error.message);
+      return { status: false, message: error.message };
+    }
+  };
+};

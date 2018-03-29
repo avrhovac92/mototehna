@@ -20,6 +20,7 @@ class CustomerInformations extends Component {
       confirmPassword: '',
       validPassword: true,
       validEmail: true,
+      validPhone: true,
       validConfirmPassword: true
     };
     this.validatePassword = this.validatePassword.bind(this);
@@ -59,6 +60,12 @@ class CustomerInformations extends Component {
     return validEmail;
   };
 
+  validatePhone = event => {
+    const validPhone = event.target.value.length ? true : false;
+    this.setState({ validPhone });
+    return validPhone;
+  };
+
   register = async event => {
     const {
       state: {
@@ -70,12 +77,14 @@ class CustomerInformations extends Component {
         address,
         phone
       },
-      props: { registerUser, history: { replace } },
+      props: { registerUser, history: { replace }, insideCheckout },
       validatePassword,
       validateEmail,
-      validateConfirmPassword
+      validateConfirmPassword,
+      validatePhone
     } = this;
     if (
+      !validatePhone({ target: { value: phone } }) ||
       !validateEmail({ target: { value: email } }) ||
       !validatePassword({ target: { value: password } }) ||
       !validateConfirmPassword({
@@ -93,7 +102,7 @@ class CustomerInformations extends Component {
       phone
     });
     if (response.status) {
-      replace('/');
+      insideCheckout ? replace('/checkout-confirmation') : replace('/');
       window.scrollTo(0, 0);
     }
   };
@@ -110,17 +119,25 @@ class CustomerInformations extends Component {
         validPassword,
         address,
         phone,
-        validConfirmPassword
+        validConfirmPassword,
+        validPhone
       },
+      props: { insideCheckout },
       change,
       register
     } = this;
     return (
       <div className="registrationContainer">
-        <div className="title-container">
-          <p className="registration-title">Registracija</p>
-          <div className="underline" />
-        </div>
+        {insideCheckout ? (
+          <p className="registration-title">
+            <span className="noviKorisnik">Novi korisnik</span>
+          </p>
+        ) : (
+          <div className="title-container">
+            <p className="registration-title">Registracija</p>
+            <div className="underline" />
+          </div>
+        )}
         <div className="registration-form">
           <label>Ime</label> <br />
           <input
@@ -183,14 +200,25 @@ class CustomerInformations extends Component {
             className={validConfirmPassword ? '' : 'invalid'}
           />
         </div>
-        <button className="createAccountButton" onClick={register}>
-          <img
-            className="accountIcon"
-            src={Icons.createAccountIcon}
-            alt="Account icon"
-          />
-          <span>NAPRAVITE NALOG</span>
-        </button>
+        {insideCheckout ? (
+          <button className="createAccountButton" onClick={register}>
+            <img
+              className="accountIcon"
+              src={Icons.confirmOrder}
+              alt="Account icon"
+            />
+            <span>POTVRDI NARUDZBU</span>
+          </button>
+        ) : (
+          <button className="createAccountButton" onClick={register}>
+            <img
+              className="accountIcon"
+              src={Icons.createAccountIcon}
+              alt="Account icon"
+            />
+            <span>NAPRAVITE NALOG</span>
+          </button>
+        )}
         <div className={validEmail ? 'hidden-div' : ''}>
           <span className="error-message">
             <img
@@ -216,6 +244,15 @@ class CustomerInformations extends Component {
               src={Icons.loginErrorIcon}
               alt="Error icon"
             />Lozinke se ne podudaraju!
+          </span>
+        </div>
+        <div className={validPhone ? 'hidden-div' : ''}>
+          <span className="error-message">
+            <img
+              className="accountIcon"
+              src={Icons.loginErrorIcon}
+              alt="Error icon"
+            />Niste uneli Broj telefona!
           </span>
         </div>
       </div>

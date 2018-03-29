@@ -12,7 +12,7 @@
   display: flex;
   margin-bottom: 8px;
   color: #010207;
-  font-family: "Work Sans", "Regular";
+  font-family: 'Work Sans', 'Regular';
   font-size: 38px;
 }
 .underline {
@@ -24,7 +24,7 @@
 }
 
 label {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: 600;
   font-size: 18px;
   color: #444;
@@ -33,7 +33,7 @@ label {
 }
 
 input {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: 300;
   font-style: italic;
   font-size: 16px;
@@ -56,7 +56,7 @@ input {
   margin: 30px 0 20px 0px;
   background-color: #fbc106;
   color: #010207;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: 700;
 }
 
@@ -80,7 +80,7 @@ input {
   align-items: center;
   background-color: #fbc106;
   color: #010207;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: 700;
   width: 80%;
 }

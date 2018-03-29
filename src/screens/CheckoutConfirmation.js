@@ -5,17 +5,14 @@ import 'css/Order.css';
 import ContainerComponent from 'components/ContainerComponent';
 import OrderLoggedIn from 'components/OrderLoggedIn';
 
-
-
 class Registration extends Component {
   render() {
     return (
       <ContainerComponent>
-
-
-      <OrderLoggedIn />
+        <OrderLoggedIn />
       </ContainerComponent>
-    )}
+    );
   }
+}
 
-export default Registration
+export default Registration;

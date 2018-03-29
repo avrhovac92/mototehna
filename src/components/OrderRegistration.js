@@ -117,8 +117,9 @@ class OrderRegistration extends Component {
     } = this;
     return (
       <div className="registrationContainer">
-          <p className="registration-title"><span className='noviKorisnik'>
-          Novi korisnik</span></p>
+        <p className="registration-title">
+          <span className="noviKorisnik">Novi korisnik</span>
+        </p>
 
         <div className="registration-form">
           <label>Ime</label> <br />
@@ -193,7 +194,7 @@ class OrderRegistration extends Component {
           />
           <span>POTVRDI NARUDZBU</span>
         </button>
-        <div className={validEmail ? "hidden-div" : ""}>
+        <div className={validEmail ? 'hidden-div' : ''}>
           <span className="error-message">
             <img
               className="accountIcon"
@@ -202,7 +203,7 @@ class OrderRegistration extends Component {
             />Niste uneli ispravnu Email adresu!
           </span>
         </div>
-        <div className={validPassword ? "hidden-div" : ""}>
+        <div className={validPassword ? 'hidden-div' : ''}>
           <span className="error-message">
             <img
               className="accountIcon"
@@ -211,7 +212,7 @@ class OrderRegistration extends Component {
             />Niste uneli ispravnu lozinku!
           </span>
         </div>
-        <div className={validConfirmPassword ? "hidden-div" : ""}>
+        <div className={validConfirmPassword ? 'hidden-div' : ''}>
           <span className="error-message">
             <img
               className="accountIcon"
