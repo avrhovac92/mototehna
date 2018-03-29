@@ -38,21 +38,29 @@ class Header extends Component {
           >
             <ul className="nav navbar-nav">
               <li>
-                <a className="navigation-item">Naslovna</a>
+                <Link to="/" className="navigation-item">
+                  Naslovna
+                </Link>
               </li>
               <li>
-                <Link to="/register" className="navigation-item">
+                <Link to="/" className="navigation-item">
                   Prodavnica
                 </Link>
               </li>
               <li>
-                <a className="navigation-item">Usluge</a>
+                <Link to="/" className="navigation-item">
+                  Usluge
+                </Link>
               </li>
               <li>
-                <a className="navigation-item">O Nama</a>
+                <Link to="/aboutus" className="navigation-item">
+                  O Nama
+                </Link>
               </li>
               <li>
-                <a className="navigation-item">Kontakt</a>
+                <Link to="/" className="navigation-item">
+                  Kontakt
+                </Link>
               </li>
             </ul>
           </div>

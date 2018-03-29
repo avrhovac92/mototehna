@@ -9,6 +9,10 @@
   font-size: 15px;
   padding: 2px 6%;
 }
+.top-navbar-register-container {
+  display: flex;
+  align-items: 'center';
+}
 .bundleNavBar {
   display: flex;
   align-items: center;
@@ -21,20 +25,22 @@
 }
 .login {
   display: flex;
-  align-content: center;
+  align-items: center;
   margin: 5px;
-  padding: 0px 5% 0px 0px;
+  margin-left: 25px;
 }
 .register {
   display: flex;
-  align-content: center;
+  align-items: center;
   margin: 5px;
+  margin-left: 25px;
   padding: 0px 5% 0px 0px;
 }
-.cart {
+.top-navbar-cart {
   display: flex;
-  align-content: center;
+  align-items: center;
   margin: 5px;
+  margin-left: 25px;
 }
 .phoneIcon {
   margin-right: 10px;
@@ -66,6 +72,15 @@
   .TopNavBar {
     padding-left: 8%;
   }
+  .register {
+    margin-left: 5px;
+  }
+  .login {
+    margin-left: 5px;
+  }
+  .top-navbar-cart {
+    margin-left: 5px;
+  }
 }
 
 @media (max-width: 522px) and (min-width: 449px) {
@@ -75,6 +90,15 @@
   .TopNavBar {
     padding-left: 3%;
   }
+  .register {
+    margin-left: 5px;
+  }
+  .login {
+    margin-left: 5px;
+  }
+  .top-navbar-cart {
+    margin-left: 5px;
+  }
 }
 
 @media (max-width: 449px) {
@@ -83,5 +107,14 @@
   }
   .top-navbar-hide-mobile {
     display: none;
+  }
+  .register {
+    margin-left: 5px;
+  }
+  .login {
+    margin-left: 5px;
+  }
+  .top-navbar-cart {
+    margin-left: 5px;
   }
 }

@@ -42,7 +42,8 @@
   color: #010207;
   font-family: 'Nunito Sans';
   font-weight: 700;
-}.cart {
+}
+.cart {
   margin: 5px;
   display: flex;
 }
