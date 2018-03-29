@@ -1,0 +1,41 @@
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 55px;
+  margin-top: 100px;
+  margin-bottom: 15px;
+}
+.registration-title {
+  display: flex;
+  margin-bottom: 8px;
+  color: #010207;
+  font-family: 'Work Sans', 'Regular';
+  font-size: 38px;
+}
+.underline {
+  display: flex;
+  margin-bottom: 40px;
+  height: 3px;
+  width: 55px;
+  background-color: #fbc106;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  height: 3px;
+  padding: 10px;
+  font-family: 'Nunito Sans';
+  color: #444;
+}
+
+.orderRequestText {
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+  font-size: 23px;
+  color: #444;
+  margin-left: 53px;
+}
