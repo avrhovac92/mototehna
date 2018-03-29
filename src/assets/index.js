@@ -28,8 +28,7 @@ const Icons = {
   confirmOrder: require('./icons/potvrdi-narudzbu-btn.png'),
   loginIcon: require('./icons/prijava-btn-icon.png'),
   successfulOrder: require('./icons/uspjesna-narudzba.png'),
-  loginErrorIcon: require('./icons/loginErrorIcon.png')
-
+  loginErrorIcon: require('./icons/login-error-icon.png')
 };
 
 const Video = {

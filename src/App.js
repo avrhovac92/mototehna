@@ -8,8 +8,10 @@ import { PersistGate } from 'redux-persist/integration/react';
 import Home from 'screens/Home';
 import Registration from 'screens/Registration';
 import AboutUs from 'screens/AboutUs';
-import Order from 'screens/RegistrationCheckout'
-import Checkout from 'screens/CheckoutConfirmation'
+import Order from 'screens/RegistrationCheckout';
+import Checkout from 'screens/CheckoutConfirmation';
+import PrivacyPolicy from 'screens/PrivacyPolicy';
+import TermsAndConditions from 'screens/TermsAndConditions';
 
 class App extends Component {
   constructor(props) {
@@ -28,6 +30,12 @@ class App extends Component {
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/registration-checkout" component={Order} />
             <Route exact path="/checkout-confirmation" component={Checkout} />
+            <Route exact path="/privacy-policy" component={PrivacyPolicy} />
+            <Route
+              exact
+              path="/terms-and-conditions"
+              component={TermsAndConditions}
+            />
           </Switch>
         </PersistGate>
       </Provider>

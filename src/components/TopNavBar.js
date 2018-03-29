@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import 'css/TopNavBar.css';
-import { connect } from 'react-redux';
-import { userActions } from 'redux/actions';
-import { Icons } from 'assets';
-import { Link } from 'react-router-dom';
+import "css/TopNavBar.css";
+import { connect } from "react-redux";
+import { userActions } from "redux/actions";
+import { Icons } from "assets";
+import { Link } from "react-router-dom";
 
 class TopNavBar extends Component {
   render() {
@@ -30,7 +30,7 @@ class TopNavBar extends Component {
                   alt="Login header"
                 />
                 <span className="top-navbar-hide-mobile">
-                  {firstName ? firstName : 'Dobrodosli'}
+                  {firstName ? firstName : "Dobrodosli"}
                 </span>
               </div>
               <Link to="/">
@@ -66,15 +66,17 @@ class TopNavBar extends Component {
               </Link>
             </div>
           )}
-          <div className="top-navbar-cart">
-            <img
-              src={Icons.cartHeader}
-              className="cartIcon"
-              alt="Cart header"
-            />
-            <span className="top-navbar-hide-mobile">Korpa</span>
-            <span>(0)</span>
-          </div>
+          <Link to='/'>
+            <div className="top-navbar-cart">
+              <img
+                src={Icons.cartHeader}
+                className="cartIcon"
+                alt="Cart header"
+              />
+              <span className="top-navbar-hide-mobile">Korpa</span>
+              <span>(0)</span>
+            </div>
+          </Link>
         </div>
       </div>
     );
