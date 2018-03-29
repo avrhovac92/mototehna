@@ -1,12 +1,50 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import ReactModal from "react-modal";
 
-import 'css/TopNavBar.css';
-import { Icons } from 'assets';
+import { Icons } from "assets";
+
+import "css/ModalLogin.css";
+import "css/TopNavBar.css";
+
+import "screens/Home.js";
+
+ReactModal.setAppElement("#root");
 
 class TopNavBar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showModal: false
+    };
+
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false });
+  }
+
   render() {
     return (
       <div className="TopNavBar">
+        <ReactModal
+          closeTimeoutMS={500}
+          isOpen={this.state.showModal}
+          contentLabel="onRequestClose Example"
+          onRequestClose={this.handleCloseModal}
+          className="Modal"
+          overlayClassName="Overlay"
+        >
+          <div className="close" onClick={this.handleCloseModal}>
+            x
+          </div>
+        </ReactModal>
+
         <div className="phone">
           <img
             src={Icons.phoneHeader}
@@ -17,7 +55,7 @@ class TopNavBar extends Component {
         </div>
 
         <div className="bundleNavBar">
-          <div className="login">
+          <div className="login" onClick={this.handleOpenModal}>
             <img
               src={Icons.loginHeader}
               className="loginIcon"
