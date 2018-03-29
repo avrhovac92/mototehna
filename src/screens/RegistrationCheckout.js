@@ -5,7 +5,7 @@ import 'css/Order.css';
 import ContainerComponent from 'components/ContainerComponent';
 import OrderRegistration from 'components/OrderRegistration';
 import OrderLogin from 'components/OrderLogin';
-import OrderLoggedIn from 'components/OrderLoggedIn';
+
 
 class Registration extends Component {
   render() {
@@ -22,9 +22,9 @@ class Registration extends Component {
         <input type='radio'  name='korisnik' value='postojeciKorisnik'/>Postojeci korisnik
         </form>
       </div>
-      <OrderRegistration />
-      <OrderLogin />
-      <OrderLoggedIn />
+      <OrderRegistration insideCheckout={true} />
+      <OrderLogin insideCheckout={true} />
+
       </ContainerComponent>
     );
   }
