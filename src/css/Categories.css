@@ -22,10 +22,6 @@
   margin-bottom: 10%;
 }
 
-/* .checkboxes {
-  padding-top: 5%;
-} */
-
 .items-list {
   display: flex;
   flex-direction: row;
@@ -58,12 +54,6 @@
   position: absolute;
   opacity: 0;
   cursor: pointer;
-}
-
-.button-test {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
 }
 
 .checkmark {
@@ -130,11 +120,6 @@
   width: 15px;
   height: 20px;
   margin-right: 10%;
-}
-
-.test-button {
-  margin-right: 10%;
-  justify-content: space-between;
 }
 
 @media (max-width: 768px) {
