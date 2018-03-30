@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { userActions } from 'redux/actions';
-import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-import 'css/CustomerInformations.css';
+import { userActions } from "redux/actions";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import "css/CustomerInformations.css";
 
-import { Icons } from 'assets';
+import { Icons } from "assets";
 
 class CustomerInformations extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      address: '',
-      phone: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
+      firstName: "",
+      lastName: "",
+      address: "",
+      phone: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
       validPassword: true,
       validEmail: true,
       validConfirmPassword: true
@@ -93,7 +93,7 @@ class CustomerInformations extends Component {
       phone
     });
     if (response.status) {
-      replace('/');
+      replace("/");
       window.scrollTo(0, 0);
     }
   };
@@ -160,7 +160,7 @@ class CustomerInformations extends Component {
             placeholder="vas@email.com"
             value={email}
             onChange={change}
-            className={validEmail ? '' : 'invalid'}
+            className={validEmail ? "" : "invalid"}
           />
           <br />
           <label>Lozinka</label> <br />
@@ -170,7 +170,7 @@ class CustomerInformations extends Component {
             placeholder="Lozinka"
             value={password}
             onChange={change}
-            className={validPassword ? '' : 'invalid'}
+            className={validPassword ? "" : "invalid"}
           />
           <br />
           <label>Ponovite lozinku</label> <br />
@@ -180,7 +180,7 @@ class CustomerInformations extends Component {
             placeholder="Ponovite lozinku"
             onChange={change}
             value={confirmPassword}
-            className={validConfirmPassword ? '' : 'invalid'}
+            className={validConfirmPassword ? "" : "invalid"}
           />
         </div>
         <button className="createAccountButton" onClick={register}>
@@ -191,7 +191,7 @@ class CustomerInformations extends Component {
           />
           <span>NAPRAVITE NALOG</span>
         </button>
-        <div className={validEmail ? 'hidden-div' : ''}>
+        <div className={validEmail ? "hidden-div" : ""}>
           <span className="error-message">
             <img
               className="accountIcon"
@@ -200,7 +200,7 @@ class CustomerInformations extends Component {
             />Niste uneli ispravnu Email adresu!
           </span>
         </div>
-        <div className={validPassword ? 'hidden-div' : ''}>
+        <div className={validPassword ? "hidden-div" : ""}>
           <span className="error-message">
             <img
               className="accountIcon"
@@ -209,7 +209,7 @@ class CustomerInformations extends Component {
             />Niste uneli ispravnu lozinku!
           </span>
         </div>
-        <div className={validConfirmPassword ? 'hidden-div' : ''}>
+        <div className={validConfirmPassword ? "hidden-div" : ""}>
           <span className="error-message">
             <img
               className="accountIcon"

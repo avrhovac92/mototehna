@@ -1,0 +1,144 @@
+#categories {
+  margin: 7%;
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  text-align: left;
+  border-bottom: 1px solid #fbc106;
+  width: 80%;
+  color: #515151;
+  line-height: 35px;
+}
+
+.categories-title {
+  padding-top: 4%;
+}
+
+.categories {
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 30%;
+  margin-left: 80px;
+  margin-bottom: 10%;
+}
+
+/* .checkboxes {
+  padding-top: 5%;
+} */
+
+.items-list {
+  display: flex;
+  flex-direction: row;
+  font-family: "Nunito Sans";
+  font-weight: normal;
+  font-size: 15px;
+  color: #666;
+}
+
+.content-container {
+  margin-left: 10%;
+  margin-top: 4%;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.button-test {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: #eee;
+  border: 2px solid #666;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #fbc106;
+  border: none;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 5px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 1.5px 1.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.categories-content {
+  font-weight: normal;
+  color: #666;
+}
+.mopeds {
+  margin-bottom: 0;
+}
+
+.filter-reseting {
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  font-size: 15px;
+  color: #fbc106;
+  text-decoration: underline;
+  padding-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.collapse-icon {
+  float: right;
+  width: 15px;
+  height: 20px;
+  margin-right: 10%;
+}
+
+.test-button {
+  margin-right: 10%;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0;
+  }
+}
