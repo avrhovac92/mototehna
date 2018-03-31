@@ -38,15 +38,19 @@ class Header extends Component {
           >
             <ul className="nav navbar-nav">
               <li>
-                <a className="navigation-item">Naslovna</a>
+                <Link to="/" className="navigation-item">
+                  Naslovna
+                </Link>
               </li>
               <li>
-                <Link to="/register" className="navigation-item">
+                <Link to="/" className="navigation-item">
                   Prodavnica
                 </Link>
               </li>
               <li>
-                <a className="navigation-item">Usluge</a>
+                <Link to="/" className="navigation-item">
+                  Usluge
+                </Link>
               </li>
               <li>
                 <Link to="/aboutus" className="navigation-item">
@@ -54,7 +58,9 @@ class Header extends Component {
                 </Link>
               </li>
               <li>
-                <a className="navigation-item">Kontakt</a>
+                <Link to="/contact-form" className="navigation-item">
+                  Kontakt
+                </Link>
               </li>
             </ul>
           </div>

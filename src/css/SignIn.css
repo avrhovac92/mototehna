@@ -6,13 +6,13 @@
   border: 2px solid #e5e5e5;
   height: 600px;
   width: 400px;
-  margin: 3%;
 }
 .topTitle {
   font-size: 18px;
   color: #666;
+  display: flex;
+  justify-content: space-between;
   align-items: flex-start;
-  flex-direction: column;
   background-color: #eee;
   width: 100%;
   padding: 3%;
@@ -45,11 +45,20 @@
   width: 80%;
   font-size: 18px;
 }
+.sign-in-close {
+  margin-right: 10px;
+  padding: 0 7px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 2px 1px #ccc;
+}
 .sign-in-email {
   padding: 10px;
   background: #eee;
   border: 1px solid grey;
   font-style: italic;
+  width: 100%;
 }
 .sign-in-fp-icon {
   margin-bottom: 4px;
@@ -101,7 +110,7 @@
   margin-top: 5%;
 }
 .here {
-  margin-left: 1%;
+  margin-left: 3px;
   color: #fbc106;
   text-decoration: underline;
 }
