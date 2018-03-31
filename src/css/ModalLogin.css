@@ -4,10 +4,7 @@
   position: absolute;
   background-color: white;
 
-  -webkit-animation: fadeInFromNone 0.5s ease-out;
-  -moz-animation: fadeInFromNone 0.5s ease-out;
-  -o-animation: fadeInFromNone 0.5s ease-out;
-  animation: fadeInFromNone 0.5s ease-out;
+
 }
 .close {
   align-self: flex-end;
@@ -24,9 +21,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  -webkit-animation: fadeInFromNone 0.5s ease-out;
-  -moz-animation: fadeInFromNone 0.5s ease-out;
-  -o-animation: fadeInFromNone 0.5s ease-out;
+
   animation: fadeInFromNone 0.5s ease-out;
 }
 
@@ -34,9 +29,7 @@
   animation: fadeOutFromNone 1s ease-out;
 }
 
-.ReactModal__Body--open {
-  overflow: hidden;
-}
+
 
 @-webkit-keyframes fadeInFromNone {
   0% {
@@ -146,7 +139,7 @@
 
   1% {
     display: block;
-    opacity: 0.5;
+    opacity: 0;
     z-index: 10;
   }
   25% {
@@ -204,14 +197,6 @@
     opacity: 0;
     z-index: 10;
     display: none;
-  }
-}
-@keyframes fadein {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 
