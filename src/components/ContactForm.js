@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import 'css/ContactForm.css';
 import { Icons } from 'assets';
+import { userActions } from 'redux/actions';
+import { connect } from 'react-redux';
 
 class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
+      name: '',
       email: '',
       phone: '',
       message: '',
       validEmail: true,
       validName: true,
-      validMessage: true
+      validMessage: true,
+      formSent: false
     };
   }
   change = event => {
@@ -25,7 +28,7 @@ class ContactForm extends Component {
     const emailRules = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const validEmail = emailRules.test(event.target.value);
 
-    this.setState({ validEmail });
+    this.setState({ validEmail: event.target.value ? validEmail : false });
     return validEmail;
   };
 
@@ -33,10 +36,9 @@ class ContactForm extends Component {
     if (event.target.value === '') {
       this.setState({ validName: false });
       return false;
-    } else {
-      this.setState({ validConfirmPassword: true });
-      return true;
     }
+    this.setState({ validName: true });
+    return true;
   };
 
   validateMessage = event => {
@@ -55,43 +57,56 @@ class ContactForm extends Component {
   };
   send = async event => {
     const {
-      state: { firstName, email, message },
-      props: { registerUser, history: { replace } },
+      state: { name, email, message, phone },
+      props: { sendContactForm },
       validateMessage,
-      validateEmail
+      validateEmail,
+      fieldRequired
     } = this;
     if (
+      !fieldRequired({ target: { value: name } }) ||
       !validateEmail({ target: { value: email } }) ||
       !validateMessage({ target: { value: message } })
     ) {
       return;
     }
-    const response = await registerUser({
+    const response = await sendContactForm({
+      name,
       email,
-      firstName,
+      phone,
       message
     });
     if (response.status) {
-      replace('/');
-      window.scrollTo(0, 0);
+      this.setState({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        formSent: true
+      });
+      setTimeout(() => {
+        this.setState({ formSent: false });
+      }, 5000);
     }
   };
 
   render() {
     const {
       state: {
-        firstName,
+        name,
         email,
         phone,
         message,
         validEmail,
         validName,
-        validMessage
+        validMessage,
+        formSent
       },
       change,
       validateEmail,
       fieldRequired,
-      validateMessage
+      validateMessage,
+      send
     } = this;
     return (
       <div className="contactContainer">
@@ -101,9 +116,9 @@ class ContactForm extends Component {
           <div className="registration-form">
             <label>Ime</label> <br />
             <input
-              name="firstName"
+              name="name"
               placeholder="Vaše ime"
-              value={firstName}
+              value={name}
               onChange={change}
               onBlur={fieldRequired}
               className={validName ? '' : 'invalid'}
@@ -142,11 +157,17 @@ class ContactForm extends Component {
             />
             <br />
           </div>
-          <button className="contactFormButton">
+          <button className="contactFormButton" onClick={send}>
             <img className="iconSend" src={Icons.send} alt="Send icon" />
             <span>POŠALJI</span>
           </button>
-          <div className={validEmail ? 'hidden-div' : ''}>
+          <div
+            className={
+              validEmail
+                ? 'validation-container hidden-div'
+                : 'validation-container'
+            }
+          >
             <span className="error-message">
               <img
                 className="iconSend"
@@ -155,7 +176,13 @@ class ContactForm extends Component {
               />Niste uneli ispravnu Email adresu!
             </span>
           </div>
-          <div className={validMessage ? 'hidden-div' : ''}>
+          <div
+            className={
+              validMessage
+                ? 'validation-container hidden-div'
+                : 'validation-container'
+            }
+          >
             <span className="error-message">
               <img
                 className="iconSend"
@@ -164,7 +191,13 @@ class ContactForm extends Component {
               />Niste uneli poruku!
             </span>
           </div>
-          <div className={validName ? 'hidden-div' : ''}>
+          <div
+            className={
+              validName
+                ? 'validation-container hidden-div'
+                : 'validation-container'
+            }
+          >
             <span className="error-message">
               <img
                 className="iconSend"
@@ -173,10 +206,28 @@ class ContactForm extends Component {
               />Niste uneli ime!
             </span>
           </div>
+          <div
+            className={
+              !formSent
+                ? 'validation-container hidden-div'
+                : 'validation-container'
+            }
+          >
+            <span className="error-message">
+              <img
+                className="iconSend"
+                src={Icons.orderConfirm}
+                alt="Error icon"
+              />Uspešno ste poslali formu! Javićemo Vam se u sledeća dva radna
+              dana.
+            </span>
+          </div>
         </div>
-        </div>
+      </div>
     );
   }
 }
 
-export default ContactForm;
+export default connect(state => ({}), {
+  sendContactForm: userActions.sendContactForm
+})(ContactForm);

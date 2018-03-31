@@ -68,6 +68,7 @@ input {
   font-weight: 700;
   width: 140px;
   height: 40px;
+  margin-bottom: 25px;
 }
 .iconSend {
   margin: 5px;
@@ -76,8 +77,6 @@ input {
 input :focus {
   background-color: white;
 }
-
-
 
 .invalid {
   border: 1px solid red;
@@ -94,14 +93,23 @@ input :focus {
   align-items: center;
   background-color: #fbc106;
   color: #010207;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: 700;
-  width: 80%;
+  width: 60%;
 }
-@media (max-width: 721px) {
-  .registrationContainer {
+@media (max-width: 768px) {
+  .contactContainer {
     display: flex;
     flex-direction: column;
+  }
+  .registration-form {
+    width: 100%;
+  }
+  .validation-container {
+    width: 100%;
+  }
+  .contactFormButton {
+    width: 100%;
   }
 
   .title-container {
@@ -113,11 +121,11 @@ input :focus {
   input {
     width: 100%;
   }
-  .text-area-field{
+  .text-area-field {
     width: 100%;
   }
 
-  createAccountButton {
+  .createAccountButton {
     display: flex;
     flex-direction: row;
     align-self: center;

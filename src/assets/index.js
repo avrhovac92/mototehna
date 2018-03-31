@@ -8,6 +8,7 @@ const Images = {
 
 const Icons = {
   arrowRight: require('./icons/arrow-right.png'),
+  orderConfirm: require('./icons/order-confirm.png'),
   arrowLeft: require('./icons/arrow-left.png'),
   next: require('./icons/next.png'),
   yellowCart: require('./icons/yellow-cart.png'),
