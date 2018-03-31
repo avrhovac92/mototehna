@@ -53,6 +53,29 @@ class ContactForm extends Component {
       }
     }
   };
+  send = async event => {
+    const {
+      state: { firstName, email, message },
+      props: { registerUser, history: { replace } },
+      validateMessage,
+      validateEmail
+    } = this;
+    if (
+      !validateEmail({ target: { value: email } }) ||
+      !validateMessage({ target: { value: message } })
+    ) {
+      return;
+    }
+    const response = await registerUser({
+      email,
+      firstName,
+      message
+    });
+    if (response.status) {
+      replace('/');
+      window.scrollTo(0, 0);
+    }
+  };
 
   render() {
     const {
@@ -120,11 +143,38 @@ class ContactForm extends Component {
             <br />
           </div>
           <button className="contactFormButton">
-            <img className="imageSend" src={Icons.send} alt="Send icon" />
+            <img className="iconSend" src={Icons.send} alt="Send icon" />
             <span>POŠALJI</span>
           </button>
+          <div className={validEmail ? 'hidden-div' : ''}>
+            <span className="error-message">
+              <img
+                className="iconSend"
+                src={Icons.loginErrorIcon}
+                alt="Error icon"
+              />Niste uneli ispravnu Email adresu!
+            </span>
+          </div>
+          <div className={validMessage ? 'hidden-div' : ''}>
+            <span className="error-message">
+              <img
+                className="iconSend"
+                src={Icons.loginErrorIcon}
+                alt="Error icon"
+              />Niste uneli poruku!
+            </span>
+          </div>
+          <div className={validName ? 'hidden-div' : ''}>
+            <span className="error-message">
+              <img
+                className="iconSend"
+                src={Icons.loginErrorIcon}
+                alt="Error icon"
+              />Niste uneli ime!
+            </span>
+          </div>
         </div>
-      </div>
+        </div>
     );
   }
 }

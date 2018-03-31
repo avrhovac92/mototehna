@@ -23,8 +23,6 @@ export default class ContactForm extends Component {
     this.setState({fields});
 
   }
-
-
   render() {
     return (
       <div className="container">
