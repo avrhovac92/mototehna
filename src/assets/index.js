@@ -8,6 +8,7 @@ const Images = {
 
 const Icons = {
   arrowRight: require('./icons/arrow-right.png'),
+  orderConfirm: require('./icons/order-confirm.png'),
   arrowLeft: require('./icons/arrow-left.png'),
   next: require('./icons/next.png'),
   yellowCart: require('./icons/yellow-cart.png'),
@@ -25,6 +26,8 @@ const Icons = {
   loginHeader: require('./icons/login-header.png'),
   registerHeader: require('./icons/register-header.png'),
   hamburgerMenu: require('./icons/hamburger-menu.png'),
+  sendIcon: require('./icons/posalji-btn-icon.png'),
+  send: require('./icons/posalji-btn-icon.png'),
   loginErrorIcon: require('./icons/login-error-icon.png')
 };
 

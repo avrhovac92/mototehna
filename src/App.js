@@ -8,6 +8,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import Home from 'screens/Home';
 import Registration from 'screens/Registration';
 import AboutUs from 'screens/AboutUs';
+import ContactForm from 'screens/ContactForm';
 import PrivacyPolicy from 'screens/PrivacyPolicy';
 import TermsAndConditions from 'screens/TermsAndConditions';
 
@@ -26,6 +27,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/registration" component={Registration} />
             <Route exact path="/aboutus" component={AboutUs} />
+            <Route exact path="/contact-form" component={ContactForm} />
             <Route exact path="/privacy-policy" component={PrivacyPolicy} />
             <Route
               exact
