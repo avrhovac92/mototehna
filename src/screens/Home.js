@@ -6,6 +6,7 @@ import OtherServices from 'components/OtherServices';
 import TopProducts from 'components/TopProducts';
 import AboutUs from 'components/AboutUs';
 import StartShopping from 'components/StartShopping';
+import SignIn from 'components/SignIn';
 
 class Home extends Component {
   render() {
@@ -16,6 +17,7 @@ class Home extends Component {
           <TopProducts />
           <OtherServices />
           <AboutUs />
+          <SignIn />
         </div>
       </ContainerComponent>
     );

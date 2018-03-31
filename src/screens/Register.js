@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import AboutUs from 'components/AboutUs';
+import SignIn from 'components/SignIn';
 import ContainerComponent from 'components/ContainerComponent';
 
 class Register extends Component {
   render() {
     return (
       <ContainerComponent>
-        <AboutUs />
+        <SignIn />
       </ContainerComponent>
     );
   }

@@ -17,6 +17,7 @@ const Icons = {
   phoneSidebar: require('./icons/phone-grey-sidebar.png'),
   viberLogo: require('./icons/viber-logo.png'),
   facebookIcon: require('./icons/facebook-icon.png'),
+  forgotIcon: require('./icons/forgot-icon.png'),
   whatsappLogo: require('./icons/WhatsApp_Logo_5.png'),
   footerWorkingHours: require('./icons/footer-working-hours.png'),
   workingHours: require('./icons/hours-grey-sidebar.png'),
