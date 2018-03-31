@@ -35,6 +35,26 @@ const Video = {
   video: require('./video/mototehna-snimak.mp4')
 };
 
+const ListBrends = [
+  require('./brends/adeco.jpg'),
+  require('./brends/sthil.jpg'),
+  require('./brends/bosch.jpg'),
+  require('./brends/divinol.jpg'),
+  require('./brends/iskra.jpg'),
+  require('./brends/motul.jpg'),
+  require('./brends/husqvarna.jpg'),
+  require('./brends/sthil.jpg'),
+  require('./brends/lucas.jpg'),
+  require('./brends/bosch.jpg'),
+  require('./brends/dellorto.jpg'),
+  require('./brends/ngk.jpg'),
+  require('./brends/oregon.jpg'),
+  require('./brends/bing.jpg'),
+  require('./brends/sword.jpg'),
+  require('./brends/trayal.jpg')
+];
+
 export { Images };
 export { Icons };
+export { ListBrends };
 export { Video };
