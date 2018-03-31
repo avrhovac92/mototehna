@@ -35,3 +35,19 @@ export const registerUser = user => {
     }
   };
 };
+
+export const sendContactForm = data => {
+  return async (dispatch, getState) => {
+    try {
+      await Fetch({
+        method: 'POST',
+        endpoint: 'http://localhost:3001/api/contact',
+        body: data
+      });
+      return { status: true };
+    } catch (error) {
+      console.log(error.message);
+      return { status: false, message: error.message };
+    }
+  };
+};
