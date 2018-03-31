@@ -6,25 +6,25 @@
   border: 2px solid #e5e5e5;
   height: 600px;
   width: 400px;
-  margin:3%;
+  margin: 3%;
 }
 .topTitle {
-  font-family: 'Nunito-Sans';
   font-size: 18px;
   color: #666;
   align-items: flex-start;
   flex-direction: column;
-  background-color: #EEE;
-width: 100%;
-padding: 3%;
-border-top-left-radius: 5px;
-border-top-right-radius: 5px;
-border-bottom: #E5E5E5;}
-.SignInBody{
+  background-color: #eee;
+  width: 100%;
+  padding: 3%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: #e5e5e5;
+}
+.SignInBody {
   display: flex;
   flex-direction: column;
 }
-.osa{
+.osa {
   display: flex;
   justify-content: center;
 }
@@ -43,26 +43,28 @@ border-bottom: #E5E5E5;}
   margin-left: 10%;
   padding: 2%;
   width: 80%;
-  font-family: 'Nunito-Sans';
   font-size: 18px;
 }
-.email{
-padding: 2%;
-background: #eee;
-border: 1px solid grey;
+.sign-in-email {
+  padding: 10px;
+  background: #eee;
+  border: 1px solid grey;
+  font-style: italic;
+}
+.sign-in-fp-icon {
+  margin-bottom: 4px;
 }
 
-.bottomPassword{
-margin-left: 12%;
+.bottomPassword {
+  margin-left: 12%;
 }
-.forgotPas{
-  font-family: 'Nunito-Sans';
+.forgotPas {
   font-weight: 'Regular';
-  font-size:14px;
+  font-size: 14px;
   color: #666;
   margin-left: 2%;
 }
-.loginButtonIcon{
+.loginButtonIcon {
   margin-right: 10px;
 }
 .signInButton {
@@ -76,25 +78,30 @@ margin-left: 12%;
   justify-content: center;
   background-color: #fbc106;
 }
-.loginButtonIcon{
+.sign-in-field-label {
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+.loginButtonIcon {
   width: 5%;
   height: 5%;
 }
-.buttonText{
+.buttonText {
   font-size: 16px;
   font-weight: bold;
   color: black;
 }
-.afterButtonText{
+.afterButtonText {
   display: flex;
   flex-direction: row;
   margin-left: 25%;
-  font-family: 'Nunito-Sans';
   font-size: 14px;
   color: #666;
   margin-top: 5%;
 }
-.here{
+.here {
   margin-left: 1%;
   color: #fbc106;
+  text-decoration: underline;
 }
