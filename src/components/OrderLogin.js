@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import "css/OrderLogin.css";
 
 import { Icons } from "assets";
+import OrderRegistration from "./OrderRegistration";
 
 class OrderLogin extends Component {
   constructor(props) {
@@ -56,41 +57,28 @@ class OrderLogin extends Component {
     return validEmail;
   };
 
-  register = async event => {
+  login = async event => {
     const {
       state: {
         password,
-        email,
-        confirmPassword,
-        firstName,
-        lastName,
-        address,
-        phone
+        email
       },
-      props: { registerUser, history: { replace } },
+      props: { signInUser, history: { replace } },
       validatePassword,
-      validateEmail,
-      validateConfirmPassword
+      validateEmail
     } = this;
     if (
       !validatePassword({ target: { value: password } }) ||
-      !validateEmail({ target: { value: email } }) ||
-      !validateConfirmPassword({
-        target: { value: confirmPassword }
-      })
+      !validateEmail({ target: { value: email } })
     ) {
       return;
     }
-    const response = await registerUser({
+    const response = await signInUser({
       email,
-      password,
-      firstName,
-      lastName,
-      address,
-      phone
+      password
     });
     if (response.status) {
-      replace("/");
+      replace("/checkout-confirmation");
       window.scrollTo(0, 0);
     }
   };
@@ -99,9 +87,7 @@ class OrderLogin extends Component {
     const {
       state: { email, password, validEmail, validPassword },
       change,
-      validateEmail,
-      validatePassword,
-      register
+      login
     } = this;
     return (
       <div className="registrationContainer">
@@ -116,7 +102,6 @@ class OrderLogin extends Component {
             placeholder="vas@email.com"
             value={email}
             onChange={change}
-            onBlur={validateEmail}
             className={validEmail ? "" : "invalid"}
           />
           <br />
@@ -127,11 +112,10 @@ class OrderLogin extends Component {
             placeholder="Lozinka"
             value={password}
             onChange={change}
-            onBlur={validatePassword}
             className={validPassword ? "" : "invalid"}
           />
         </div>
-        <button className="createAccountButton" onClick={register}>
+        <button className="createAccountButton" onClick={login}>
           <img
             className="accountIcon"
             src={Icons.loginIcon}
@@ -145,5 +129,5 @@ class OrderLogin extends Component {
 }
 
 export default connect(state => ({}), {
-  registerUser: userActions.registerUser
+  signInUser: userActions.signInUser
 })(withRouter(OrderLogin));

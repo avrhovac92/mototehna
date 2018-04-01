@@ -15,6 +15,12 @@
   font-family: 'Work Sans', 'Regular';
   font-size: 38px;
 }
+.noviKorisnik {
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+  font-size: 23px;
+  color: #444;
+}
 .underline {
   display: flex;
   margin-bottom: 40px;

@@ -27,17 +27,19 @@ class Registration extends Component {
         <div className="radio-buttons">
           <form action="">
             <input
+              id='radio1'
               type="radio"
               onChange={updateRadio}
               checked={newUser}
               name="newUser"
-            />Novi korisnik
+            /><label for="radio1" className='radio-label'>Novi korisnik</label>
             <input
+              id='radio2'
               type="radio"
               onChange={updateRadio}
               checked={!newUser}
               value="existingUser"
-            />Postojeci korisnik
+            /><label for="radio2" className='radio-label'>Postojeci korisnik</label>
           </form>
         </div>
         {newUser ? (
