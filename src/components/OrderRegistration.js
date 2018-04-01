@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import { userActions } from 'redux/actions';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import 'css/CustomerInformations.css';
+import 'css/OrderRegistration.css';
 
 import { Icons } from 'assets';
 
-class CustomerInformations extends Component {
+class OrderRegistration extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +20,6 @@ class CustomerInformations extends Component {
       confirmPassword: '',
       validPassword: true,
       validEmail: true,
-      validPhone: true,
       validConfirmPassword: true
     };
     this.validatePassword = this.validatePassword.bind(this);
@@ -51,19 +50,10 @@ class CustomerInformations extends Component {
 
   validateEmail = event => {
     const emailRules = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    let validEmail = false;
+    const validEmail = emailRules.test(event.target.value);
 
-    if (event.target.value) {
-      validEmail = emailRules.test(event.target.value);
-    }
     this.setState({ validEmail });
     return validEmail;
-  };
-
-  validatePhone = event => {
-    const validPhone = event.target.value.length ? true : false;
-    this.setState({ validPhone });
-    return validPhone;
   };
 
   register = async event => {
@@ -77,16 +67,14 @@ class CustomerInformations extends Component {
         address,
         phone
       },
-      props: { registerUser, history: { replace }, insideCheckout },
+      props: { registerUser, history: { replace } },
       validatePassword,
       validateEmail,
-      validateConfirmPassword,
-      validatePhone
+      validateConfirmPassword
     } = this;
     if (
-      !validatePhone({ target: { value: phone } }) ||
-      !validateEmail({ target: { value: email } }) ||
       !validatePassword({ target: { value: password } }) ||
+      !validateEmail({ target: { value: email } }) ||
       !validateConfirmPassword({
         target: { value: confirmPassword }
       })
@@ -102,7 +90,7 @@ class CustomerInformations extends Component {
       phone
     });
     if (response.status) {
-      insideCheckout ? replace('/checkout-confirmation') : replace('/');
+      replace('/');
       window.scrollTo(0, 0);
     }
   };
@@ -119,25 +107,20 @@ class CustomerInformations extends Component {
         validPassword,
         address,
         phone,
-        validConfirmPassword,
-        validPhone
+        validConfirmPassword
       },
-      props: { insideCheckout },
       change,
-      register
+      validateEmail,
+      validatePassword,
+      register,
+      validateConfirmPassword
     } = this;
     return (
       <div className="registrationContainer">
-        {insideCheckout ? (
-          <p className="registration-title">
-            <span className="noviKorisnik">Novi korisnik</span>
-          </p>
-        ) : (
-          <div className="title-container">
-            <p className="registration-title">Registracija</p>
-            <div className="underline" />
-          </div>
-        )}
+        <p className="registration-title">
+          <span className="noviKorisnik">Novi korisnik</span>
+        </p>
+
         <div className="registration-form">
           <label>Ime</label> <br />
           <input
@@ -177,6 +160,7 @@ class CustomerInformations extends Component {
             placeholder="vas@email.com"
             value={email}
             onChange={change}
+            onBlur={validateEmail}
             className={validEmail ? '' : 'invalid'}
           />
           <br />
@@ -187,6 +171,7 @@ class CustomerInformations extends Component {
             placeholder="Lozinka"
             value={password}
             onChange={change}
+            onBlur={validatePassword}
             className={validPassword ? '' : 'invalid'}
           />
           <br />
@@ -196,29 +181,19 @@ class CustomerInformations extends Component {
             type="password"
             placeholder="Ponovite lozinku"
             onChange={change}
+            onBlur={validateConfirmPassword}
             value={confirmPassword}
             className={validConfirmPassword ? '' : 'invalid'}
           />
         </div>
-        {insideCheckout ? (
-          <button className="createAccountButton" onClick={register}>
-            <img
-              className="accountIcon"
-              src={Icons.confirmOrder}
-              alt="Account icon"
-            />
-            <span>POTVRDI NARUDZBU</span>
-          </button>
-        ) : (
-          <button className="createAccountButton" onClick={register}>
-            <img
-              className="accountIcon"
-              src={Icons.createAccountIcon}
-              alt="Account icon"
-            />
-            <span>NAPRAVITE NALOG</span>
-          </button>
-        )}
+        <button className="createAccountButton" onClick={register}>
+          <img
+            className="accountIcon"
+            src={Icons.confirmOrder}
+            alt="Account icon"
+          />
+          <span>POTVRDI NARUDZBU</span>
+        </button>
         <div className={validEmail ? 'hidden-div' : ''}>
           <span className="error-message">
             <img
@@ -246,15 +221,6 @@ class CustomerInformations extends Component {
             />Lozinke se ne podudaraju!
           </span>
         </div>
-        <div className={validPhone ? 'hidden-div' : ''}>
-          <span className="error-message">
-            <img
-              className="accountIcon"
-              src={Icons.loginErrorIcon}
-              alt="Error icon"
-            />Niste uneli Broj telefona!
-          </span>
-        </div>
       </div>
     );
   }
@@ -262,4 +228,4 @@ class CustomerInformations extends Component {
 
 export default connect(state => ({}), {
   registerUser: userActions.registerUser
-})(withRouter(CustomerInformations));
+})(withRouter(OrderRegistration));
