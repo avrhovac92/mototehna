@@ -8,6 +8,7 @@ const Images = {
 
 const Icons = {
   arrowRight: require('./icons/arrow-right.png'),
+  orderConfirm: require('./icons/order-confirm.png'),
   arrowLeft: require('./icons/arrow-left.png'),
   next: require('./icons/next.png'),
   yellowCart: require('./icons/yellow-cart.png'),
@@ -28,6 +29,8 @@ const Icons = {
   confirmOrder: require('./icons/potvrdi-narudzbu-btn.png'),
   loginIcon: require('./icons/prijava-btn-icon.png'),
   successfulOrder: require('./icons/uspjesna-narudzba.png'),
+  sendIcon: require('./icons/posalji-btn-icon.png'),
+  send: require('./icons/posalji-btn-icon.png'),
   loginErrorIcon: require('./icons/login-error-icon.png')
 };
 
@@ -35,6 +38,26 @@ const Video = {
   video: require('./video/mototehna-snimak.mp4')
 };
 
+const ListBrends = [
+  require('./brends/adeco.jpg'),
+  require('./brends/sthil.jpg'),
+  require('./brends/bosch.jpg'),
+  require('./brends/divinol.jpg'),
+  require('./brends/iskra.jpg'),
+  require('./brends/motul.jpg'),
+  require('./brends/husqvarna.jpg'),
+  require('./brends/sthil.jpg'),
+  require('./brends/lucas.jpg'),
+  require('./brends/bosch.jpg'),
+  require('./brends/dellorto.jpg'),
+  require('./brends/ngk.jpg'),
+  require('./brends/oregon.jpg'),
+  require('./brends/bing.jpg'),
+  require('./brends/sword.jpg'),
+  require('./brends/trayal.jpg')
+];
+
 export { Images };
 export { Icons };
+export { ListBrends };
 export { Video };

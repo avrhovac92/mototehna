@@ -47,7 +47,7 @@ class OrderLoggedIn extends Component {
   register = async event => {
     const {
       state: { email, firstName, lastName, address, phone },
-      props: { registerUser, history: { replace } },
+      props: { registerUser, history: { replace }, updateUser },
       validateEmail,
       validatePhoneNumber
     } = this;
@@ -59,17 +59,10 @@ class OrderLoggedIn extends Component {
     ) {
       return;
     }
-    const response = await registerUser({
-      email,
-      firstName,
-      lastName,
-      address,
-      phone
-    });
-    if (response.status) {
-      replace('/');
-      window.scrollTo(0, 0);
-    }
+    const { validEmail, validPhoneNumber, ...rest } = this.state;
+    updateUser(rest);
+    replace('/');
+    window.scrollTo(0, 0);
   };
 
   render() {
@@ -160,10 +153,15 @@ class OrderLoggedIn extends Component {
   }
 }
 
-export default connect(state => ({
-  email: state.user.email,
-  phone: state.user.phone,
-  firstName: state.user.firstName,
-  lastName: state.user.lastName,
-  address: state.user.address
-}))(withRouter(OrderLoggedIn));
+export default connect(
+  state => ({
+    email: state.user.email,
+    phone: state.user.phone,
+    firstName: state.user.firstName,
+    lastName: state.user.lastName,
+    address: state.user.address
+  }),
+  {
+    updateUser: userActions.updateUser
+  }
+)(withRouter(OrderLoggedIn));

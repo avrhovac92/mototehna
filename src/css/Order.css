@@ -3,8 +3,7 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 55px;
-  margin-top: 100px;
-  margin-bottom: 15px;
+  margin-top: 50px;
 }
 .registration-title {
   display: flex;
@@ -25,17 +24,29 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 40px;
-  margin-left: 25px;
+  margin-left: 55px;
   height: 3px;
   padding: 10px;
   font-family: 'Nunito Sans';
   color: #444;
 }
-.radio-label{
+.radio-label {
   font-size: 13px;
   padding: 0;
-
+  margin-bottom: 0;
+  cursor: pointer;
 }
+.registration-checkout-radio-button-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.registration-checkout-radio-button {
+  width: 30px;
+  margin: 0 0 3px 0;
+  cursor: pointer;
+}
+
 .orderRequestText {
   font-family: 'Nunito Sans';
   font-weight: 600;
@@ -102,4 +113,10 @@
   height: 8px;
   border-radius: 50%;
   background: white;
+}
+
+@media (max-width: 768px) {
+  .title-container {
+    margin-left: 0;
+  }
 }
