@@ -154,9 +154,101 @@ const PrivacyPolicyContent = [
   }
 ];
 
+const CategoriesList = [
+  {
+    title: 'MOPEDI',
+    toggle: false,
+    collapsed: true,
+    subCategories: [
+      {
+        toggle: false,
+        title: 'A3'
+      },
+      {
+        toggle: false,
+        title: 'A35'
+      },
+      {
+        toggle: false,
+        title: 'APN4'
+      },
+      {
+        toggle: false,
+        title: 'APN6'
+      },
+      {
+        toggle: false,
+        title: 'BT50'
+      },
+      {
+        toggle: false,
+        title: 'ATX'
+      },
+      {
+        toggle: false,
+        title: 'CTX'
+      }
+    ]
+  },
+  {
+    title: 'BASTA',
+    toggle: false,
+    collapsed: true,
+    subCategories: [
+      {
+        toggle: false,
+        title: 'Kosilice'
+      },
+      {
+        toggle: false,
+        title: 'Trimeri'
+      }
+    ]
+  },
+  {
+    title: 'SUMA',
+    toggle: false,
+    collapsed: true,
+    subCategories: [
+      {
+        toggle: false,
+        title: 'Motorne testere'
+      }
+    ]
+  },
+  {
+    title: 'VANBRODSKI',
+    toggle: false,
+    collapsed: true,
+    subCategories: [
+      {
+        toggle: false,
+        title: 'T4'
+      },
+      {
+        toggle: false,
+        title: 'T4.5'
+      },
+      {
+        toggle: false,
+        title: 'T4.8'
+      },
+      {
+        toggle: false,
+        title: 'T10'
+      },
+      {
+        toggle: false,
+        title: 'T18'
+      }
+    ]
+  }
+];
+
 export { ListProducts };
 export { Services };
 export { MototehnaGoogleMapRoutes };
 export { FooterList };
 export { SidebarPhones };
 export { PrivacyPolicyContent };
+export { CategoriesList };

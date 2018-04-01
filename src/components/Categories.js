@@ -1,10 +1,14 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import "css/Categories.css";
-
-import { Icons } from "assets";
+import 'css/Categories.css';
+import { CategoriesList } from 'config/constants';
+import { Icons } from 'assets';
 
 class Categories extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { list: CategoriesList };
+  }
   render() {
     return (
       <div className="categories">
@@ -13,18 +17,28 @@ class Categories extends Component {
         </div>
         <div className="content-container">
           <div>
-            <label className="container">
-              MOPEDI
-              <input type="checkbox" />
-              <span className="checkmark" />
-              <img
-                src={Icons.collapseIcon}
-                className="collapse-icon"
-                alt="collapse-icon"
-              />
-            </label>
+            <div className="collapser">
+              <div className="categories-main-category">
+                <label className="container">
+                  MOPEDI
+                  <input type="checkbox" />
+                  <span className="checkmark" />
+                </label>
+              </div>
+              <div
+                onClick={this.toggleCategory}
+                data-target="#collapseExample"
+                data-toggle="collapse"
+              >
+                <img
+                  src={Icons.collapseIcon}
+                  className="collapse-icon"
+                  alt="collapse-icon"
+                />
+              </div>
+            </div>
 
-            <ul className="mopeds">
+            <ul className="mopeds collapse" id="collapseExample">
               <li className="items-list">
                 <label className="container">
                   <span className="categories-content">A3</span>

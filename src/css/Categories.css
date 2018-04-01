@@ -1,12 +1,25 @@
 #categories {
   margin: 7%;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-size: 22px;
   text-align: left;
   border-bottom: 1px solid #fbc106;
   width: 80%;
   color: #515151;
   line-height: 35px;
+}
+.container input {
+  left: 0;
+}
+
+.collapser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 15%;
+}
+.categories-main-category {
+  width: 90%;
 }
 
 .categories-title {
@@ -25,7 +38,7 @@
 .items-list {
   display: flex;
   flex-direction: row;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: normal;
   font-size: 15px;
   color: #666;
@@ -41,7 +54,7 @@
   position: relative;
   padding-left: 26px;
   cursor: pointer;
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: bold;
   font-size: 15px;
   -webkit-user-select: none;
@@ -75,7 +88,7 @@
 }
 
 .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -105,7 +118,7 @@
 }
 
 .filter-reseting {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: bold;
   font-size: 15px;
   color: #fbc106;
