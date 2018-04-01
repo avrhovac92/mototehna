@@ -1,4 +1,4 @@
-.registrationContainer {
+.contactContainer {
   padding: 8%;
   padding-top: 3%;
 }
@@ -8,18 +8,12 @@
   flex-direction: column;
   justify-content: center;
 }
-.registration-title {
+.contact-title {
   display: flex;
   margin-bottom: 8px;
   color: #010207;
   font-family: 'Work Sans', 'Regular';
   font-size: 38px;
-}
-.noviKorisnik {
-  font-family: 'Nunito Sans';
-  font-weight: 600;
-  font-size: 23px;
-  color: #444;
 }
 .underline {
   display: flex;
@@ -28,14 +22,23 @@
   width: 50px;
   background-color: #fbc106;
 }
-
-label {
+.text-area-field {
   font-family: 'Nunito Sans';
+  font-weight: 300;
+  font-style: italic;
+  font-size: 16px;
+  padding: 13px;
+  background-color: #f4f4f4;
+  border: 1px solid #acacac;
+  width: 60%;
+}
+label {
+  font-family: 'Nunito Sans' + SemiBold;
   font-weight: 600;
   font-size: 18px;
   color: #444;
-  padding-top: 17px;
-  padding-bottom: 4px;
+  padding-top: 25px;
+  padding-bottom: 10px;
 }
 
 input {
@@ -46,29 +49,33 @@ input {
   padding: 13px;
   background-color: #f4f4f4;
   border: 1px solid #acacac;
-  width: 80%;
+  width: 60%;
 }
 
 ::placeholder {
   color: #95989a;
 }
-
-.createAccountButton {
+.contactFormButton {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 5px 30px;
-  margin: 30px 0 20px 0px;
+  padding: 5px 10px 5px 10px;
+  margin: 30px 5px 10px 5px;
   background-color: #fbc106;
   color: #010207;
   font-family: 'Nunito Sans';
   font-weight: 700;
+  width: 140px;
+  height: 40px;
+  margin-bottom: 25px;
 }
-
-.accountIcon {
+.iconSend {
   margin: 5px;
   display: flex;
+}
+input :focus {
+  background-color: white;
 }
 
 .invalid {
@@ -88,13 +95,21 @@ input {
   color: #010207;
   font-family: 'Nunito Sans';
   font-weight: 700;
-  width: 80%;
+  width: 60%;
 }
-
-@media (max-width: 721px) {
-  .registrationContainer {
+@media (max-width: 768px) {
+  .contactContainer {
     display: flex;
     flex-direction: column;
+  }
+  .registration-form {
+    width: 100%;
+  }
+  .validation-container {
+    width: 100%;
+  }
+  .contactFormButton {
+    width: 100%;
   }
 
   .title-container {
@@ -106,8 +121,11 @@ input {
   input {
     width: 100%;
   }
+  .text-area-field {
+    width: 100%;
+  }
 
-  createAccountButton {
+  .createAccountButton {
     display: flex;
     flex-direction: row;
     align-self: center;

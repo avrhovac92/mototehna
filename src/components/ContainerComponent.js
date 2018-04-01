@@ -26,6 +26,9 @@ export default class ContainerComponent extends Component {
             <div>{children}</div>
           )}
         </div>
+
+
+
         <div className="container-component-lower">
           <Footer />
         </div>

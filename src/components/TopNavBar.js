@@ -1,16 +1,54 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import ReactModal from 'react-modal';
 
-import "css/TopNavBar.css";
-import { connect } from "react-redux";
-import { userActions } from "redux/actions";
-import { Icons } from "assets";
-import { Link } from "react-router-dom";
+import { Icons } from 'assets';
+import { connect } from 'react-redux';
+import { userActions } from 'redux/actions';
+import { Link } from 'react-router-dom';
+
+import 'css/ModalLogin.css';
+import 'css/TopNavBar.css';
+
+ReactModal.setAppElement('#root');
 
 class TopNavBar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showModal: false
+    };
+  }
+
+  handleOpenModal = () => {
+    this.setState({ showModal: true });
+  };
+
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+  };
+
   render() {
-    const { props: { firstName, token }, logoutUser } = this;
+    const {
+      props: { token, firstName },
+      state: { showModal },
+      logoutUser,
+      handleCloseModal
+    } = this;
     return (
       <div className="TopNavBar">
+        <ReactModal
+          closeTimeoutMS={500}
+          isOpen={showModal}
+          contentLabel="onRequestClose Example"
+          onRequestClose={handleCloseModal}
+          className="Modal"
+          overlayClassName="Overlay"
+        >
+          <div className="close" onClick={this.handleCloseModal}>
+            x
+          </div>
+        </ReactModal>
+
         <div className="phone">
           <img
             src={Icons.phoneHeader}
@@ -30,7 +68,7 @@ class TopNavBar extends Component {
                   alt="Login header"
                 />
                 <span className="top-navbar-hide-mobile">
-                  {firstName ? firstName : "Dobrodosli"}
+                  {firstName ? firstName : 'Dobrodosli'}
                 </span>
               </div>
               <Link to="/">
@@ -46,7 +84,7 @@ class TopNavBar extends Component {
             </div>
           ) : (
             <div className="top-navbar-register-container">
-              <div className="login">
+              <div className="login" onClick={this.handleOpenModal}>
                 <img
                   src={Icons.loginHeader}
                   className="loginIcon"
@@ -66,7 +104,7 @@ class TopNavBar extends Component {
               </Link>
             </div>
           )}
-          <Link to='/'>
+          <Link to="/">
             <div className="top-navbar-cart">
               <img
                 src={Icons.cartHeader}
@@ -90,8 +128,8 @@ class TopNavBar extends Component {
 
 export default connect(
   state => ({
-    firstName: state.user.firstName,
-    token: state.user.token
+    token: state.user.token,
+    firstName: state.user.firstName
   }),
   { logout: userActions.logout }
 )(TopNavBar);
