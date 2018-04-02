@@ -27,7 +27,7 @@ class Categories extends Component {
               </div>
               <div
                 onClick={this.toggleCategory}
-                data-target="#collapseExample"
+                data-target="#collapseExample1"
                 data-toggle="collapse"
               >
                 <img
@@ -38,7 +38,7 @@ class Categories extends Component {
               </div>
             </div>
 
-            <ul className="mopeds collapse" id="collapseExample">
+            <ul className="mopeds collapse" id="collapseExample1">
               <li className="items-list">
                 <label className="container">
                   <span className="categories-content">A3</span>
@@ -90,17 +90,27 @@ class Categories extends Component {
               </li>
             </ul>
           </div>
-          <label className="container">
-            BAŠTA
-            <input type="checkbox" />
-            <span className="checkmark" />
-            <img
-              src={Icons.collapseIcon}
-              className="collapse-icon"
-              alt="collapse-icon"
-            />
-          </label>
-          <ul className="mopeds">
+          <div className="collapser">
+            <div className="categories-main-category">
+              <label className="container">
+                BAŠTA
+                <input type="checkbox" />
+                <span className="checkmark" />
+              </label>
+            </div>
+            <div
+              onClick={this.toggleCategory}
+              data-target="#collapseExample2"
+              data-toggle="collapse"
+            >
+              <img
+                src={Icons.collapseIcon}
+                className="collapse-icon"
+                alt="collapse-icon"
+              />
+            </div>
+          </div>
+          <ul className="mopeds collapse" id="collapseExample2">
             <li className="items-list">
               <label className="container">
                 <span className="categories-content">Kosilice</span>
@@ -116,17 +126,27 @@ class Categories extends Component {
               </label>
             </li>
           </ul>
-          <label className="container">
-            ŠUMA
-            <input type="checkbox" />
-            <span className="checkmark" />
-            <img
-              src={Icons.collapseIcon}
-              className="collapse-icon"
-              alt="collapse-icon"
-            />
-          </label>
-          <ul className="mopeds">
+          <div className="collapser">
+            <div className="categories-main-category">
+              <label className="container">
+                ŠUME
+                <input type="checkbox" />
+                <span className="checkmark" />
+              </label>
+            </div>
+            <div
+              onClick={this.toggleCategory}
+              data-target="#collapseExample3"
+              data-toggle="collapse"
+            >
+              <img
+                src={Icons.collapseIcon}
+                className="collapse-icon"
+                alt="collapse-icon"
+              />
+            </div>
+          </div>
+          <ul className="mopeds collapse" id="collapseExample3">
             <li className="items-list">
               <label className="container">
                 <span className="categories-content">Motorne testere</span>
@@ -135,17 +155,28 @@ class Categories extends Component {
               </label>
             </li>
           </ul>
-          <label className="container">
-            VANBRODSKI
-            <input type="checkbox" />
-            <span className="checkmark" />
-            <img
-              src={Icons.collapseIcon}
-              className="collapse-icon"
-              alt="collapse-icon"
-            />
-          </label>
-          <ul className="mopeds">
+          
+          <div className="collapser">
+              <div className="categories-main-category">
+                <label className="container">
+                  VANBRODSKI
+                  <input type="checkbox" />
+                  <span className="checkmark" />
+                </label>
+              </div>
+              <div
+                onClick={this.toggleCategory}
+                data-target="#collapseExample4"
+                data-toggle="collapse"
+              >
+                <img
+                  src={Icons.collapseIcon}
+                  className="collapse-icon"
+                  alt="collapse-icon"
+                />
+              </div>
+            </div>
+          <ul className="mopeds collapse" id="collapseExample4">
             <li className="items-list">
               <label className="container">
                 <span className="categories-content">T4</span>
@@ -185,7 +216,7 @@ class Categories extends Component {
           <div className="filter-reseting">
             <span>RESETUJ FILTERE</span>
           </div>
-        </div>
+      </div>
       </div>
     );
   }

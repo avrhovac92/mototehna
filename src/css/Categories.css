@@ -139,4 +139,9 @@
   .container {
     margin: 0;
   }
+
+  .categories {
+    margin: 0 10% 5%;
+    width: 100%;
+  }
 }
