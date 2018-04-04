@@ -48,7 +48,10 @@ class Header extends Component {
                 </Link>
               </li>
               <li>
-                <Link to="/" className="navigation-item">
+
+                
+                <Link to="/registration-checkout" className="navigation-item">
+
                   Usluge
                 </Link>
               </li>

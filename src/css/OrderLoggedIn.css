@@ -1,41 +1,19 @@
 .registrationContainer {
-  padding: 8%;
+  padding: 4%;
   padding-top: 3%;
 }
 
-.title-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.registration-title {
-  display: flex;
-  margin-bottom: 8px;
-  color: #010207;
-  font-family: 'Work Sans', 'Regular';
-  font-size: 38px;
-}
-.noviKorisnik {
+
+.postojeciKorisnik {
   font-family: 'Nunito Sans';
   font-weight: 600;
   font-size: 23px;
   color: #444;
 }
->>>>>>> develop
-.underline {
-  display: flex;
-  margin-bottom: 40px;
-  height: 3px;
-  width: 50px;
-  background-color: #fbc106;
-}
+
 
 label {
-<<<<<<< HEAD
-  font-family: "Nunito Sans";
-=======
   font-family: 'Nunito Sans';
->>>>>>> develop
   font-weight: 600;
   font-size: 18px;
   color: #444;
@@ -44,18 +22,14 @@ label {
 }
 
 input {
-<<<<<<< HEAD
-  font-family: "Nunito Sans";
-=======
   font-family: 'Nunito Sans';
->>>>>>> develop
   font-weight: 300;
   font-style: italic;
   font-size: 16px;
   padding: 13px;
   background-color: #f4f4f4;
   border: 1px solid #acacac;
-  width: 80%;
+  width: 40%;
 }
 
 ::placeholder {
@@ -71,11 +45,7 @@ input {
   margin: 30px 0 20px 0px;
   background-color: #fbc106;
   color: #010207;
-<<<<<<< HEAD
-  font-family: "Nunito Sans";
-=======
   font-family: 'Nunito Sans';
->>>>>>> develop
   font-weight: 700;
 }
 
@@ -93,22 +63,23 @@ input {
   display: none;
 }
 
-.error-message {
+.loginSuccessful {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: #fbc106;
   color: #010207;
-<<<<<<< HEAD
-  font-family: "Nunito Sans";
-=======
   font-family: 'Nunito Sans';
->>>>>>> develop
   font-weight: 700;
-  width: 80%;
+  width: 40%;
+  margin-bottom: 15px;
 }
 
-@media (max-width: 721px) {
+#test {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
   .registrationContainer {
     display: flex;
     flex-direction: column;
@@ -124,13 +95,21 @@ input {
     width: 100%;
   }
 
+  .loginSuccessful {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fbc106;
+    color: #010207;
+    font-family: 'Nunito Sans';
+    font-weight: 700;
+    width: 100%;
+
+  }
+
   createAccountButton {
     display: flex;
     flex-direction: row;
     align-self: center;
-  }
-
-  .error-message {
-    width: 100%;
   }
 }
