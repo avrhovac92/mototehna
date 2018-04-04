@@ -32,7 +32,8 @@ const Icons = {
   sendIcon: require('./icons/posalji-btn-icon.png'),
   send: require('./icons/posalji-btn-icon.png'),
   loginErrorIcon: require('./icons/login-error-icon.png'),
-  collapseIcon: require('./icons/collapse-icon.png')
+  collapseIcon: require('./icons/collapse-icon.png'),
+  collideIcon: require('./icons/collide-icon.png')
 };
 
 const Video = {

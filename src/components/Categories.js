@@ -9,217 +9,103 @@ class Categories extends Component {
     super(props);
     this.state = { list: CategoriesList };
   }
+
   render() {
+    const {
+      state: { list },
+      toggleCategories,
+      checkIfChecked,
+      checkIfChecked1
+    } = this;
     return (
       <div className="categories">
         <div className="categories-title">
           <span id="categories">Kategorije</span>
         </div>
         <div className="content-container">
-          <div>
-            <div className="collapser">
-              <div className="categories-main-category">
-                <label className="container">
-                  MOPEDI
-                  <input type="checkbox" />
-                  <span className="checkmark" />
-                </label>
-              </div>
-              <div
-                onClick={this.toggleCategory}
-                data-target="#collapseExample1"
-                data-toggle="collapse"
-              >
-                <img
-                  src={Icons.collapseIcon}
-                  className="collapse-icon"
-                  alt="collapse-icon"
-                />
-              </div>
-            </div>
+          {list.map((item, key) => {
+            {
+              let t = false;
+            }
+            return (
+              <div {...item} key={key}>
+                <div className="collapser">
+                  <div className="categories-main-category">
+                    <label className="container" onClick={checkIfChecked(key)}>
+                      <span>{item.title}</span>
 
-            <ul className="mopeds collapse" id="collapseExample1">
-              <li className="items-list">
-                <label className="container">
-                  <span className="categories-content">A3</span>
-                  <input type="checkbox" />
-                  <span className="checkmark" />
-                </label>
-              </li>
-              <li className="items-list">
-                <label className="container">
-                  <span className="categories-content">A35</span>
-                  <input type="checkbox" />
-                  <span className="checkmark" />
-                </label>
-              </li>
-              <li className="items-list">
-                <label className="container">
-                  <span className="categories-content">APN4</span>
-                  <input type="checkbox" />
-                  <span className="checkmark" />
-                </label>
-              </li>
-              <li className="items-list">
-                <label className="container">
-                  <span className="categories-content">APN6</span>
-                  <input type="checkbox" />
-                  <span className="checkmark" />
-                </label>
-              </li>
-              <li className="items-list">
-                <label className="container">
-                  <span className="categories-content">BT50</span>
-                  <input type="checkbox" />
-                  <span className="checkmark" />
-                </label>
-              </li>
-              <li className="items-list">
-                <label className="container">
-                  <span className="categories-content">ATX</span>
-                  <input type="checkbox" />
-                  <span className="checkmark" />
-                </label>
-              </li>
-              <li className="items-list">
-                <label className="container">
-                  <span className="categories-content">CTX</span>
-                  <input type="checkbox" />
-                  <span className="checkmark" />
-                </label>
-              </li>
-            </ul>
-          </div>
-          <div className="collapser">
-            <div className="categories-main-category">
-              <label className="container">
-                BAŠTA
-                <input type="checkbox" />
-                <span className="checkmark" />
-              </label>
-            </div>
-            <div
-              onClick={this.toggleCategory}
-              data-target="#collapseExample2"
-              data-toggle="collapse"
-            >
-              <img
-                src={Icons.collapseIcon}
-                className="collapse-icon"
-                alt="collapse-icon"
-              />
-            </div>
-          </div>
-          <ul className="mopeds collapse" id="collapseExample2">
-            <li className="items-list">
-              <label className="container">
-                <span className="categories-content">Kosilice</span>
-                <input type="checkbox" />
-                <span className="checkmark" />
-              </label>
-            </li>
-            <li className="items-list">
-              <label className="container">
-                <span className="categories-content">Trimeri</span>
-                <input type="checkbox" />
-                <span className="checkmark" />
-              </label>
-            </li>
-          </ul>
-          <div className="collapser">
-            <div className="categories-main-category">
-              <label className="container">
-                ŠUME
-                <input type="checkbox" />
-                <span className="checkmark" />
-              </label>
-            </div>
-            <div
-              onClick={this.toggleCategory}
-              data-target="#collapseExample3"
-              data-toggle="collapse"
-            >
-              <img
-                src={Icons.collapseIcon}
-                className="collapse-icon"
-                alt="collapse-icon"
-              />
-            </div>
-          </div>
-          <ul className="mopeds collapse" id="collapseExample3">
-            <li className="items-list">
-              <label className="container">
-                <span className="categories-content">Motorne testere</span>
-                <input type="checkbox" />
-                <span className="checkmark" />
-              </label>
-            </li>
-          </ul>
-          
-          <div className="collapser">
-              <div className="categories-main-category">
-                <label className="container">
-                  VANBRODSKI
-                  <input type="checkbox" />
-                  <span className="checkmark" />
-                </label>
+                      <input
+                        type="checkbox"
+                        checked={CategoriesList[key].toggle}
+                      />
+                      <span className="checkmark" />
+                    </label>
+                  </div>
+                  <div
+                    onClick={() => {
+                      toggleCategories(key);
+                    }}
+                    data-target={'#' + key}
+                    data-toggle="collapse"
+                  >
+                    {CategoriesList[key].collapsed ? (
+                      <img
+                        src={Icons.collideIcon}
+                        className="collapse-icon"
+                        alt="collapse-icon"
+                      />
+                    ) : (
+                      <img
+                        src={Icons.collapseIcon}
+                        className="collapse-icon"
+                        alt="collide-icon"
+                      />
+                    )}
+                  </div>
+                </div>
+
+                <ul className="mopeds collapse" id={key}>
+                  {item.subCategories.map((item1, key1) => {
+                    return (
+                      <li className="items-list">
+                        <label className="container">
+                          <span className="categories-content">
+                            {item1.title}
+                          </span>
+                          <input
+                            type="checkbox"
+                            checked={
+                              CategoriesList[key].subCategories[key1].toggle
+                            }
+                          />
+                          <span className="checkmark" />
+                        </label>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
-              <div
-                onClick={this.toggleCategory}
-                data-target="#collapseExample4"
-                data-toggle="collapse"
-              >
-                <img
-                  src={Icons.collapseIcon}
-                  className="collapse-icon"
-                  alt="collapse-icon"
-                />
-              </div>
-            </div>
-          <ul className="mopeds collapse" id="collapseExample4">
-            <li className="items-list">
-              <label className="container">
-                <span className="categories-content">T4</span>
-                <input type="checkbox" />
-                <span className="checkmark" />
-              </label>
-            </li>
-            <li className="items-list">
-              <label className="container">
-                <span className="categories-content">T4.5</span>
-                <input type="checkbox" />
-                <span className="checkmark" />
-              </label>
-            </li>
-            <li className="items-list">
-              <label className="container">
-                <span className="categories-content">T4.8</span>
-                <input type="checkbox" />
-                <span className="checkmark" />
-              </label>
-            </li>
-            <li className="items-list">
-              <label className="container">
-                <span className="categories-content">T10</span>
-                <input type="checkbox" />
-                <span className="checkmark" />
-              </label>
-            </li>
-            <li className="items-list">
-              <label className="container">
-                <span className="categories-content">T18</span>
-                <input type="checkbox" />
-                <span className="checkmark" />
-              </label>
-            </li>
-          </ul>
-          <div className="filter-reseting">
-            <span>RESETUJ FILTERE</span>
-          </div>
-      </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
+  toggleCategories = y => {
+    // this.setState({ {list}: {list} });
+    let x = !CategoriesList[y].collapsed;
+    CategoriesList[y].collapsed = x;
+    this.setState({});
+  };
+  checkIfChecked = key => {
+    CategoriesList[key].toggle = !CategoriesList[key].toggle;
+    console.log('djjd');
+    if (CategoriesList[key].toggle) {
+      CategoriesList[key].subCategories.map((item2, key2) => {
+        item2.toggle = true;
+      });
+    }
+  };
 }
 
 export default Categories;
