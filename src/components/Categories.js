@@ -61,11 +61,7 @@ class Categories extends Component {
                           <span className="categories-content">
                             {item1.title}
                           </span>
-                          <input
-                            type="checkbox"
-                            checked={item1.toggle}
-                            disabled={false}
-                          />
+                          <input type="checkbox" />
                           <span className="checkmark" />
                         </label>
                       </li>
@@ -75,6 +71,9 @@ class Categories extends Component {
               </div>
             );
           })}
+          <div className="filter-reseting">
+            <span>RESETUJ FILTERE</span>
+          </div>
         </div>
       </div>
     );
