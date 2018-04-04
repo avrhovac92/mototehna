@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
 import 'css/Categories.css';
 import { CategoriesList } from 'config/constants';
 import { Icons } from 'assets';
+console.log(CategoriesList);
 
 class Categories extends Component {
   constructor(props) {
@@ -11,33 +11,22 @@ class Categories extends Component {
   }
 
   render() {
-    const {
-      state: { list },
-      toggleCategories,
-      checkIfChecked,
-      checkIfChecked1
-    } = this;
+    const { state: { list }, toggleCategories, checkIfChecked } = this;
     return (
       <div className="categories">
         <div className="categories-title">
-          <span id="categories">Kategorije</span>
+          <div id="categories">Kategorije</div>
         </div>
         <div className="content-container">
           {list.map((item, key) => {
-            {
-              let t = false;
-            }
             return (
               <div {...item} key={key}>
                 <div className="collapser">
                   <div className="categories-main-category">
-                    <label className="container" onClick={checkIfChecked(key)}>
+                    <label className="container">
                       <span>{item.title}</span>
 
-                      <input
-                        type="checkbox"
-                        checked={CategoriesList[key].toggle}
-                      />
+                      <input type="checkbox" onClick={checkIfChecked(key)} />
                       <span className="checkmark" />
                     </label>
                   </div>
@@ -74,9 +63,8 @@ class Categories extends Component {
                           </span>
                           <input
                             type="checkbox"
-                            checked={
-                              CategoriesList[key].subCategories[key1].toggle
-                            }
+                            checked={item1.toggle}
+                            disabled={false}
                           />
                           <span className="checkmark" />
                         </label>
@@ -92,17 +80,18 @@ class Categories extends Component {
     );
   }
   toggleCategories = y => {
-    // this.setState({ {list}: {list} });
     let x = !CategoriesList[y].collapsed;
     CategoriesList[y].collapsed = x;
     this.setState({});
   };
+
   checkIfChecked = key => {
+    const { state: { filter } } = this;
     CategoriesList[key].toggle = !CategoriesList[key].toggle;
-    console.log('djjd');
     if (CategoriesList[key].toggle) {
       CategoriesList[key].subCategories.map((item2, key2) => {
         item2.toggle = true;
+        console.log(item2.toggle);
       });
     }
   };

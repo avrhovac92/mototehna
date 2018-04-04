@@ -21,9 +21,3 @@
   width: 55px;
   background-color: #fbc106;
 }
-
-@media (max-width: 768px) {
-  .titleContainer1 {
-    align-self: flex-start;
-  }
-}

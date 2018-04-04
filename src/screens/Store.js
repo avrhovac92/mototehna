@@ -9,7 +9,7 @@ class Store extends Component {
   render() {
     return (
       <ContainerComponent>
-        <Title1 title="Prodavnica" className="title-categories" />
+        <Title1 title="Prodavnica" className="title-categories css-store" />
         <div className="store">
           <Categories />
         </div>

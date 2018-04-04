@@ -140,6 +140,16 @@
     margin: 0;
   }
 
+  #categories {
+    margin: 7%;
+    font-family: 'Nunito Sans';
+    font-size: 22px;
+    text-align: left;
+    border-bottom: 1px solid #fbc106;
+    width: 80%;
+    color: #515151;
+    line-height: 35px;
+  }
   .categories {
     margin: 0 10% 5%;
     width: 100%;
