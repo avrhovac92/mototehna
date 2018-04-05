@@ -1,10 +1,10 @@
 #categories {
-  margin: 7%;
+  margin: 4%;
   font-family: 'Nunito Sans';
   font-size: 22px;
   text-align: left;
   border-bottom: 1px solid #fbc106;
-  width: 80%;
+  width: 90%;
   color: #515151;
   line-height: 35px;
 }
@@ -20,10 +20,6 @@
 }
 .categories-main-category {
   width: 90%;
-}
-
-.categories-title {
-  padding-top: 4%;
 }
 
 .categories {
@@ -45,11 +41,10 @@
 }
 
 .content-container {
-  margin-left: 10%;
-  margin-top: 4%;
+  margin-left: 8%;
 }
 
-.container {
+.container-top-checkbox {
   display: block;
   position: relative;
   padding-left: 26px;
@@ -63,7 +58,7 @@
   user-select: none;
 }
 
-.container input {
+.container-top-checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -78,11 +73,11 @@
   border: 2px solid #666;
 }
 
-.container:hover input ~ .checkmark {
+.container-top-checkbox:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-.container input:checked ~ .checkmark {
+.container-top-checkbox input:checked ~ .checkmark {
   background-color: #fbc106;
   border: none;
 }
@@ -93,11 +88,11 @@
   display: none;
 }
 
-.container input:checked ~ .checkmark:after {
+.container-top-checkbox input:checked ~ .checkmark:after {
   display: block;
 }
 
-.container .checkmark:after {
+.container-top-checkbox .checkmark:after {
   left: 6px;
   top: 1px;
   width: 5px;

@@ -2,16 +2,20 @@ import React, { Component } from 'react';
 import 'css/Categories.css';
 import { CategoriesList } from 'config/constants';
 import { Icons } from 'assets';
-console.log(CategoriesList);
 
 class Categories extends Component {
   constructor(props) {
     super(props);
-    this.state = { list: CategoriesList };
+    this.state = { list: CategoriesList, isChecked: false };
   }
+  toggleChange = () => {
+    this.setState({
+      isChecked: !this.state.isChecked
+    });
+  };
 
   render() {
-    const { state: { list }, toggleCategories, checkIfChecked } = this;
+    const { state: { list }, toggleCategories } = this;
     return (
       <div className="categories">
         <div className="categories-title">
@@ -20,13 +24,13 @@ class Categories extends Component {
         <div className="content-container">
           {list.map((item, key) => {
             return (
-              <div {...item} key={key}>
+              <div>
                 <div className="collapser">
                   <div className="categories-main-category">
-                    <label className="container">
+                    <label className="container-top-checkbox">
                       <span>{item.title}</span>
 
-                      <input type="checkbox" onClick={checkIfChecked(key)} />
+                      <input type="checkbox" onChange={this.toggleChange} />
                       <span className="checkmark" />
                     </label>
                   </div>
@@ -39,13 +43,13 @@ class Categories extends Component {
                   >
                     {CategoriesList[key].collapsed ? (
                       <img
-                        src={Icons.collideIcon}
+                        src={Icons.collapseIcon}
                         className="collapse-icon"
                         alt="collapse-icon"
                       />
                     ) : (
                       <img
-                        src={Icons.collapseIcon}
+                        src={Icons.collideIcon}
                         className="collapse-icon"
                         alt="collide-icon"
                       />
@@ -57,11 +61,15 @@ class Categories extends Component {
                   {item.subCategories.map((item1, key1) => {
                     return (
                       <li className="items-list">
-                        <label className="container">
+                        <label className="container-top-checkbox">
                           <span className="categories-content">
                             {item1.title}
                           </span>
-                          <input type="checkbox" />
+                          <input
+                            type="checkbox"
+                            checked={this.state.isChecked}
+                            onChange={this.toggleChange}
+                          />
                           <span className="checkmark" />
                         </label>
                       </li>
@@ -82,17 +90,6 @@ class Categories extends Component {
     let x = !CategoriesList[y].collapsed;
     CategoriesList[y].collapsed = x;
     this.setState({});
-  };
-
-  checkIfChecked = key => {
-    const { state: { filter } } = this;
-    CategoriesList[key].toggle = !CategoriesList[key].toggle;
-    if (CategoriesList[key].toggle) {
-      CategoriesList[key].subCategories.map((item2, key2) => {
-        item2.toggle = true;
-        console.log(item2.toggle);
-      });
-    }
   };
 }
 
