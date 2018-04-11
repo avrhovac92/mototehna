@@ -12,9 +12,9 @@ class MotivationText extends Component {
           className="balckQuoteIcon"
           alt="Blackquote"
         />
-        <span>
+        <div className="Text">
           Kada čuješ posumnjaj, kada vidiš ne veruj, kada kupiš ne zaboravljaj!
-        </span>
+        </div>
       </div>
     );
   }

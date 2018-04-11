@@ -8,12 +8,22 @@ class TopNavBar extends Component {
     return (
       <div className="TopNavBar">
         <div className="phone">
-          <img
-            src={Icons.phoneHeader}
-            className="phoneIcon"
-            alt="Phone header"
-          />
-          <div>+381 61 4217 994</div>
+          <div className="phone1">
+            <img
+              src={Icons.phoneHeader}
+              className="phoneIcon"
+              alt="Phone header"
+            />
+            <div>+381 61 4217 994</div>
+          </div>
+          <a className="phoneCall" href="tel:+381614217994">
+            <img
+              src={Icons.phoneHeader}
+              className="phoneIcon"
+              alt="Phone header"
+            />
+            <div>+381 61 4217 994</div>
+          </a>
         </div>
 
         <div className="bundleNavBar">

@@ -8,11 +8,18 @@
   font-weight: lighter;
   font-size: 15px;
   padding: 2px 6%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .bundleNavBar {
   display: flex;
   align-items: center;
   flex-direction: row;
+  margin-left: 0px;
+  margin-right: 2%;
+  padding-right: 44px;
 }
 .phone {
   display: flex;
@@ -51,19 +58,40 @@
   margin-right: 10px;
   height: 20px;
 }
-
-@media (max-width: 985px) and (min-width: 768px) {
-  .TopNavBar {
-    padding-left: 2%;
+.phoneCall {
+  display: flex;
+}
+.phone1 {
+  display: flex;
+  padding-left: 27%;
+  margin-right: -15px;
+}
+@media (min-width: 985px) {
+  .phoneCall {
+    display: none;
+  }
+}
+@media (max-width: 985px) {
+  .phone1 {
+    display: none;
   }
 }
 
-@media (max-width: 768px) and (min-width: 522px) {
+@media (max-width: 985px) and (min-width: 767px) {
+  .TopNavBar {
+    padding-left: 1.5%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 522px) {
   .top-navbar-hide-mobile {
     display: none;
   }
   .TopNavBar {
-    padding-left: 8%;
+    padding-left: 73px;
+  }
+  .bundleNavBar {
+    padding-right: 40px;
   }
 }
 
@@ -74,11 +102,20 @@
   .TopNavBar {
     padding-left: 3%;
   }
+  .bundleNavBar {
+    padding: 0;
+    margin-right: 1%;
+  }
 }
 
 @media (max-width: 449px) {
   .TopNavBar {
-    padding-left: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .bundleNavBar {
+    padding: 0;
+    margin-right: 1%;
   }
   .top-navbar-hide-mobile {
     display: none;

@@ -96,7 +96,32 @@ const FooterList = [
   }
 ];
 
+const SidebarPhones = {
+  header: 'Kontakt Telefoni',
+  items: [
+    {
+      image: Icons.phoneSidebar,
+      text: '+381 61 4217 994'
+    },
+    {
+      image: Icons.phoneSidebar,
+      text: '+381 21 6315 252'
+    },
+    {
+      image: Icons.workingHours,
+      text: (
+        <span>
+          Radnim danima od 09 - 17h
+          <br />Subotom od 09 - 14h
+          <br />Nedelja neradna
+        </span>
+      )
+    }
+  ]
+};
+
 export { ListProducts };
 export { Services };
 export { MototehnaGoogleMapRoutes };
 export { FooterList };
+export { SidebarPhones };
