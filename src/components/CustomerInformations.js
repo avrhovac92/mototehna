@@ -207,7 +207,7 @@ class CustomerInformations extends Component {
               src={Icons.confirmOrder}
               alt="Account icon"
             />
-            <span>POTVRDI NARUDZBU</span>
+            <span>POTVRDI NARUDŽBU</span>
           </button>
         ) : (
           <button className="createAccountButton" onClick={register}>

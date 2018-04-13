@@ -46,8 +46,8 @@ class OrderLoggedIn extends Component {
 
   register = async event => {
     const {
-      state: { email, firstName, lastName, address, phone },
-      props: { registerUser, history: { replace }, updateUser },
+      state: { email, phone },
+      props: { history: { replace }, updateUser },
       validateEmail,
       validatePhoneNumber
     } = this;
@@ -59,7 +59,7 @@ class OrderLoggedIn extends Component {
     ) {
       return;
     }
-    const { validEmail, validPhoneNumber, ...rest } = this.state;
+    const { ...rest } = this.state;
     updateUser(rest);
     replace('/');
     window.scrollTo(0, 0);
@@ -89,10 +89,10 @@ class OrderLoggedIn extends Component {
             src={Icons.successfulOrder}
             alt="Account icon"
           />
-          Uspjesno ste se prijavili <br />
+          Uspješno ste se prijavili <br />
         </div>
         <p className="registration-title">
-          <span className="postojeciKorisnik">Postojeci korisnik</span>
+          <span className="postojeciKorisnik">Postojeći korisnik</span>
         </p>
 
         <div className="registration-form">
@@ -146,7 +146,7 @@ class OrderLoggedIn extends Component {
             src={Icons.confirmOrder}
             alt="Account icon"
           />
-          <span>POTVRDI NARUDZBU</span>
+          <span>POTVRDI NARUDŽBU</span>
         </button>
       </div>
     );

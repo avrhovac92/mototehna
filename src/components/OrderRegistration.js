@@ -192,7 +192,7 @@ class OrderRegistration extends Component {
             src={Icons.confirmOrder}
             alt="Account icon"
           />
-          <span>POTVRDI NARUDZBU</span>
+          <span>POTVRDI NARUDŽBU</span>
         </button>
         <div className={validEmail ? 'hidden-div' : ''}>
           <span className="error-message">

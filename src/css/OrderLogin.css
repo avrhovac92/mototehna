@@ -10,7 +10,6 @@
   color: #444;
 }
 
-
 label {
   font-family: 'Nunito Sans';
   font-weight: 600;
@@ -60,6 +59,17 @@ input {
 
 .hidden-div {
   display: none;
+}
+
+.forgotPas {
+  font-weight: 'Regular';
+  font-size: 14px;
+  color: #666;
+  margin-left: 5px;
+}
+
+.sign-in-fp-icon {
+  margin-bottom: 4px;
 }
 
 @media (max-width: 768px) {

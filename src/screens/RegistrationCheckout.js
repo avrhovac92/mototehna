@@ -18,11 +18,11 @@ class Registration extends Component {
     return (
       <ContainerComponent>
         <div className="title-container">
-          <p className="registration-title">Naruci</p>
+          <p className="registration-title">Naruči</p>
           <div className="underline" />
         </div>
         <div className="orderRequestText">
-          Posaljite zahtjev za narudzbu kao:
+          Pošaljite zahtjev za narudžbu kao:
         </div>
         <div className="radio-buttons">
           <form action="">
@@ -49,7 +49,7 @@ class Registration extends Component {
                 className="registration-checkout-radio-button"
               />
               <label htmlFor="radio2" className="radio-label">
-                Postojeci korisnik
+                Postojeći korisnik
               </label>
             </div>
           </form>

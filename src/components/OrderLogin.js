@@ -6,22 +6,15 @@ import { connect } from 'react-redux';
 import 'css/OrderLogin.css';
 
 import { Icons } from 'assets';
-import OrderRegistration from './OrderRegistration';
 
 class OrderLogin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      address: '',
-      phone: '',
       email: '',
       password: '',
-      confirmPassword: '',
       validPassword: true,
       validEmail: true,
-      validConfirmPassword: true,
       loginFailed: false
     };
     this.validatePassword = this.validatePassword.bind(this);
@@ -31,15 +24,6 @@ class OrderLogin extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
-  };
-
-  validateConfirmPassword = event => {
-    if (event.target.value !== this.state.password) {
-      this.setState({ validConfirmPassword: false });
-      return false;
-    }
-    this.setState({ validConfirmPassword: true });
-    return true;
   };
 
   validatePassword = event => {
@@ -75,7 +59,6 @@ class OrderLogin extends Component {
       email,
       password
     });
-    console.log('response', response);
     if (response.status) {
       replace('/checkout-confirmation');
       window.scrollTo(0, 0);
@@ -93,7 +76,7 @@ class OrderLogin extends Component {
     return (
       <div className="registrationContainer">
         <p className="registration-title">
-          <span className="postojeciKorisnik">Postojeci korisnik</span>
+          <span className="postojeciKorisnik">Postojeći korisnik</span>
         </p>
 
         <div className="registration-form">
@@ -115,6 +98,14 @@ class OrderLogin extends Component {
             onChange={change}
             className={validPassword ? '' : 'invalid'}
           />
+          <div className="bottomPassword">
+            <img
+              src={Icons.forgotIcon}
+              className="sign-in-fp-icon"
+              alt="forgotIcon"
+            />
+            <span className="forgotPas">Zaboravljena lozinka</span>
+          </div>
         </div>
         <button className="createAccountButton" onClick={login}>
           <img

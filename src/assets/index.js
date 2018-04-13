@@ -31,7 +31,8 @@ const Icons = {
   successfulOrder: require('./icons/uspjesna-narudzba.png'),
   sendIcon: require('./icons/posalji-btn-icon.png'),
   send: require('./icons/posalji-btn-icon.png'),
-  loginErrorIcon: require('./icons/login-error-icon.png')
+  loginErrorIcon: require('./icons/login-error-icon.png'),
+  forgotIcon: require('./icons/forgot-icon.png')
 };
 
 const Video = {
