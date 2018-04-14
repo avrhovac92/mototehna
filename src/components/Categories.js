@@ -6,13 +6,10 @@ import { Icons } from 'assets';
 class Categories extends Component {
   constructor(props) {
     super(props);
-    this.state = { list: CategoriesList, isChecked: false };
+    this.state = { list: CategoriesList };
+    this.stopClick = false;
+    console.log(this.state);
   }
-  toggleChange = () => {
-    this.setState({
-      isChecked: !this.state.isChecked
-    });
-  };
 
   render() {
     const { state: { list }, toggleCategories } = this;
@@ -24,20 +21,22 @@ class Categories extends Component {
         <div className="content-container">
           {list.map((item, key) => {
             return (
-              <div>
+              <div key={key}>
                 <div className="collapser">
                   <div className="categories-main-category">
                     <label className="container-top-checkbox">
                       <span>{item.title}</span>
 
-                      <input type="checkbox" onChange={this.toggleChange} />
+                      <input
+                        type="checkbox"
+                        onChange={() => this.toggleChange(key)}
+                        checked={item.checked}
+                      />
                       <span className="checkmark" />
                     </label>
                   </div>
                   <div
-                    onClick={() => {
-                      toggleCategories(key);
-                    }}
+                    onClick={() => toggleCategories(item)}
                     data-target={'#' + key}
                     data-toggle="collapse"
                   >
@@ -60,15 +59,15 @@ class Categories extends Component {
                 <ul className="mopeds collapse" id={key}>
                   {item.subCategories.map((item1, key1) => {
                     return (
-                      <li className="items-list">
+                      <li className="items-list" key={key + '-' + key1}>
                         <label className="container-top-checkbox">
                           <span className="categories-content">
                             {item1.title}
                           </span>
                           <input
                             type="checkbox"
-                            checked={this.state.isChecked}
-                            onChange={this.toggleChange}
+                            checked={item1.checked}
+                            onChange={() => this.toggleChange(key, key1)}
                           />
                           <span className="checkmark" />
                         </label>
@@ -86,10 +85,46 @@ class Categories extends Component {
       </div>
     );
   }
-  toggleCategories = y => {
-    let x = !CategoriesList[y].collapsed;
-    CategoriesList[y].collapsed = x;
-    this.setState({});
+
+  toggleChange = (bigIndex, smallIndex) => {
+    if (smallIndex !== undefined) {
+      this.state.list[bigIndex].subCategories[smallIndex].checked = !this.state
+        .list[bigIndex].subCategories[smallIndex].checked;
+      let checkedSmallIndex = true;
+      this.state.list[bigIndex].subCategories.forEach((subCategory, index) => {
+        if (!subCategory.checked) {
+          this.state.list[bigIndex].checked = false;
+          checkedSmallIndex = false;
+        }
+      });
+      if (checkedSmallIndex) {
+        this.state.list[bigIndex].checked = true;
+      }
+    } else {
+      this.state.list[bigIndex].checked = !this.state.list[bigIndex].checked;
+      this.state.list[bigIndex].subCategories.forEach((subCategory, index) => {
+        this.state.list[bigIndex].subCategories[
+          index
+        ].checked = this.state.list[bigIndex].checked;
+      });
+    }
+    this.forceUpdate();
+  };
+
+  toggleCategories = item => {
+    if (this.stopClick) {
+      return;
+    }
+    this.stopClick = true;
+    this.state.list.forEach((listItem, index) => {
+      if (listItem.title === item.title) {
+        this.state.list[index].collapsed = !this.state.list[index].collapsed;
+      }
+    });
+    this.forceUpdate();
+    setTimeout(() => {
+      this.stopClick = false;
+    }, 600);
   };
 }
 

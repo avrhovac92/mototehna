@@ -157,66 +157,90 @@ const PrivacyPolicyContent = [
 const CategoriesList = [
   {
     title: 'MOPEDI',
+    collapsed: false,
+    checked: true,
     subCategories: [
       {
-        title: 'A3'
+        title: 'A3',
+        checked: true
       },
       {
-        title: 'A35'
+        title: 'A35',
+        checked: true
       },
       {
-        title: 'APN4'
+        title: 'APN4',
+        checked: true
       },
       {
-        title: 'APN6'
+        title: 'APN6',
+        checked: true
       },
       {
-        title: 'BT50'
+        title: 'BT50',
+        checked: true
       },
       {
-        title: 'ATX'
+        title: 'ATX',
+        checked: true
       },
       {
-        title: 'CTX'
+        title: 'CTX',
+
+        checked: true
       }
     ]
   },
   {
     title: 'BASTA',
+    collapsed: false,
+    checked: true,
     subCategories: [
       {
-        title: 'Kosilice'
+        title: 'Kosilice',
+        checked: true
       },
       {
-        title: 'Trimeri'
+        title: 'Trimeri',
+        checked: true
       }
     ]
   },
   {
     title: 'SUMA',
+    collapsed: false,
+    checked: true,
     subCategories: [
       {
-        title: 'Motorne testere'
+        title: 'Motorne testere',
+        checked: true
       }
     ]
   },
   {
     title: 'VANBRODSKI',
+    collapsed: false,
+    checked: true,
     subCategories: [
       {
-        title: 'T4'
+        title: 'T4',
+        checked: true
       },
       {
-        title: 'T4.5'
+        title: 'T4.5',
+        checked: true
       },
       {
-        title: 'T4.8'
+        title: 'T4.8',
+        checked: true
       },
       {
-        title: 'T10'
+        title: 'T10',
+        checked: true
       },
       {
-        title: 'T18'
+        title: 'T18',
+        checked: true
       }
     ]
   }
