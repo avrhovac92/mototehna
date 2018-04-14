@@ -1,0 +1,21 @@
+.titleContainer3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  .title3 {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: #444;
+  font-family: 'Nunito-Sans';
+  font-size: 20px;
+}
+.line3 {
+  display: flex;
+  margin-bottom:5px;
+  height: 2px;
+  width: 40px;
+  background-color: #fbc106;
+}
