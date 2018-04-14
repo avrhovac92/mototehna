@@ -26,9 +26,10 @@
   background-color: #eeeeee;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 30%;
+  width: 100%;
+  flex-grow: 1;
   margin-left: 80px;
-  margin-bottom: 10%;
+  margin-bottom: 40%;
 }
 
 .items-list {

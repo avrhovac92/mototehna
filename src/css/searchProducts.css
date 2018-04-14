@@ -1,0 +1,18 @@
+.search-products-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.products-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 800px;
+}
+
+input {
+  width: 90%;
+  margin-left: 50px;
+}

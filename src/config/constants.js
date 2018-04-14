@@ -245,8 +245,34 @@ const CategoriesList = [
     ]
   }
 ];
+const ListProducts1 = [
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din'
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din'
+  }
+];
+const ListProducts2 = [
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din'
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din'
+  }
+];
 
 export { ListProducts };
+export { ListProducts1 };
+export { ListProducts2 };
 export { Services };
 export { MototehnaGoogleMapRoutes };
 export { FooterList };
