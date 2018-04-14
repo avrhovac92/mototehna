@@ -1,30 +1,31 @@
-import React, { Component } from 'react';
-import 'css/App.css';
+import React, { Component } from "react";
+import "css/App.css";
 
-import { Switch, Route } from 'react-router-dom';
-import configureStore from 'redux/configureStore';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
+import { Switch, Route } from "react-router-dom";
+import configureStore from "redux/configureStore";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 
-import { Provider as AlertProvider } from 'react-alert';
-import AlertTemplate from 'react-alert-template-basic';
+import { Provider as AlertProvider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
 
-import Home from 'screens/Home';
-import Registration from 'screens/Registration';
-import AboutUs from 'screens/AboutUs';
-import Order from 'screens/RegistrationCheckout';
-import Checkout from 'screens/CheckoutConfirmation';
-import ContactForm from 'screens/ContactForm';
-import PrivacyPolicy from 'screens/PrivacyPolicy';
-import TermsAndConditions from 'screens/TermsAndConditions';
-import Store from 'screens/Store';
+import Home from "screens/Home";
+import Registration from "screens/Registration";
+import AboutUs from "screens/AboutUs";
+import Order from "screens/RegistrationCheckout";
+import Checkout from "screens/CheckoutConfirmation";
+import ContactForm from "screens/ContactForm";
+import PrivacyPolicy from "screens/PrivacyPolicy";
+import TermsAndConditions from "screens/TermsAndConditions";
+import Store from "screens/Store";
+import UpdateUserInformations from "screens/UpdateUserInformations";
 
 // optional cofiguration
 const options = {
-  position: 'bottom center',
+  position: "bottom center",
   timeout: 5000,
-  offset: '30px',
-  transition: 'scale'
+  offset: "30px",
+  transition: "scale"
 };
 
 class App extends Component {
@@ -52,6 +53,11 @@ class App extends Component {
                 exact
                 path="/terms-and-conditions"
                 component={TermsAndConditions}
+              />
+              <Route
+                exact
+                path="/updateUserInformations"
+                component={UpdateUserInformations}
               />
             </Switch>
           </AlertProvider>

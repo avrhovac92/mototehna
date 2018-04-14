@@ -1,24 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { userActions } from 'redux/actions';
-import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-import 'css/OrderLogin.css';
+import { userActions } from "redux/actions";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import "css/OrderLogin.css";
 
-import { Icons } from 'assets';
-import OrderRegistration from './OrderRegistration';
+import { Icons } from "assets";
 
 class OrderLogin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      address: '',
-      phone: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
+      firstName: "",
+      lastName: "",
+      address: "",
+      phone: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
       validPassword: true,
       validEmail: true,
       validConfirmPassword: true,
@@ -75,9 +74,9 @@ class OrderLogin extends Component {
       email,
       password
     });
-    console.log('response', response);
+    console.log("response", response);
     if (response.status) {
-      replace('/checkout-confirmation');
+      replace("/checkout-confirmation");
       window.scrollTo(0, 0);
     } else {
       this.setState({ loginFailed: true });
@@ -103,7 +102,7 @@ class OrderLogin extends Component {
             placeholder="vas@email.com"
             value={email}
             onChange={change}
-            className={validEmail ? '' : 'invalid'}
+            className={validEmail ? "" : "invalid"}
           />
           <br />
           <label>Lozinka</label> <br />
@@ -113,7 +112,7 @@ class OrderLogin extends Component {
             placeholder="Lozinka"
             value={password}
             onChange={change}
-            className={validPassword ? '' : 'invalid'}
+            className={validPassword ? "" : "invalid"}
           />
         </div>
         <button className="createAccountButton" onClick={login}>
