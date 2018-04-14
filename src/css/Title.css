@@ -1,10 +1,10 @@
-.titleContainer{
+.titleContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-  .title {
+.title {
   display: flex;
   margin-top: 57px;
   margin-bottom: 8px;

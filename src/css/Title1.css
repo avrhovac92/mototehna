@@ -1,8 +1,8 @@
 .titleContainer1 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  /* justify-content: center;
+  align-items: flex-start; */
 }
 .title1 {
   display: flex;
@@ -20,10 +20,4 @@
   height: 3.4px;
   width: 55px;
   background-color: #fbc106;
-}
-
-@media (max-width: 768px) {
-  .titleContainer1 {
-    align-self: flex-start;
-  }
 }
