@@ -8,7 +8,6 @@ class Categories extends Component {
     super(props);
     this.state = { list: CategoriesList };
     this.stopClick = false;
-    console.log(this.state);
   }
 
   render() {
