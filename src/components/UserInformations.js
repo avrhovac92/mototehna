@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { userActions } from 'redux/actions';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import 'css/UserInformations.css';
 import 'css/UserInformationContainer.css';
 
@@ -9,11 +13,11 @@ class UserInformations extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      address: '',
-      phone: '',
-      email: '',
+      firstName: props.firstName || '',
+      lastName: props.lastName || '',
+      address: props.address || '',
+      phone: props.phone || '',
+      email: props.email || '',
       buttonChangePassword: true
     };
   }
@@ -199,4 +203,15 @@ class UserInformations extends Component {
   };
 }
 
-export default UserInformations;
+export default connect(
+  state => ({
+    email: state.user.email,
+    phone: state.user.phone,
+    firstName: state.user.firstName,
+    lastName: state.user.lastName,
+    address: state.user.address
+  }),
+  {
+    updateUser: userActions.updateUser
+  }
+)(withRouter(UserInformations));

@@ -72,7 +72,7 @@ class OrderLogin extends Component {
 
   render() {
     const {
-      state: { email, password, validEmail, validPassword },
+      state: { email, password, validEmail, validPassword, loginFailed },
       change,
       login
     } = this;
@@ -118,6 +118,15 @@ class OrderLogin extends Component {
           />
           <span>PRIJAVITE SE</span>
         </button>
+        <div className={!loginFailed ? 'hidden-div' : ''}>
+          <span className="error-message">
+            <img
+              className="accountIcon"
+              src={Icons.loginErrorIcon}
+              alt="Error icon"
+            />Podaci nisu tacni!
+          </span>
+        </div>
       </div>
     );
   }
