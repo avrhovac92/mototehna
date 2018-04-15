@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import 'css/Categories.css';
-import { CategoriesList } from 'config/constants';
-import { Icons } from 'assets';
+import React, { Component } from "react";
+import "css/Categories.css";
+import { CategoriesList } from "config/constants";
+import { Icons } from "assets";
 
 class Categories extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class Categories extends Component {
   }
 
   render() {
-    const { state: { list }, toggleCategories } = this;
+    const { state: { list }, toggleCategories, resetFilter } = this;
     return (
       <div className="categories">
         <div className="categories-title">
@@ -36,7 +36,7 @@ class Categories extends Component {
                   </div>
                   <div
                     onClick={() => toggleCategories(item)}
-                    data-target={'#' + key}
+                    data-target={"#" + key}
                     data-toggle="collapse"
                   >
                     {CategoriesList[key].collapsed ? (
@@ -58,7 +58,7 @@ class Categories extends Component {
                 <ul className="mopeds collapse" id={key}>
                   {item.subCategories.map((item1, key1) => {
                     return (
-                      <li className="items-list" key={key + '-' + key1}>
+                      <li className="items-list" key={key + "-" + key1}>
                         <label className="container-top-checkbox">
                           <span className="categories-content">
                             {item1.title}
@@ -77,13 +77,20 @@ class Categories extends Component {
               </div>
             );
           })}
+
           <div className="filter-reseting">
-            <span>RESETUJ FILTERE</span>
+            <span className="filter-reseting-text" onClick={resetFilter}>
+              RESETUJ FILTERE
+            </span>
           </div>
         </div>
       </div>
     );
   }
+
+  resetFilter = () => {
+    window.location.reload();
+  };
 
   toggleChange = (bigIndex, smallIndex) => {
     if (smallIndex !== undefined) {
