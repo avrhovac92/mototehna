@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import ReactModal from 'react-modal';
+import React, { Component } from "react";
+import ReactModal from "react-modal";
 
-import { Icons } from 'assets';
-import { connect } from 'react-redux';
-import { userActions } from 'redux/actions';
-import { Link } from 'react-router-dom';
-import SignIn from 'components/SignIn';
+import { Icons } from "assets";
+import { connect } from "react-redux";
+import { userActions } from "redux/actions";
+import { Link } from "react-router-dom";
+import SignIn from "components/SignIn";
 
-import 'css/ModalLogin.css';
-import 'css/TopNavBar.css';
+import "css/ModalLogin.css";
+import "css/TopNavBar.css";
 
-ReactModal.setAppElement('#root');
+ReactModal.setAppElement("#root");
 
 class TopNavBar extends Component {
   constructor() {
@@ -67,7 +67,7 @@ class TopNavBar extends Component {
                   alt="Login header"
                 />
                 <span className="top-navbar-hide-mobile">
-                  {firstName ? firstName : 'Dobrodosli'}
+                  {firstName ? firstName : "Dobrodosli"}
                 </span>
               </div>
               <Link to="/">

@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import 'css/StartShoping.css';
+import React, { Component } from "react";
+import "css/StartShoping.css";
 
-import { Icons } from 'assets';
+import { Icons } from "assets";
+import { Link } from "react-router-dom";
 
 export default class StartShoping extends Component {
   render() {
@@ -15,10 +16,12 @@ export default class StartShoping extends Component {
           MOTOTEHNA je maloprodajni distributer rezervnih delova za mopede,
           kosilice, vanbrodske motore, vodene pumpe i motorne testere
         </div>
-        <div className="startShopingButton">
-          <img className="cart" src={Icons.addToCartIcon} alt="Icon cart" />
-          <span>Započni kupovinu</span>
-        </div>
+        <Link to="/updateUserInformations">
+          <div className="startShopingButton">
+            <img className="cart" src={Icons.addToCartIcon} alt="Icon cart" />
+            <span>Započni kupovinu</span>
+          </div>{" "}
+        </Link>
       </div>
     );
   }

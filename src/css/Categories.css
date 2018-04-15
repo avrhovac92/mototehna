@@ -1,6 +1,6 @@
 #categories {
   margin: 4%;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-size: 22px;
   text-align: left;
   border-bottom: 1px solid #fbc106;
@@ -35,7 +35,7 @@
 .items-list {
   display: flex;
   flex-direction: row;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-weight: normal;
   font-size: 15px;
   color: #666;
@@ -50,7 +50,7 @@
   position: relative;
   padding-left: 26px;
   cursor: pointer;
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-weight: bold;
   font-size: 15px;
   -webkit-user-select: none;
@@ -84,7 +84,7 @@
 }
 
 .checkmark:after {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
 }
@@ -114,14 +114,19 @@
 }
 
 .filter-reseting {
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-weight: bold;
   font-size: 15px;
-  color: #fbc106;
   text-decoration: underline;
   padding-top: 20px;
   padding-top: 20px;
   padding-bottom: 40px;
+}
+
+.filter-reseting-text:hover {
+  color: #fbc106;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .collapse-icon {
@@ -138,7 +143,7 @@
 
   #categories {
     margin: 7%;
-    font-family: 'Nunito Sans';
+    font-family: "Nunito Sans";
     font-size: 22px;
     text-align: left;
     border-bottom: 1px solid #fbc106;

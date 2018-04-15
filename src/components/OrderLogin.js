@@ -45,7 +45,10 @@ class OrderLogin extends Component {
   login = async event => {
     const {
       state: { password, email },
-      props: { signInUser, history: { replace } },
+      props: {
+        signInUser,
+        history: { replace }
+      },
       validatePassword,
       validateEmail
     } = this;
