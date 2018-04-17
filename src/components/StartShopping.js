@@ -16,12 +16,11 @@ export default class StartShoping extends Component {
           MOTOTEHNA je maloprodajni distributer rezervnih delova za mopede,
           kosilice, vanbrodske motore, vodene pumpe i motorne testere
         </div>
-        <Link to="/updateUserInformations">
-          <div className="startShopingButton">
-            <img className="cart" src={Icons.addToCartIcon} alt="Icon cart" />
-            <span>Započni kupovinu</span>
-          </div>{" "}
-        </Link>
+
+        <div className="startShopingButton">
+          <img className="cart" src={Icons.addToCartIcon} alt="Icon cart" />
+          <span>Započni kupovinu</span>
+        </div>
       </div>
     );
   }

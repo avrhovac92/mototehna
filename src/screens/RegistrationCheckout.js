@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import 'css/Page1.css';
-import 'css/Order.css';
-import ContainerComponent from 'components/ContainerComponent';
-import CustomerInformations from 'components/CustomerInformations';
-import OrderLogin from 'components/OrderLogin';
+import "css/Page1.css";
+import "css/Order.css";
+import ContainerComponent from "components/ContainerComponent";
+import CustomerInformations from "components/CustomerInformations";
+import OrderLogin from "components/OrderLogin";
 
 class Registration extends Component {
   constructor(props) {
@@ -64,7 +64,7 @@ class Registration extends Component {
   }
 
   updateRadio = event => {
-    this.setState({ newUser: event.target.name === 'newUser' });
+    this.setState({ newUser: event.target.name === "newUser" });
   };
 }
 

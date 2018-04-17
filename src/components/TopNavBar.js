@@ -66,9 +66,11 @@ class TopNavBar extends Component {
                   className="loginIcon"
                   alt="Login header"
                 />
-                <span className="top-navbar-hide-mobile">
-                  {firstName ? firstName : "Dobrodosli"}
-                </span>
+                <Link to="/updateUserInformations">
+                  <span className="top-navbar-hide-mobile">
+                    {firstName ? firstName : "Dobrodosli"}
+                  </span>
+                </Link>
               </div>
               <Link to="/">
                 <div className="login" onClick={logoutUser}>

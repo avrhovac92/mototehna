@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import ContainerComponent from 'components/ContainerComponent';
+import ContainerComponent from "components/ContainerComponent";
 
-import OtherServices from 'components/OtherServices';
-import TopProducts from 'components/TopProducts';
-import AboutUs from 'components/AboutUs';
-import StartShopping from 'components/StartShopping';
-import Bredns from 'components/Bredns';
+import OtherServices from "components/OtherServices";
+import TopProducts from "components/TopProducts";
+import AboutUs from "components/AboutUs";
+import StartShopping from "components/StartShopping";
+import Bredns from "components/Bredns";
 
 class Home extends Component {
   render() {

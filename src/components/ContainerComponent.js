@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import 'css/index.css';
+import React, { Component } from "react";
+import "css/index.css";
 
-import Footer from 'components/Footer';
-import Header from 'components/Header';
-import TopNavBar from 'components/TopNavBar';
+import Footer from "components/Footer";
+import Header from "components/Header";
+import TopNavBar from "components/TopNavBar";
+import MotivationText from "components/MotivationText";
 
 export default class ContainerComponent extends Component {
   render() {
@@ -27,8 +28,7 @@ export default class ContainerComponent extends Component {
           )}
         </div>
 
-
-
+        <MotivationText />
         <div className="container-component-lower">
           <Footer />
         </div>

@@ -1,0 +1,21 @@
+.MotivationText {
+  display: flex;
+  justify-content: center;
+  font-family: 'Nunito sans';
+  font-weight: lighter;
+  font-size: 30px;
+  color: #666666;
+  background-color: #fff;
+  padding: 3%;
+  text-align: center;
+}
+.balckQuoteIcon {
+  height: 30px;
+  margin-right: 10px;
+  margin-top: -8px;
+}
+@media (max-width: 768px) {
+  .MotivationText {
+    text-align: center;
+  }
+}
