@@ -203,6 +203,7 @@ class UserInformations extends Component {
   };
 }
 
+
 export default connect(
   state => ({
     email: state.user.email,
@@ -212,6 +213,6 @@ export default connect(
     address: state.user.address
   }),
   {
-    updateUser: userActions.updateUser
+    updateUser: userActions.patchUser
   }
 )(withRouter(UserInformations));

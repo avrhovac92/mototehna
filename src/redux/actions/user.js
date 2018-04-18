@@ -72,3 +72,21 @@ export const sendContactForm = data => {
     }
   };
 };
+
+export const patchUser = user => {
+  return async (dispatch, getState) => {
+    try {
+      const pUser = await Fetch({
+        endpoint: 'http://localhost:3001/api/users/:userID',
+        method: 'PATCH',
+        body: user
+      });
+      const result = await pUser.json();
+      dispatch(updateUser(result));
+      return { status: true };
+    } catch (error) {
+      console.log(error.message);
+      return { status: false, message: error.message };
+    }
+  };
+};
