@@ -29,15 +29,18 @@ class UserInformations extends Component {
   };
 
   submit = async event => {
+    console.log('submit button triggered');
     const {
       state: { email, firstName, lastName, address, phone },
       props: {
+        _id,
         updateUser,
         history: { replace }
       }
     } = this;
 
     const response = await updateUser({
+      _id,
       email,
       firstName,
       lastName,
@@ -203,9 +206,9 @@ class UserInformations extends Component {
   };
 }
 
-
 export default connect(
   state => ({
+    _id: state.user._id,
     email: state.user.email,
     phone: state.user.phone,
     firstName: state.user.firstName,

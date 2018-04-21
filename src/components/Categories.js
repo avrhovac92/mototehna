@@ -29,6 +29,7 @@ class Categories extends Component {
                       <input
                         type="checkbox"
                         onChange={() => this.toggleChange(key)}
+                        style={{left: 0}}
                         checked={item.checked}
                       />
                       <span className="checkmark" />

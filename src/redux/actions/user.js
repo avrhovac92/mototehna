@@ -77,12 +77,14 @@ export const patchUser = user => {
   return async (dispatch, getState) => {
     try {
       const pUser = await Fetch({
-        endpoint: 'http://localhost:3001/api/users/:userID',
+        endpoint: 'http://localhost:3001/api/users/' + user._id,
         method: 'PATCH',
         body: user
       });
+      console.log('pUser', pUser);
       const result = await pUser.json();
-      dispatch(updateUser(result));
+      console.log('result', result);
+      dispatch(updateUser(result.user));
       return { status: true };
     } catch (error) {
       console.log(error.message);
