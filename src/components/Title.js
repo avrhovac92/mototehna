@@ -7,7 +7,7 @@ export default class Title extends Component {
     return (
       <div className="titleContainer">
         <p className="title">{title}</p>
-        <div className="line" />
+        <div className="non-bootstrap-line " />
       </div>
     );
   }

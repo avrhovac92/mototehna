@@ -8,6 +8,7 @@
 .title-container {
   display: flex;
   flex-direction: column;
+  margin-left: 0;
 }
 .subtitle {
   display: flex;

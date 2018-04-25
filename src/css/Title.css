@@ -9,13 +9,16 @@
   margin-top: 57px;
   margin-bottom: 8px;
   color: #010207;
-  font-family: 'Work Sans', 'Regular';
+  font-family: "Work Sans", "Regular";
   font-size: 38px;
 }
-.line {
+
+
+
+.non-bootstrap-line {
   display: flex;
   margin-bottom: 56px;
-  height: 1.5px;
+  height: 2px;
   width: 100px;
   background-color: #fbc106;
 }
