@@ -15,7 +15,7 @@
 .underline {
   display: flex;
   margin-bottom: 40px;
-  height: 3px;
+  height: 2px;
   width: 55px;
   background-color: #fbc106;
 }

@@ -1,23 +1,24 @@
-import React, { Component } from 'react';
-import { userActions } from 'redux/actions';
-import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { userActions } from "redux/actions";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import { withAlert } from "react-alert";
 
-import 'css/UserInformations.css';
-import 'css/UserInformationContainer.css';
+import "css/UserInformations.css";
+import "css/UserInformationContainer.css";
 
-import Title1 from './Title1';
-import ChangePassword from './ChangePassword';
+import Title1 from "./Title1";
+import ChangePassword from "./ChangePassword";
 
 class UserInformations extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: props.firstName || '',
-      lastName: props.lastName || '',
-      address: props.address || '',
-      phone: props.phone || '',
-      email: props.email || '',
+      firstName: props.firstName || "",
+      lastName: props.lastName || "",
+      address: props.address || "",
+      phone: props.phone || "",
+      email: props.email || "",
       buttonChangePassword: true
     };
   }
@@ -29,14 +30,10 @@ class UserInformations extends Component {
   };
 
   submit = async event => {
-    console.log('submit button triggered');
+    console.log("submit button triggered");
     const {
       state: { email, firstName, lastName, address, phone },
-      props: {
-        _id,
-        updateUser,
-        history: { replace }
-      }
+      props: { _id, updateUser, alert }
     } = this;
 
     const response = await updateUser({
@@ -48,8 +45,7 @@ class UserInformations extends Component {
       phone
     });
     if (response.status) {
-      replace('/');
-      window.scrollTo(0, 0);
+      alert.show('Podaci su azurirani');
     }
   };
   render() {
@@ -199,9 +195,7 @@ class UserInformations extends Component {
     );
   }
   ClickClick = () => {
-    const {
-      state: { buttonChangePassword }
-    } = this;
+    const { state: { buttonChangePassword } } = this;
     this.setState({ buttonChangePassword: !buttonChangePassword });
   };
 }
@@ -218,4 +212,4 @@ export default connect(
   {
     updateUser: userActions.patchUser
   }
-)(withRouter(UserInformations));
+)(withAlert(UserInformations));

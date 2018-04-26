@@ -8,7 +8,7 @@
 .title-container {
   display: flex;
   flex-direction: column;
-  margin-left: 0;
+
 }
 .subtitle {
   display: flex;
@@ -16,4 +16,10 @@
   color: #010207;
   font-family: "Work Sans", "Regular";
   font-size: 25px;
+}
+
+@media (max-width: 995px) {
+  .title-container {
+    align-items: center;
+  }
 }
