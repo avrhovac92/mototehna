@@ -61,6 +61,11 @@ input {
   display: none;
 }
 
+.order-login-bottom-password {
+  cursor: pointer;
+  margin-right: 50%;
+}
+
 .forgotPas {
   font-weight: 'Regular';
   font-size: 14px;

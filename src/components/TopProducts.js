@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { ListProducts } from 'config/constants';
-import Product from 'components/Product';
-import Title from 'components/Title';
+import { ListProducts } from "config/constants";
+import Product from "components/Product";
+import Title from "components/Title";
 
-import 'css/TopProducts.css';
-import { Images, Icons } from 'assets';
+import "css/TopProducts.css";
+import { Images, Icons } from "assets";
+import { Link } from "react-router-dom";
 
 export default class TopProducts extends Component {
   constructor(props) {
@@ -38,16 +39,19 @@ export default class TopProducts extends Component {
             <Product
               key={key}
               {...item}
-              src={Images['picture' + (key + 1)]}
-              className={displayedProduct === key ? '' : 'hide-mobile'}
+              src={Images["picture" + (key + 1)]}
+              className={displayedProduct === key ? "" : "hide-mobile"}
             />
           ))}
         </div>
+
         <div className="button-container">
-          <div className="button">
-            <img className="arrow" src={Icons.next} alt="Icon arrow" />
-            <span>POGLEDAJ SVE PROIZVODE</span>
-          </div>
+          <Link to="/store">
+            <div className="button">
+              <img className="arrow" src={Icons.next} alt="Icon arrow" />
+              <span>POGLEDAJ SVE PROIZVODE</span>
+            </div>
+          </Link>
         </div>
       </div>
     );

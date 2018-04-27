@@ -101,7 +101,7 @@ class OrderLogin extends Component {
             onChange={change}
             className={validPassword ? '' : 'invalid'}
           />
-          <div className="bottomPassword">
+          <div className="order-login-bottom-password">
             <img
               src={Icons.forgotIcon}
               className="sign-in-fp-icon"

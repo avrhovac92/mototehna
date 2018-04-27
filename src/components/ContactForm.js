@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import 'css/ContactForm.css';
-import { Icons } from 'assets';
-import { userActions } from 'redux/actions';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import "css/ContactForm.css";
+import { Icons } from "assets";
+import { userActions } from "redux/actions";
+import { connect } from "react-redux";
 
 class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
       validEmail: true,
       validName: true,
       validMessage: true,
@@ -33,7 +33,7 @@ class ContactForm extends Component {
   };
 
   fieldRequired = event => {
-    if (event.target.value === '') {
+    if (event.target.value === "") {
       this.setState({ validName: false });
       return false;
     }
@@ -42,7 +42,7 @@ class ContactForm extends Component {
   };
 
   validateMessage = event => {
-    if (event.target.value === '') {
+    if (event.target.value === "") {
       this.setState({ validMessage: false });
       return false;
     } else {
@@ -78,10 +78,10 @@ class ContactForm extends Component {
     });
     if (response.status) {
       this.setState({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
         formSent: true
       });
       setTimeout(() => {
@@ -113,115 +113,115 @@ class ContactForm extends Component {
         <div className="title-container">
           <p className="contact-title">Kontakt</p>
           <div className="underline" />
-          <div className="registration-form">
-            <label>Ime</label> <br />
-            <input
-              name="name"
-              placeholder="Vaše ime"
-              value={name}
-              onChange={change}
-              onBlur={fieldRequired}
-              className={validName ? '' : 'invalid'}
-            />
-            <br />
-            <label>Email</label> <br />
-            <input
-              name="email"
-              placeholder="vas@email.com"
-              value={email}
-              onChange={change}
-              onBlur={validateEmail}
-              className={validEmail ? '' : 'invalid'}
-            />
-            <br />
-            <label>Broj telefona</label> <br />
-            <input
-              name="phone"
-              placeholder="061 1234 567"
-              value={phone}
-              onChange={change}
-            />
-            <br />
-            <label>Poruka</label> <br />
-            <textarea
-              name="message"
-              placeholder="Vaša poruka"
-              value={message}
-              onChange={change}
-              onBlur={validateMessage}
-              className={
-                validMessage ? 'text-area-field' : 'text-area-field invalid'
-              }
-              rows="5"
-              maxLength="512"
-            />
-            <br />
-          </div>
-          <button className="contactFormButton" onClick={send}>
-            <img className="iconSend" src={Icons.send} alt="Send icon" />
-            <span>POŠALJI</span>
-          </button>
-          <div
+        </div>
+        <div className="registration-form">
+          <label>Ime</label> <br />
+          <input
+            name="name"
+            placeholder="Vaše ime"
+            value={name}
+            onChange={change}
+            onBlur={fieldRequired}
+            className={validName ? "" : "invalid"}
+          />
+          <br />
+          <label>Email</label> <br />
+          <input
+            name="email"
+            placeholder="vas@email.com"
+            value={email}
+            onChange={change}
+            onBlur={validateEmail}
+            className={validEmail ? "" : "invalid"}
+          />
+          <br />
+          <label>Broj telefona</label> <br />
+          <input
+            name="phone"
+            placeholder="061 1234 567"
+            value={phone}
+            onChange={change}
+          />
+          <br />
+          <label>Poruka</label> <br />
+          <textarea
+            name="message"
+            placeholder="Vaša poruka"
+            value={message}
+            onChange={change}
+            onBlur={validateMessage}
             className={
-              validEmail
-                ? 'validation-container hidden-div'
-                : 'validation-container'
+              validMessage ? "text-area-field" : "text-area-field invalid"
             }
-          >
-            <span className="error-message">
-              <img
-                className="iconSend"
-                src={Icons.loginErrorIcon}
-                alt="Error icon"
-              />Niste uneli ispravnu Email adresu!
-            </span>
-          </div>
-          <div
-            className={
-              validMessage
-                ? 'validation-container hidden-div'
-                : 'validation-container'
-            }
-          >
-            <span className="error-message">
-              <img
-                className="iconSend"
-                src={Icons.loginErrorIcon}
-                alt="Error icon"
-              />Niste uneli poruku!
-            </span>
-          </div>
-          <div
-            className={
-              validName
-                ? 'validation-container hidden-div'
-                : 'validation-container'
-            }
-          >
-            <span className="error-message">
-              <img
-                className="iconSend"
-                src={Icons.loginErrorIcon}
-                alt="Error icon"
-              />Niste uneli ime!
-            </span>
-          </div>
-          <div
-            className={
-              !formSent
-                ? 'validation-container hidden-div'
-                : 'validation-container'
-            }
-          >
-            <span className="error-message">
-              <img
-                className="iconSend"
-                src={Icons.orderConfirm}
-                alt="Error icon"
-              />Uspešno ste poslali formu! Javićemo Vam se u sledeća dva radna
-              dana.
-            </span>
-          </div>
+            rows="5"
+            maxLength="512"
+          />
+          <br />
+        </div>
+        <button className="contactFormButton" onClick={send}>
+          <img className="iconSend" src={Icons.send} alt="Send icon" />
+          <span>POŠALJI</span>
+        </button>
+        <div
+          className={
+            validEmail
+              ? "validation-container hidden-div"
+              : "validation-container"
+          }
+        >
+          <span className="error-message">
+            <img
+              className="iconSend"
+              src={Icons.loginErrorIcon}
+              alt="Error icon"
+            />Niste uneli ispravnu Email adresu!
+          </span>
+        </div>
+        <div
+          className={
+            validMessage
+              ? "validation-container hidden-div"
+              : "validation-container"
+          }
+        >
+          <span className="error-message">
+            <img
+              className="iconSend"
+              src={Icons.loginErrorIcon}
+              alt="Error icon"
+            />Niste uneli poruku!
+          </span>
+        </div>
+        <div
+          className={
+            validName
+              ? "validation-container hidden-div"
+              : "validation-container"
+          }
+        >
+          <span className="error-message">
+            <img
+              className="iconSend"
+              src={Icons.loginErrorIcon}
+              alt="Error icon"
+            />Niste uneli ime!
+          </span>
+        </div>
+        <div
+          className={
+            !formSent
+              ? "validation-container hidden-div"
+              : "validation-container"
+          }
+        >
+          <span className="error-message">
+            <img
+              className="iconSend"
+              src={Icons.orderConfirm}
+              alt="Error icon"
+            />Uspešno ste poslali formu! Javićemo Vam se u sledeća dva radna
+            dana.
+          </span>
         </div>
       </div>
     );
