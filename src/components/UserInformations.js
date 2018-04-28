@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { userActions } from "redux/actions";
-import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { withAlert } from "react-alert";
 
@@ -45,7 +44,7 @@ class UserInformations extends Component {
       phone
     });
     if (response.status) {
-      alert.show('Podaci su azurirani');
+      alert.show("Podaci su azurirani");
     }
   };
   render() {

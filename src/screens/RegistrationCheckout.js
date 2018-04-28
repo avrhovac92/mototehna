@@ -5,6 +5,9 @@ import "css/Order.css";
 import ContainerComponent from "components/ContainerComponent";
 import CustomerInformations from "components/CustomerInformations";
 import OrderLogin from "components/OrderLogin";
+import MototehnaMap from "components/MototehnaMap";
+import SideBar from "components/Sidebar";
+import { SidebarPhones } from "config/constants";
 
 class Registration extends Component {
   constructor(props) {
@@ -16,8 +19,16 @@ class Registration extends Component {
   render() {
     const { state: { newUser }, updateRadio } = this;
     return (
-      <ContainerComponent>
-        <div className="title-container">
+      <ContainerComponent
+        hasSidebar={true}
+        sidebarItems={[
+          <SideBar {...SidebarPhones} />,
+          <div className="aboutUsMap1">
+            <MototehnaMap />
+          </div>
+        ]}
+      >
+        <div className="title-container-order">
           <p className="registration-title">Naruči</p>
           <div className="underline" />
         </div>

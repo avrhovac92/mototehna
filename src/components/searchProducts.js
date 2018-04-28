@@ -3,9 +3,8 @@ import 'css/searchProducts.css';
 
 import { ListProducts1, ListProducts2 } from 'config/constants';
 import Product from 'components/Product';
-import Title from 'components/Title';
 
-import { Images, Icons } from 'assets';
+import { Images } from 'assets';
 
 class SearchProducts extends Component {
   render() {

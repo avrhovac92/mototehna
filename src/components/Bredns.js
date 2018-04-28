@@ -32,6 +32,7 @@ export default class Brends extends Component {
                   key === 0 ? 'brendPicture' : 'brendPicture hideMobile'
                 }
                 src={image}
+                alt="brendPicture"
               />
             ))}
           </div>
