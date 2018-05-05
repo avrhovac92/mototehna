@@ -26,10 +26,9 @@
   background-color: #eeeeee;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 100%;
-  flex-grow: 1;
+  width: 300px;
   margin-left: 80px;
-  margin-bottom: 40%;
+  margin-bottom: 200px;
 }
 
 .items-list {

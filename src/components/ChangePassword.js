@@ -12,7 +12,7 @@ class ChangePassword extends Component {
     super(props);
     this.state = {
       oldPassword: "",
-      newPassword: "",
+      password: "",
       confirmNewPassword: ""
     };
   }
@@ -23,7 +23,7 @@ class ChangePassword extends Component {
   };
   render() {
     const {
-      state: { oldPassword, newPassword, confirmNewPassword },
+      state: { oldPassword, password, confirmNewPassword },
       updatePassword,
       change
     } = this;
@@ -35,6 +35,7 @@ class ChangePassword extends Component {
             <label>Stara Lozinka</label>
             <br />
             <input
+              name="oldPassword"
               type="password"
               value={oldPassword}
               onChange={change}
@@ -44,14 +45,16 @@ class ChangePassword extends Component {
             <label>Nova Lozinka</label>
             <br />
             <input
+              name="password"
               type="password"
               onChange={change}
-              value={newPassword}
+              value={password}
               placeholder="Vaša nova lozinka"
             />
             <br />
             <label>Potvrdi Novu Lozinku</label> <br />
             <input
+              name="confirmNewPassword"
               type="password"
               onChange={change}
               value={confirmNewPassword}
@@ -74,11 +77,11 @@ class ChangePassword extends Component {
   updatePassword = async () => {
     const {
       props: { updatePassword },
-      state: { oldPassword, newPassword }
+      state: { oldPassword, password }
     } = this;
     const response = await updatePassword({ oldPassword });
     if (response.status) {
-      const patchPassword = updatePassword({ newPassword });
+      const patchPassword = updatePassword({ password });
       if (patchPassword) {
         ("/");
       }
@@ -89,6 +92,10 @@ class ChangePassword extends Component {
   };
 }
 
-export default connect(state => ({}), {
-  updatePassword: userActions.updateUser
+export default connect(state => ({
+  _id: state.user._id,
+  oldPassword: state.user.oldPassword,
+  password: state.user.password
+}), {
+  updatePassword: userActions.updatePassword
 })(withAlert(ChangePassword));

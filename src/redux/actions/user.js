@@ -92,3 +92,23 @@ export const patchUser = user => {
     }
   };
 };
+
+export const updatePassword = user => {
+  return async (dispatch, getState) => {
+    try {
+      const passwordPatch = await Fetch({
+        endpoint: 'http://localhost:3001/api/users/' + user._id,
+        method: 'PATCH',
+        body: user
+      });
+      console.log('passwordPatch', passwordPatch);
+      const result = await passwordPatch.json();
+      console.log('result', result);
+      dispatch(updateUser(result.user));
+      return { status: true };
+    } catch (error) {
+      console.log(error.message);
+      return { status: false, message: error.message };
+    }
+  };
+};
