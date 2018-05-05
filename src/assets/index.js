@@ -12,11 +12,14 @@ const Icons = {
   arrowLeft: require('./icons/arrow-left.png'),
   next: require('./icons/next.png'),
   yellowCart: require('./icons/yellow-cart.png'),
+    logo: require('./icons/mototehna-logo-login.png'),
+    loginButtonIcon: require('./icons/login-large-btn-icon.png'),
   phoneHeader: require('./icons/phone-header.png'),
   profileIcon: require('./icons/profile-icon.png'),
   phoneSidebar: require('./icons/phone-grey-sidebar.png'),
   viberLogo: require('./icons/viber-logo.png'),
   facebookIcon: require('./icons/facebook-icon.png'),
+  forgotIcon: require('./icons/forgot-icon.png'),
   whatsappLogo: require('./icons/WhatsApp_Logo_5.png'),
   footerWorkingHours: require('./icons/footer-working-hours.png'),
   workingHours: require('./icons/hours-grey-sidebar.png'),
@@ -31,7 +34,10 @@ const Icons = {
   successfulOrder: require('./icons/uspjesna-narudzba.png'),
   sendIcon: require('./icons/posalji-btn-icon.png'),
   send: require('./icons/posalji-btn-icon.png'),
-  loginErrorIcon: require('./icons/login-error-icon.png')
+  loginErrorIcon: require('./icons/login-error-icon.png'),
+  collapseIcon: require('./icons/collapse-icon.png'),
+  collideIcon: require('./icons/collide-icon.png'),
+  search:require('./icons/search-products-icon.png' )
 };
 
 const Video = {

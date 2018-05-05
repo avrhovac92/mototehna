@@ -36,8 +36,6 @@ export const registerUser = user => {
   };
 };
 
-<<<<<<< HEAD
-=======
 export const signInUser = user => {
   return async (dispatch, getState) => {
     try {
@@ -59,7 +57,6 @@ export const signInUser = user => {
   };
 };
 
->>>>>>> develop
 export const sendContactForm = data => {
   return async (dispatch, getState) => {
     try {

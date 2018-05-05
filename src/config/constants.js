@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icons } from 'assets';
 import { Link } from 'react-router-dom';
+import { Images } from 'assets';
 
 const ListProducts = [
   {
@@ -154,9 +155,223 @@ const PrivacyPolicyContent = [
   }
 ];
 
+const CategoriesList = [
+  {
+    title: 'MOPEDI',
+    collapsed: false,
+    checked: true,
+    subCategories: [
+      {
+        title: 'A3',
+        checked: true
+      },
+      {
+        title: 'A35',
+        checked: true
+      },
+      {
+        title: 'APN4',
+        checked: true
+      },
+      {
+        title: 'APN6',
+        checked: true
+      },
+      {
+        title: 'BT50',
+        checked: true
+      },
+      {
+        title: 'ATX',
+        checked: true
+      },
+      {
+        title: 'CTX',
+
+        checked: true
+      }
+    ]
+  },
+  {
+    title: 'BASTA',
+    collapsed: false,
+    checked: true,
+    subCategories: [
+      {
+        title: 'Kosilice',
+        checked: true
+      },
+      {
+        title: 'Trimeri',
+        checked: true
+      }
+    ]
+  },
+  {
+    title: 'SUMA',
+    collapsed: false,
+    checked: true,
+    subCategories: [
+      {
+        title: 'Motorne testere',
+        checked: true
+      }
+    ]
+  },
+  {
+    title: 'VANBRODSKI',
+    collapsed: false,
+    checked: true,
+    subCategories: [
+      {
+        title: 'T4',
+        checked: true
+      },
+      {
+        title: 'T4.5',
+        checked: true
+      },
+      {
+        title: 'T4.8',
+        checked: true
+      },
+      {
+        title: 'T10',
+        checked: true
+      },
+      {
+        title: 'T18',
+        checked: true
+      }
+    ]
+  }
+];
+
+
+const ListProducts1 = [
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture1']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture2']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture3']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture3']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture3']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture3']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture3']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture3']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture2']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture2']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture2']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture2']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture1']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture1']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture1']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture1']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture3']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture3']
+  },
+  {
+    name: 'Sedište malo A3/APN6',
+    category: 'MOPEDI',
+    price: '1600 din',
+    src:Images['picture3']
+  }
+ 
+
+];
+
 export { ListProducts };
+export { ListProducts1 };
 export { Services };
 export { MototehnaGoogleMapRoutes };
 export { FooterList };
 export { SidebarPhones };
 export { PrivacyPolicyContent };
+export { CategoriesList };

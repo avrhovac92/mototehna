@@ -1,13 +1,8 @@
 .Modal {
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 600px;
   position: absolute;
   background-color: white;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> develop
 }
 .close {
   align-self: flex-end;
@@ -81,30 +76,6 @@
     z-index: 10;
   }
 
-<<<<<<< HEAD
-  1% {
-    display: block;
-    opacity: 0;
-    z-index: 10;
-  }
-  25% {
-    display: block;
-    opacity: 0.25;
-    z-index: 11;
-  }
-  50% {
-    display: block;
-    opacity: 0.5;
-    z-index: 11;
-  }
-  75% {
-    display: block;
-    opacity: 0.7;
-    z-index: 11;
-  }
-
-=======
->>>>>>> develop
   100% {
     display: block;
     opacity: 1;

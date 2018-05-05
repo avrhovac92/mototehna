@@ -4,13 +4,9 @@
   justify-content: space-between;
 }
 .brendPicture {
-  width: 17%;
+  width: 17%!important;
   height: 90px;
   width: 20px;
-}*/
-* {
-  min-height: 0;
-  min-width: 0;
 }
 .slider-container {
   filter: grayscale(100%);
@@ -20,7 +16,7 @@
 }
 
 .row {
->>>>>>> develop
+
   display: flex;
   flex-direction: row;
   justify-content: center;

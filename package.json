@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "react": "16.2.0",
+    "react-alert": "^3.4.0",
+    "react-alert-template-basic": "^1.0.0",
     "react-bootstrap": "0.32.1",
     "react-dom": "16.2.0",
     "react-google-maps": "9.4.5",
@@ -12,10 +14,6 @@
     "react-redux": "5.0.7",
     "react-router-dom": "4.2.2",
     "react-scripts": "1.1.1",
-<<<<<<< HEAD
-    "react-slick": "^0.22.3",
-=======
->>>>>>> develop
     "recompose": "0.26.0",
     "redux": "3.7.2",
     "redux-logger": "3.0.6",

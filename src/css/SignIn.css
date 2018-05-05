@@ -1,0 +1,116 @@
+.signInContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #e5e5e5;
+  height: 600px;
+  width: 400px;
+}
+.topTitle {
+  font-size: 18px;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #eee;
+  width: 100%;
+  padding: 3%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: #e5e5e5;
+}
+.SignInBody {
+  display: flex;
+  flex-direction: column;
+}
+.osa {
+  display: flex;
+  justify-content: center;
+}
+.logo3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  height: 25%;
+  width: 25%;
+}
+.formOf {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10%;
+  padding: 2%;
+  width: 80%;
+  font-size: 18px;
+}
+.sign-in-close {
+  margin-right: 10px;
+  padding: 0 7px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 2px 1px #ccc;
+}
+.sign-in-email {
+  padding: 10px;
+  background: #eee;
+  border: 1px solid grey;
+  font-style: italic;
+  width: 100%;
+}
+.sign-in-fp-icon {
+  margin-bottom: 4px;
+}
+
+.bottomPassword {
+  margin-left: 12%;
+}
+.forgotPas {
+  font-weight: 'Regular';
+  font-size: 14px;
+  color: #666;
+  margin-left: 2%;
+}
+.loginButtonIcon {
+  margin-right: 10px;
+}
+.signInButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 7px 0;
+  width: 76%;
+  margin-top: 5%;
+  margin-left: 12%;
+  justify-content: center;
+  background-color: #fbc106;
+}
+.sign-in-field-label {
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+.loginButtonIcon {
+  width: 5%;
+  height: 5%;
+}
+.buttonText {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+.afterButtonText {
+  display: flex;
+  flex-direction: row;
+  margin-left: 25%;
+  font-size: 14px;
+  color: #666;
+  margin-top: 5%;
+}
+.here {
+  margin-left: 3px;
+  color: #fbc106;
+  text-decoration: underline;
+}

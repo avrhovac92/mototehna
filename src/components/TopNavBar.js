@@ -5,6 +5,7 @@ import { Icons } from 'assets';
 import { connect } from 'react-redux';
 import { userActions } from 'redux/actions';
 import { Link } from 'react-router-dom';
+import SignIn from 'components/SignIn';
 
 import 'css/ModalLogin.css';
 import 'css/TopNavBar.css';
@@ -44,9 +45,7 @@ class TopNavBar extends Component {
           className="Modal"
           overlayClassName="Overlay"
         >
-          <div className="close" onClick={this.handleCloseModal}>
-            x
-          </div>
+          <SignIn handleCloseModal={handleCloseModal} />
         </ReactModal>
 
         <div className="phone">
