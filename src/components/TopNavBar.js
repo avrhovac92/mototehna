@@ -105,7 +105,7 @@ class TopNavBar extends Component {
               </Link>
             </div>
           )}
-          <Link to="/">
+          <Link to="/registration-checkout">
             <div className="top-navbar-cart">
               <img
                 src={Icons.cartHeader}
