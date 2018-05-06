@@ -19,6 +19,7 @@ import PrivacyPolicy from "screens/PrivacyPolicy";
 import TermsAndConditions from "screens/TermsAndConditions";
 import Store from "screens/Store";
 import UpdateUserInformations from "screens/UpdateUserInformations";
+import Services from 'screens/Services';
 
 // optional cofiguration
 const options = {
@@ -44,6 +45,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/registration" component={Registration} />
               <Route exact path="/aboutus" component={AboutUs} />
+              <Route exact path="/services" component={Services} />
               <Route exact path="/registration-checkout" component={Order} />
               <Route exact path="/checkout-confirmation" component={Checkout} />
               <Route exact path="/contact-form" component={ContactForm} />
