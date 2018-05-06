@@ -29,14 +29,7 @@
   display: flex;
   justify-content: center;
 }
-.logo3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10%;
-  height: 25%;
-  width: 25%;
-}
+
 .formOf {
   display: flex;
   flex-direction: column;
