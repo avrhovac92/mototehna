@@ -12,9 +12,8 @@ class Store extends Component {
       <ContainerComponent>
         <Title1 title="Prodavnica" className="title-categories css-store" />
         <div className="store">
-          <div className="CategoryS hideMobile">
-            <Categories />
-          </div>
+          <Categories />
+
           <ProductSearch />
         </div>
       </ContainerComponent>

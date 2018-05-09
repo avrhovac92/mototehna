@@ -4,10 +4,6 @@
   margin-top: 30px;
 }
 
-.CategoryS {
-  width: 60% !important;
-}
-
 @media (max-width: 960px) {
   .hideMobile {
     display: none;

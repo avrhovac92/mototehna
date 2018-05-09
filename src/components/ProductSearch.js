@@ -50,6 +50,7 @@ class ProductSearch extends Component {
               src={ListProducts1[4 * (page - 1)].src}
             />
           ) : null}
+
           {4 * (page - 1) + 1 < ListProducts1.length ? (
             <Product
               className="ProductS"
@@ -59,8 +60,6 @@ class ProductSearch extends Component {
               src={ListProducts1[4 * (page - 1) + 1].src}
             />
           ) : null}
-        </div>
-        <div className="SearchProducts">
           {4 * (page - 1) + 2 < ListProducts1.length ? (
             <Product
               className="ProductS"
@@ -81,11 +80,17 @@ class ProductSearch extends Component {
           ) : null}
         </div>
         <div className="arrowsSearch">
-          <img onClick={leftClick} src={Icons.arrowLeft} alt="Arrow left" />
+          <span id="arrowsSearch">
+            <img onClick={leftClick} src={Icons.arrowLeft} alt="Arrow left" />
 
-          <div className="PageSearch">{page}</div>
+            <div className="PageSearch">{page}</div>
 
-          <img onClick={rightClick} src={Icons.arrowRight} alt="Arrow right" />
+            <img
+              onClick={rightClick}
+              src={Icons.arrowRight}
+              alt="Arrow right"
+            />
+          </span>
         </div>
       </div>
     );
