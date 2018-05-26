@@ -1,0 +1,152 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.basket-title {
+  background: #eee;
+  color: #666;
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  margin: 20px 6% 0px 6%;
+}
+.pictureBorder {
+  border: 1px solid #ccc;
+  padding: 13px 17px;
+  background: white;
+  display: flex;
+  flex-grow: 2;
+  justify-content: center;
+  align-items: center;
+}
+.basket-content {
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: row;
+  margin: 0px 6%;
+  padding: 2% 0px 2.5% 0px;
+  border-top: 2px solid #eee;
+}
+.picture-div {
+  display: flex;
+  flex-grow: 3;
+  height: 160px;
+  width: 65px;
+}
+.product-name {
+  display: flex;
+  flex-grow: 2;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 18px;
+  font-family: "Regular";
+  color: #010207;
+}
+.product-price {
+  display: flex;
+  flex-grow: 1.8;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-size: 16px;
+  font-family: "Regular";
+  color: #010207;
+}
+
+.product-value {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.product-sum {
+  display: flex;
+  flex-grow: 1.6;
+
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 16px;
+  font-family: "Regular";
+  color: #010207;
+}
+.button-div {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.basket-title-decoration {
+  display: flex;
+  flex-grow: 17;
+  padding: 4px 0px;
+  justify-content: center;
+  margin: 15px 0px 15px 12%;
+}
+
+.basket-title-decoration1 {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  padding: 4px;
+  margin: 15px 3% 15px 0px;
+}
+.arrow1 {
+  margin: 5px;
+  display: flex;
+}
+.sum-container {
+  display: flex;
+  margin: 1% 6% 2% 6%;
+  color: #010207;
+  font-size: 18px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sumOf {
+  margin-left: 10px;
+  margin-right: 3px;
+}
+.button-container1 {
+  display: flex;
+  margin: 0px 6% 60px 5%;
+  width: 89.4%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
+  margin: 3px 5px;
+  background-color: #fbc106;
+  color: #010207;
+  font-size: 18px;
+  font-family: "Nunito Sans";
+  width: 18%;
+}
+
+.remove-product {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  margin-left: 2%;
+  color: #999;
+  background-color: white;
+  border-radius: 15px;
+  text-align: center;
+  align-self: center;
+}
+
+.remove-product:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}

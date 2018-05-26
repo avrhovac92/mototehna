@@ -11,6 +11,7 @@
     "react-google-maps": "9.4.5",
     "react-image-slider": "0.1.0",
     "react-modal": "3.3.2",
+    "react-numeric-input": "^2.2.3",
     "react-redux": "5.0.7",
     "react-router-dom": "4.2.2",
     "react-scripts": "1.1.1",
