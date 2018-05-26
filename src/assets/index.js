@@ -22,6 +22,7 @@ const Icons = {
   cartHeader: require('./icons/cart-header.png'),
   loginHeader: require('./icons/login-header.png'),
   registerHeader: require('./icons/register-header.png'),
+  removeProduct: require('./icons/remove-product.png'),
   hamburgerMenu: require('./icons/hamburger-menu.png')
 };
 
