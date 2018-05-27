@@ -18,7 +18,7 @@ export default class FooterItem extends Component {
                 alt="phone header"
               />
             ) : null}
-            <span className="footer-item-text">{item.text}</span>
+            <span className="footer-item-text" onClick={() => window.scrollTo(0, 0)}>{item.text}</span>
           </div>
         ))}
       </div>

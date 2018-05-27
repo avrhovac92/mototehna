@@ -72,7 +72,7 @@ class SignIn extends Component {
           <div className="afterButtonText">
             Nemate nalog? Napravite novi
             <Link to="/registration">
-              <div className="here"> ovde</div>
+              <div className="here" onClick={() => window.scrollTo(0, 0)}> ovde</div>
             </Link>
           </div>
         </div>

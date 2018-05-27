@@ -47,7 +47,7 @@ export default class TopProducts extends Component {
 
         <div className="button-container">
           <Link to="/store">
-            <div className="button">
+            <div className="button" onClick={() => window.scrollTo(0, 0)}>
               <img className="arrow" src={Icons.next} alt="Icon arrow" />
               <span>POGLEDAJ SVE PROIZVODE</span>
             </div>

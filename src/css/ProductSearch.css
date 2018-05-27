@@ -41,7 +41,9 @@
   position: absolute;
   top: 15px;
   font-size: 15px;
+  margin-left: 15px;
 }
+
 .arrowsSearch {
   margin-top: 30px;
   margin-bottom: 40px;
@@ -56,6 +58,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.arrowsSearch img {
+  cursor: pointer;
 }
 
 .PageSearch {

@@ -22,6 +22,7 @@ class ProductSearch extends Component {
     ) {
       this.setState({ page: page + 1 });
     }
+    window.scrollTo(0, 0);
   };
   leftClick = () => {
     const { state: { page }, leftClick, rightClick } = this;
@@ -29,6 +30,7 @@ class ProductSearch extends Component {
     if (page >= 2) {
       this.setState({ page: page - 1 });
     }
+    window.scrollTo(0, 0);
   };
 
   render() {

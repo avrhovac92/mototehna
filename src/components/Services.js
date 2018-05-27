@@ -18,7 +18,7 @@ class Services extends Component {
           culpa qui officia deserunt mollit anim id est laborum.
           <div>
             <Link to="/contact-form">
-              <button className="servicesButton">KONTAKTIRAJ</button>
+              <button className="servicesButton" onClick={() => window.scrollTo(0, 0)}>KONTAKTIRAJ</button>
             </Link>
           </div>
         </div>
@@ -34,7 +34,7 @@ class Services extends Component {
           culpa qui officia deserunt mollit anim id est laborum.
           <div>
             <Link to="/contact-form">
-              <button className="servicesButton">KONTAKTIRAJ</button>
+              <button className="servicesButton" onClick={() => window.scrollTo(0, 0)}>KONTAKTIRAJ</button>
             </Link>
           </div>
         </div>

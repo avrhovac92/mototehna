@@ -55,6 +55,7 @@
   box-shadow: 2px 1px #ccc;
   cursor: pointer;
 }
+
 .sign-in-email {
   padding: 10px;
   background: #eee;
@@ -73,7 +74,7 @@
 }
 
 .forgotPas {
-  font-weight: 'Regular';
+  font-weight: "Regular";
   font-size: 14px;
   color: #666;
   margin-left: 2%;
