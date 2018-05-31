@@ -247,43 +247,43 @@ const CategoriesList = [
 ];
 const ListProducts1 = [
   {
-    name: "Sedište malo A3/APN6",
+    name: "Sediste malo A3",
     category: "MOPEDI",
     price: "1600 din",
     src: Images["picture1"]
   },
   {
-    name: "Sedište malo A3/APN6",
+    name: "Sediste malo A35",
     category: "MOPEDI",
     price: "1600 din",
     src: Images["picture2"]
   },
   {
-    name: "Sedište malo A3/APN6",
+    name: "Sediste malo APN4",
     category: "MOPEDI",
     price: "1600 din",
     src: Images["picture3"]
   },
   {
-    name: "Sedište malo A3/APN6",
+    name: "Sediste malo APN6",
     category: "MOPEDI",
     price: "1600 din",
     src: Images["picture3"]
   },
   {
-    name: "Sedište malo A3/APN6",
+    name: "Sediste malo BT50",
     category: "MOPEDI",
     price: "1600 din",
     src: Images["picture3"]
   },
   {
-    name: "Sedište malo A3/APN6",
+    name: "Sediste malo ATX",
     category: "MOPEDI",
     price: "1600 din",
     src: Images["picture3"]
   },
   {
-    name: "Sedište malo A3/APN6",
+    name: "Sediste malo CTX",
     category: "MOPEDI",
     price: "1600 din",
     src: Images["picture3"]
